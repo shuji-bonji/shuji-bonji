@@ -7,15 +7,7 @@ body {
   background-color: #B2B2B2;
   position:relative;
 }
-h1 {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: #CCC;
-    font-family: serif;
-    font-size: 16px;
-    text-shadow: 1px 2px 3px #808080;
-}
+
 #mikuro {
   position: fixed;
   top: 0;
@@ -24,7 +16,15 @@ h1 {
   right: 0;
   margin: auto;
 }
-
+footer small {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #CCC;
+  font-family: serif;
+  font-size: 16px;
+  text-shadow: 1px 2px 3px #808080;
+}
 
 @-webkit-keyframes animate-svg-fill-1 {
   0% {

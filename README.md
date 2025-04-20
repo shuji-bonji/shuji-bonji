@@ -1,28 +1,40 @@
-### にゃ〜〜〜ん 🐱
-
-<a href="https://bonji-396.github.io/bonji-396/">
-<img src="mikuro.svg" width="160px">
+<a href="https://shuji-bonji.github.io/shuji-bonji/">
+<img src="mikuro.svg" width="92px">
 </a>
+にゃ〜〜〜ん
 
 
-<!--
-**bonji396/bonji396** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Public Index
 
-Here are some ideas to get you started:
+| 📚 ドキュメント | Webサイト |   | 🛠 アプリケーション | Webサイト |
+|---|:---:|:---:|---|:---:|
+| [RxJS学習ノート](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
+|  [テスト駆動開発ノート](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   | [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |  |
+| [SOLID原則ノート](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   | [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
+|[リファクタリングノート](https://github.com/shuji-bonji/Notes-on-Refactoring) |  |   | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |  |
+| 関数型プログラミング |  |   |  |  |
+| [Web Componentsノート](https://github.com/shuji-bonji/Notes-on-WebComponents) |  |   |  |  |
+| [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA) |  |   |  |  |
+| [デジタル署名とタイムスタンプ](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps) |  |   |  |  |
+| [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns) |  |   |  |  |
+| [Webアプリテストノート](https://github.com/shuji-bonji/Notes-on-WebApplication-Testing) |  |   |  |  |
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+関数型プログラミング
+--- 
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
- <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
- <img alt="YOUR-ALT-TEXT" src="YOUR-DEFAULT-IMAGE">
-</picture>
--->
+|Template|Description|
+|---|---|
+|[rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)|Vanilla TypeScript + RxJS + Vitest with Vite での開発環境テンプレート。<br>RxJS with TypeScript 学習環境構築用でもあります。|
+[TypeScript PWA with Vite template](https://github.com/shuji-bonji/TypeScript-PWA-with-Vite-template)|ViteにてTypeScriptでPWAフロントエンドを作成するテンプレート（vite-plugin-pwa, webboxなし）|
 
+## 🛠 主に扱っている技術スタック
+
+- TypeScript / JavaScript（RxJS / Angular）
+- C# (.NET Core) / LINQ / MySQL
+- Node.js / Vite / Vitest / Jest / Jasmine
+- SCSS / Markdown / Mermaid
+- Docker / AWS
+
+## 🔍 学習・調査中の技術
+
+- Web Components / PWA / Svelte / GraphQL / FP
