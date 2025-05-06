@@ -25,6 +25,7 @@
 |Template|Description|
 |---|---|
 |[rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)|Vanilla TypeScript + RxJS + Vitest with Vite での開発環境テンプレート。<br>RxJS with TypeScript 学習環境構築用でもあります。|
+|[typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)|Vite と TypeScript を使用して Web Components を開発するための最小構成のスターターキット|
 [TypeScript PWA with Vite template](https://github.com/shuji-bonji/TypeScript-PWA-with-Vite-template)|ViteにてTypeScriptでPWAフロントエンドを作成するテンプレート（vite-plugin-pwa, webboxなし）|
 
 ## 🛠 主に扱っている技術スタック
