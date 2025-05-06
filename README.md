@@ -11,8 +11,8 @@
 | [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
 |  [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   | [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |  |
 | [TypeScriptで学ぶSOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   | [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
-|[リファクタリングノート](https://github.com/shuji-bonji/Notes-on-Refactoring) |  |   | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |  |
-| 関数型プログラミング |  |   |  |  |
+|[リファクタリングノート](https://github.com/shuji-bonji/Notes-on-Refactoring) |👷|   | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |  |
+| 関数型プログラミング |👷|   |  |  |
 | [Web Componentsノート](https://github.com/shuji-bonji/Notes-on-WebComponents) |  |   |  |  |
 | [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA) |  |   |  |  |
 | [デジタル署名とタイムスタンプ](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps) |  |   |  |  |
