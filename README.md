@@ -19,7 +19,6 @@
 | [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns) |  |   |  |  |
 | [Webアプリテストノート](https://github.com/shuji-bonji/Notes-on-WebApplication-Testing) |  |   |  |  |
 
-関数型プログラミング
 --- 
 
 |Template|Description|
