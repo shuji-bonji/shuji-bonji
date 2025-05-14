@@ -19,7 +19,7 @@
 | 🗒️ ノート |🔗|🐱| 🗒️ ノート |🔗|
 |---|:---:|:---:|---|:---:|
 | [デジタル署名とタイムスタンプ](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps) |-|   |TypeScript で 関数型プログラミング |-|
-| [Svelte 5]() |-|   |SvelteKit |-|
+| Svelte 5 |-|   |SvelteKit |-|
 | [リファクタリングノート](https://github.com/shuji-bonji/Notes-on-Refactoring) |-|   | [Webアプリテストノート](https://github.com/shuji-bonji/Notes-on-WebApplication-Testing) |-|
 | [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA) |-|   | [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns) |-|
 
