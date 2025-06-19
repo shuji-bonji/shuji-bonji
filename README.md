@@ -48,4 +48,4 @@
 
 ## 🔍 学習・調査中の技術
 
-- Web Components / PWA / Svelte / GraphQL / FP
+- WebSokcet / Svelte / GraphQL / Web Components / PWA / FP
