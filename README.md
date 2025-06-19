@@ -7,11 +7,11 @@
 
 | 📚 ドキュメントリポジトリ | Webサイト |   | 🛠 アプリケーションリポジトリ | サービスサイト |
 |---|:---:|:---:|---|:---:|
-| [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |   |🐱|👷|
-| [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   |🐱|👷|
-| [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   |🐱|👷|
-| [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   |🐱|👷|
-|TypeScript で PWA||  |🐱|👷|
+| [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |   |🐱|👷(6月中リリース)|
+| [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   |🐱|👷(6月中リリース)|
+| [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   |🐱|👷(7月中リリース)|
+| [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   |🐱|👷(7月中リリース)|
+|TypeScript で PWA||  |🐱|👷(8月中リリース)|
 | [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
 |[Web開発者なら知っておきたい 技術基盤入門](https://github.com/shuji-bonji/web-foundation-guide)||  | [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
 |WebSocket Learning||  |[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
