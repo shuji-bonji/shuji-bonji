@@ -10,8 +10,12 @@
 | [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |   |🐱|👷|
 | [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
 |  [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   | [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
-| [TypeScriptで学ぶSOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   | [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
-| [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
+| [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   | [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |-|
+|TypeScript で PWA||  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
+| [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | |-|
+|[Web開発者なら知っておきたい 技術基盤入門](https://github.com/shuji-bonji/web-foundation-guide)|  | |-|
+|WebSocket Learning|  | |-|
+|SPA経験者の為の Svelte5/SvelteKit 道場|  | |-|
 
 
 ## Study Notes
