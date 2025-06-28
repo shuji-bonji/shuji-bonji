@@ -16,7 +16,7 @@
 | [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   |🐱|👷(6月中リリース)|
 |TypeScript で PWA||  |[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)|[🔗](https://shuji-bonji.github.io/fact-checklist/)|
 | [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
-|WebSocket Learning||  | [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
+|[WebSocket Learning](https://github.com/shuji-bonji/websocket-learning)||  | [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
 |SPA経験者の為の Svelte5/SvelteKit 道場||  |[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
 |<!-- [Web開発者なら知っておきたい 技術基盤入門](https://github.com/shuji-bonji/web-foundation-guide) -->||  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
 
