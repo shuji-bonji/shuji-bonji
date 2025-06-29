@@ -10,9 +10,9 @@
 
 | 📚 ドキュメントリポジトリ | Webサイト |   | 🛠 アプリケーションリポジトリ | サービスサイト |
 |---|:---:|:---:|---|:---:|
-| [WebSocket Learning](https://github.com/shuji-bonji/websocket-learning)||  |🐱|👷(7月中リリース)|
-| TypeScript で PWA| | | 🐱|👷(7月中リリース)|
-| [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |   |🐱|👷(7月中リリース)|
+| [WebSocket Learning](https://github.com/shuji-bonji/websocket-learning)||  |🐱(7月中リリース)|👷|
+| TypeScript で PWA| | | 🐱(7月中リリース)|👷|
+| [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |   |🐱(7月中リリース)|👷|
 | [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   |[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)|[🔗](https://shuji-bonji.github.io/fact-checklist/)|
 | [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
 | [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   |[Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
