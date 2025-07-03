@@ -48,6 +48,6 @@
 - Docker / AWS
 
 
-## 🔍 学習・調査中の技術
+## 🔍 学習・調査・実践中の技術
 
 - WebSokcet / Svelte / GraphQL / Web Components / PWA / FP
