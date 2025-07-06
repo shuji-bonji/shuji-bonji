@@ -17,7 +17,7 @@
 | [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
 | [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   |[Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
 |SPA経験者の為の Svelte5/SvelteKit 道場| | |[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
-| [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
+|ITエンジニアのための [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
 |<!-- [Web開発者なら知っておきたい 技術基盤入門](https://github.com/shuji-bonji/web-foundation-guide) -->||  | |
 
 ## Study Notes
