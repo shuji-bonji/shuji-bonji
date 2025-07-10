@@ -29,7 +29,7 @@
 | [Svelte 5 / SvelteKit](https://github.com/shuji-bonji/Notes-on-Svelte) |-|   | [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA)  |-|
 | [リファクタリングノート](https://github.com/shuji-bonji/Notes-on-Refactoring) |-|   | [Webアプリテストノート](https://github.com/shuji-bonji/Notes-on-WebApplication-Testing) |-|
 |[デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)|-| 　 | [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges) |-|
-|AssemblyScript|-|WebAssembly|-|
+|AssemblyScript|-||WebAssembly|-|
 
 
 ## Templates
