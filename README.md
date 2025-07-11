@@ -10,7 +10,7 @@
 
 | 📚 ドキュメントリポジトリ | Webサイト |   | 🛠 アプリケーションリポジトリ | サービスサイト |
 |---|:---:|:---:|---|:---:|
-| [WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)| [🔗](https://shuji-bonji.github.io/websocket-practical-guide/)|  |🐱(8月中プロジェクト開始)|👷|
+| [WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)| [🔗](https://shuji-bonji.github.io/websocket-practical-guide/)👷|  |🐱(8月中プロジェクト開始)|👷|
 | WebRTC Learning|👷|  |🐱(7月中プロジェクト開始)|👷|
 | TypeScript で PWA| | | 🐱(7月中開発＆リリース)|👷|
 | [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |   |🐱(7月中開発＆リリース)|👷|
