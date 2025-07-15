@@ -1,7 +1,17 @@
-にゃ〜〜〜ん
-<a href="https://shuji-bonji.github.io/shuji-bonji/">
-<img src="mikuro.svg" width="92px">
-</a>
+![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark&show_icons=true)
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
+## 🛠 主に扱っている技術スタック
+
+- TypeScript / JavaScript（ Angular / RxJS )
+- C# (.NET Core) / LINQ / MySQL
+- Node.js / Vite / Vitest / Jest / Jasmine
+- SCSS / Markdown / Mermaid
+- Docker / AWS
+
+
+## 🔍 学習・調査・実践中の技術
+
+- WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
 
 ## Public Index
 
@@ -16,25 +26,8 @@
 | [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) | [🔗](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) |   |[Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) |-|
 |SPA経験者の為の Svelte5/SvelteKit 道場| | |[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
 |ITエンジニアのための [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
-|<!-- [Web開発者なら知っておきたい 技術基盤入門](https://github.com/shuji-bonji/web-foundation-guide) -->||  | |
 
 
-![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark&show_icons=true)
-![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
-
-
-## 🛠 主に扱っている技術スタック
-
-- TypeScript / JavaScript（ Angular / RxJS )
-- C# (.NET Core) / LINQ / MySQL
-- Node.js / Vite / Vitest / Jest / Jasmine
-- SCSS / Markdown / Mermaid
-- Docker / AWS
-
-
-## 🔍 学習・調査・実践中の技術
-
-- WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
 
 ## Study Notes
 
