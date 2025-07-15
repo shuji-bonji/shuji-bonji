@@ -1,15 +1,3 @@
-## 🛠 主に扱っている技術スタック
-
-- TypeScript / JavaScript（ Angular / RxJS )
-- C# (.NET Core) / LINQ / MySQL
-- Node.js / Vite / Vitest / Jest / Jasmine
-- SCSS / Markdown / Mermaid
-- Docker / AWS
-
-## 🔍 学習・調査・実践中の技術
-
-- WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
-
 ![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark&show_icons=true)
 ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
 
@@ -27,8 +15,6 @@
 |SPA経験者の為の Svelte5/SvelteKit 道場| | |[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) | [🔗](https://shuji-bonji.github.io/resume_editting/) |
 |ITエンジニアのための [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  | [操作説明ページ（訓練課題）](https://github.com/shuji-bonji/experience_based_operation_explanation) |-|
 
-
-
 ## Study Notes
 
 | 🗒️ ノート |🔗|🐱| 🗒️ ノート |🔗|
@@ -39,7 +25,6 @@
 |[デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)|-| 　 | [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges) |-|
 |AssemblyScript|-||WebAssembly|-|
 
-
 ## Templates
 
 |Template|Description|
@@ -48,4 +33,15 @@
 |[typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)|Vite と TypeScript を使用して Web Components を開発するための最小構成のスターターキット|
 [TypeScript PWA with Vite template](https://github.com/shuji-bonji/TypeScript-PWA-with-Vite-template)|ViteにてTypeScriptでPWAフロントエンドを作成するテンプレート（vite-plugin-pwa, webboxなし）|
 
+## 🛠 主に扱っている技術スタック
+
+- TypeScript / JavaScript（ Angular / RxJS )
+- C# (.NET Core) / LINQ / MySQL
+- Node.js / Vite / Vitest / Jest / Jasmine
+- SCSS / Markdown / Mermaid
+- Docker / AWS
+
+## 🔍 学習・調査・実践中の技術
+
+- WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
 
