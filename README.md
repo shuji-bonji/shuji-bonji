@@ -1,5 +1,3 @@
-![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark&show_icons=true)
-![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
 ## 🛠 主に扱っている技術スタック
 
 - TypeScript / JavaScript（ Angular / RxJS )
@@ -8,10 +6,12 @@
 - SCSS / Markdown / Mermaid
 - Docker / AWS
 
-
 ## 🔍 学習・調査・実践中の技術
 
 - WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
+
+![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark&show_icons=true)
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
 
 ## Public Index
 
