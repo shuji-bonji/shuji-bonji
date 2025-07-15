@@ -3,6 +3,9 @@
 </a>
 にゃ〜〜〜ん
 
+![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonj)
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonj&layout=compact)
+
 ## Product
 
 
