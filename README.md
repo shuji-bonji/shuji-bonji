@@ -1,7 +1,13 @@
+にゃ〜〜〜ん
 <a href="https://shuji-bonji.github.io/shuji-bonji/">
 <img src="mikuro.svg" width="92px">
 </a>
-にゃ〜〜〜ん
+
+
+![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark&show_icons=true)
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
+
+
 
 ## Product
 
