@@ -8,10 +8,6 @@
 ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark)
 
 
-
-## Product
-
-
 ## Public Index
 
 | 📚 ドキュメントリポジトリ | Webサイト |   | 🛠 アプリケーションリポジトリ | サービスサイト |
