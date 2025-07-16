@@ -45,3 +45,5 @@
 
 - WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
 
+
+![](https://komarev.com/ghpvc/?username=shuji-bonji)
