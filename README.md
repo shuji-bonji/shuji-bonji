@@ -7,7 +7,7 @@
 |---|:---:|:---:|---|:---:|
 |ITエンジニアのための [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making/) | [🔗](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) |  |🐱(8月中プロジェクト開始)|👷|
 | WebRTC Learning|  |  |🐱(7月中プロジェクト開始)|👷|
-| TypeScript で PWA | | | [実践 Svelte5/SvelteKit](https://github.com/shuji-bonji/Svelte-SvelteKit-with-TypeScript)|👷 |
+| TypeScript で PWA | | | [実践 Svelte5/SvelteKit](https://github.com/shuji-bonji/Svelte-SvelteKit-with-TypeScript)|[🔗](https://shuji-bonji.github.io/Svelte-SvelteKit-with-TypeScript/)👷 |
 | [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) | [🔗](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) |  |[WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)| [🔗](https://shuji-bonji.github.io/websocket-practical-guide/)👷|
 | [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) |[🔗](https://shuji-bonji.github.io/RxJS-with-TypeScript/) |   |[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)|[🔗](https://fact-checklist.vercel.app/)|
 | [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) | [🔗](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)|   | [マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg) | [🔗](https://shuji-bonji.github.io/marble-to-svg/) |
