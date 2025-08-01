@@ -43,7 +43,7 @@
 
 ## 🔍 学習・調査・実践中の技術
 
-- WebSokcet / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
+- WebSocket / Svelte / Tailwind CSS / Web Components / PWA / FP / GraphQL
 
 
 ![](https://komarev.com/ghpvc/?username=shuji-bonji)
