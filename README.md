@@ -56,10 +56,6 @@
 ![Claude](https://img.shields.io/badge/-Claude-6B5B95?logoColor=fff)
 ![ChatGPT](https://img.shields.io/badge/-ChatGPT-74aa9c?logo=openai&logoColor=fff)
 
-### 実績例
-- 「[状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making)」プロジェクトでのAI活用による理論解説の充実
-- 技術ノートシリーズでのAI支援による包括的な学習コンテンツ作成
-
 
 <p align="right">
   <img src="https://komarev.com/ghpvc/?username=shuji-bonji" alt="Profile Views" />
