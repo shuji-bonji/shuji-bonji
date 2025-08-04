@@ -40,7 +40,6 @@
 ![RxJS](https://img.shields.io/badge/-RxJS-B7178C?logo=reactivex&logoColor=fff)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=fff)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=fff)
-<!-- 必要に応じて追加 -->
 
 - TypeScript / JavaScript (Angular / RxJS)
 - C# (.NET Core) / LINQ / MySQL
@@ -53,9 +52,16 @@
 
 - WebSocket / Svelte / Tailwind CSS / Web Components / PWA / 関数型プログラミング / GraphQL
 
+## AI活用
+![Claude](https://img.shields.io/badge/-Claude-6B5B95?logoColor=fff)
+![ChatGPT](https://img.shields.io/badge/-ChatGPT-74aa9c?logo=openai&logoColor=fff)
+
+### 実績例
+- 「[状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making)」プロジェクトでのAI活用による理論解説の充実
+- 技術ノートシリーズでのAI支援による包括的な学習コンテンツ作成
+
 
 <p align="right">
   <img src="https://komarev.com/ghpvc/?username=shuji-bonji" alt="Profile Views" />
 </p>
 
-<!-- ここまで -->
