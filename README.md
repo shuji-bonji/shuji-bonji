@@ -43,8 +43,10 @@
 
 - TypeScript / JavaScript (Angular / RxJS)
 - C# (.NET Core) / LINQ / MySQL
-- Node.js / Vite / Vitest / Jest / Jasmine
-- SCSS / Markdown / Mermaid
+- Node.js / Vite
+- Vitest / Jest / Jasmine / StepCI
+- ESLint / Prettier
+- SCSS / Markdown / Mermaid / Marp
 - Docker / AWS
 
 
