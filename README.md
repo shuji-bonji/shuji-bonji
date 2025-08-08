@@ -13,7 +13,7 @@
 - [事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度PWAアプリ。[🈸](https://fact-checklist.vercel.app/)
 - [WebComponents with TypeScript](https://github.com/shuji-bonji/WebComponents-with-TypeScript)：TypeScriptでの利用を前提とした、Web Components の学び場 [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)
 - [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript)：TypeScriptでの利用を前提とした、RxJS の学び場です。 [🌐](https://shuji-bonji.github.io/RxJS-with-TypeScript/)
-- [実践 Svelte5/SvelteKit](https://github.com/shuji-bonji/Svelte-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習プラットフォーム [👷](https://shuji-bonji.github.io/Svelte-SvelteKit-with-TypeScript/)
+- [TypeScriptで学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習プラットフォーム [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)
 - [WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)：ブラウザ標準WebSocket APIを中心としたリアルタイムWebアプリ実践ガイド [👷](https://shuji-bonji.github.io/websocket-practical-guide/)
 - [TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)：SOLIDの原則について、TypeScriptによるサンプルコード付きで解説 [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)
 - [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)：TypeScriptとVitestで学ぶ、テスト駆動開発 [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)
