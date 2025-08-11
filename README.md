@@ -25,7 +25,6 @@
 ## 📚 学習ノート & テンプレート
 
 - [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
-- [Svelte 5 / SvelteKit ノート](https://github.com/shuji-bonji/Notes-on-Svelte)
 - [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA)
 - [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
 - [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
