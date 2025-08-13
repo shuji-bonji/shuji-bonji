@@ -15,7 +15,7 @@
 - [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)：[TypeScriptで学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習サイト
 - [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)：[WebComponents with TypeScript](https://github.com/shuji-bonji/WebComponents-with-TypeScript)：TypeScriptでの利用を前提とした、Web Components の学び場
 - [🌐](https://shuji-bonji.github.io/RxJS-with-TypeScript/)：[TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript)：TypeScriptでの利用を前提とした、RxJS の学び場です。
-- [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)：[TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)：SOLIDの原則について、TypeScriptによるサンプルコード付きで解説 
+- [🌐](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/)：[TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)：SOLIDの原則について、TypeScriptによるサンプルコード付きで解説 
 - [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)：[TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)：TypeScriptとVitestで学ぶ、テスト駆動開発
 - [🈸](https://shuji-bonji.github.io/marble-to-svg/)：[マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg)：RxJSのTestSchedulerで使用されるマーブル記法をSVG図に変換するツール
 - [Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)：Step CI / runnerを利用したWebAPIテスト実行ツール
