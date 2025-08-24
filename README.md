@@ -1,5 +1,3 @@
-<!-- ここから -->
-
 <div align="center"> 
   <picture >
     <source
