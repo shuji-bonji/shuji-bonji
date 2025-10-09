@@ -31,7 +31,7 @@
 
 ## 🚀 プロジェクト
 
-- [🚧👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)：[TypeScriptで学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習サイト 👉 [元ネタである自身のナレッジ](https://github.com/shuji-bonji/Notes-on-Svelte)
+- [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)：[TypeScriptで学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習サイト
 - [📱](https://fact-checklist.vercel.app/)：[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度PWAアプリ
 - [🌐](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/)：[状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making)：認知、判断、行動を最適化するための理論、モデル、アプリに関する情報をまとめたサイト
 - [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)：[TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript)：TypeScriptでの利用を前提とした、Web Components の学び場
