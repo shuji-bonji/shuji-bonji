@@ -1,31 +1,3 @@
-<div align="center"> 
-  <picture >
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark#gh-dark-mode-only&show_icons=true"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=shuji-bonji&show_icons=true"
-      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-    />
-    <img src="https://github-readme-stats.vercel.app/api?username=shuji-bonji&show_icons=true" />
-  </picture>
-  <picture>
-    <source
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact"
-      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-    />
-    <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true" />
-  </picture>
-
-</div>
-
-
-
 <h1 align="center">Hi 👋 I'm shuji-bonji</h1>
 <p align="center"><b>TypeScript / Web技術が好きなエンジニア🐱</b></p>
 
@@ -94,6 +66,34 @@
 ![Claude Code](https://img.shields.io/badge/-Claude_Code-6B5B95?logoColor=fff)
 ![ChatGPT](https://img.shields.io/badge/-ChatGPT-74aa9c?logo=openai&logoColor=fff)
 ![Codex](https://img.shields.io/badge/-Codex-412991?logo=openai&logoColor=fff)
+
+## Github Stats
+
+<div align="center"> 
+  <picture >
+    <source
+      srcset="https://github-readme-stats.vercel.app/api?username=shuji-bonji&theme=dark#gh-dark-mode-only&show_icons=true"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats.vercel.app/api?username=shuji-bonji&show_icons=true"
+      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+    />
+    <img src="https://github-readme-stats.vercel.app/api?username=shuji-bonji&show_icons=true" />
+  </picture>
+  <picture>
+    <source
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact&theme=dark"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=shuji-bonji&layout=compact"
+      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+    />
+    <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true" />
+  </picture>
+
+</div>
 
 
 <p align="right">
