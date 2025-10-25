@@ -57,9 +57,10 @@
 ## 🛠 技術スタック
 
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178c6?logo=typescript&logoColor=fff)
-![Svelte](https://img.shields.io/badge/-Svelte-orange?logo=svelte&logoColor=fff)
+![Angular](https://img.shields.io/badge/-Angular-DD0031?logo=angular&logoColor=white)
 ![RxJS](https://img.shields.io/badge/-RxJS-B7178C?logo=reactivex&logoColor=fff)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=fff)
+![Svelte](https://img.shields.io/badge/-Svelte-orange?logo=svelte&logoColor=fff)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=fff)
 
 - TypeScript / JavaScript (Angular / RxJS / Svelte / SvelteKit)
@@ -73,12 +74,12 @@
 
 ## 🧪 最近実践しているもの
 
-- Tailwind CSS / PWA
+- Tailwind CSS / PWA / NgRx
 
 
 ## 🧪 最近学んでいるもの
 
-- WebSocket
+- WebSocket / MongDB
 
 ## これからの興味
 
