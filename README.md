@@ -62,11 +62,13 @@
 - 接続・統合基盤: SvelteKit  - (SSR / CSR / Edge / API対応)
 
 ## AI活用
-![Claude](https://img.shields.io/badge/-Claude-6B5B95?logoColor=fff)
+![Claude](https://img.shields.io/badge/-Claude-6B5B95?logo=claude&logoColor=fff)
 ![Claude Code](https://img.shields.io/badge/-Claude_Code-6B5B95?logoColor=fff)
-![ChatGPT](https://img.shields.io/badge/-ChatGPT-74aa9c?logo=openai&logoColor=fff)
+![ChatGPT](https://img.shields.io/badge/-ChatGPT-00A67E?logo=openai&logoColor=fff)
 ![Codex](https://img.shields.io/badge/-Codex-412991?logo=openai&logoColor=fff)
-![DeepL MCP](https://img.shields.io/badge/DeepL%20MCP-Server-1A73E8?logo=deepl&logoColor=white)
+![DeepL MCP](https://img.shields.io/badge/-DeepL_MCP_Server-0F2B46?logo=deepl&logoColor=fff)
+![GitHub Copilot](https://img.shields.io/badge/-GitHub_Copilot-181717?logo=githubcopilot&logoColor=fff)
+
 
 ## Github Stats
 
