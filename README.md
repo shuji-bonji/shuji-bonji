@@ -66,6 +66,7 @@
 ![Claude Code](https://img.shields.io/badge/-Claude_Code-6B5B95?logoColor=fff)
 ![ChatGPT](https://img.shields.io/badge/-ChatGPT-74aa9c?logo=openai&logoColor=fff)
 ![Codex](https://img.shields.io/badge/-Codex-412991?logo=openai&logoColor=fff)
+![DeepL MCP](https://img.shields.io/badge/DeepL%20MCP-Server-1A73E8?logo=deepl&logoColor=white)
 
 ## Github Stats
 
