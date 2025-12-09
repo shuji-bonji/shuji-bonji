@@ -15,7 +15,7 @@
 ### Web アプリ
 - [📱](https://fact-checklist.vercel.app/)：[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度PWAアプリ
 - [👷🚧🏗️](https://shuji-bonji.github.io/websocket-practical-guide/)：[WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)：ブラウザ標準WebSocket APIを中心としたリアルタイムWebアプリ実践ガイドPWAアプリ
-- [📝](https://shuji-bonji.github.io/resume_editting/)：[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting)：first commit: 2021/4/7：履歴書作成ウェブアプリ。履歴書（JIS規格）見た目のままで編集、作成可能です。JavaScriptを習って初めて書いたコードで
+- [📝](https://shuji-bonji.github.io/resume_editting/)：[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting)：first commit: 2021/4/7：履歴書作成ウェブアプリ。履歴書（JIS規格）見た目のままで編集、作成可能です。JavaScriptを学び、初めての作ったアプリです。 一旦プライベートアーカイブにしたのものですが、記念に残しておきたいと思います。ソースなど今見るととても恥ずかしいですが、ここがスタート地点ということで、このまま残しておきます。
 
 ### Tools
 - [🔧](https://shuji-bonji.github.io/marble-to-svg/)：[マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg)：RxJSのTestSchedulerで使用されるマーブル記法をSVG図に変換するツール
