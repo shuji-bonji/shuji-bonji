@@ -76,6 +76,7 @@
 ![GitHub Copilot](https://img.shields.io/badge/-GitHub_Copilot-181717?logo=githubcopilot&logoColor=fff)
 
 
+<!--
 ## Github Stats
 
 <div align="center"> 
@@ -108,4 +109,4 @@
 <p align="right">
   <img src="https://komarev.com/ghpvc/?username=shuji-bonji" alt="Profile Views" />
 </p>
-
+-->
