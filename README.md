@@ -3,15 +3,6 @@
 
 ## 🚀 プロジェクト
 
-### Web サイト
-- [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)：[TypeScriptで学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習サイト
-- [🌐](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/)：[状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making)：認知、判断、行動を最適化するための理論、モデル、アプリに関する情報をまとめたサイト
-- [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)：[TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript)：TypeScriptでの利用を前提とした、Web Components の学び場
-- [🌐](https://shuji-bonji.github.io/RxJS-with-TypeScript/)：[TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript)：TypeScriptでの利用を前提とした、RxJS の学び場です。
-- [🌐](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/)：[TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)：SOLIDの原則について、TypeScriptによるサンプルコード付きで解説 
-- [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)：[TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)：TypeScriptとVitestで学ぶ、テスト駆動開発
-す。
-
 ### MCP Server
 - [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価をAIエージェントから行えるようにした、MCPサーバーです。
 
@@ -24,6 +15,14 @@
 - [🔧](https://shuji-bonji.github.io/marble-to-svg/)：[マーブル図SVG変換ツール](https://github.com/shuji-bonji/marble-to-svg)：RxJSのTestSchedulerで使用されるマーブル記法をSVG図に変換するツール
 - [🧪](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)：[Step CI WebAPI実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)：Step CI / runnerを利用したWebAPIテスト実行ツール
 
+### Web サイト
+- [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)：[TypeScriptで学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA経験者向けのSvelte5/SvelteKit学習サイト
+- [🌐](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/)：[状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making)：認知、判断、行動を最適化するための理論、モデル、アプリに関する情報をまとめたサイト
+- [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)：[TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript)：TypeScriptでの利用を前提とした、Web Components の学び場
+- [🌐](https://shuji-bonji.github.io/RxJS-with-TypeScript/)：[TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript)：TypeScriptでの利用を前提とした、RxJS の学び場です。
+- [🌐](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/)：[TypeScriptで学ぶ SOLID設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)：SOLIDの原則について、TypeScriptによるサンプルコード付きで解説 
+- [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)：[TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)：TypeScriptとVitestで学ぶ、テスト駆動開発
+す。
 
 ## 📚 学習ノート & テンプレート
 
