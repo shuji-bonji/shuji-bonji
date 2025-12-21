@@ -12,6 +12,9 @@
 - [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)：[TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)：TypeScriptとVitestで学ぶ、テスト駆動開発
 す。
 
+### MCP Server
+- [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価をAIエージェントから行えるようにした、MCPサーバーです。
+
 ### Web アプリ
 - [📱](https://fact-checklist.vercel.app/)：[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度PWAアプリ
 - [👷🚧🏗️](https://shuji-bonji.github.io/websocket-practical-guide/)：[WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)：ブラウザ標準WebSocket APIを中心としたリアルタイムWebアプリ実践ガイドPWAアプリ
