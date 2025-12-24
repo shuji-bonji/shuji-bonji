@@ -5,6 +5,7 @@
 
 ### MCP Server
 - [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価をAIエージェントから行えるようにした、MCPサーバーです。
+- [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : ClaudeなどのAIアシスタント向けRxJSデバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
 
 ### Web アプリ
 - [📱](https://fact-checklist.vercel.app/)：[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度PWAアプリ
