@@ -8,7 +8,7 @@
 - [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : ClaudeなどのAIアシスタント向けRxJSデバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
 
 ### Web アプリ
-- [📒]()：[e-shiwake](https://github.com/shuji-bonji/e-shiwake)：フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ 👉 さらに、総勘定元帳の生成など確定申告に利用できるレベルの会計アプリにまで育てたい思います。
+- [📒](https://shuji-bonji.github.io/e-shiwake/)：[e-shiwake](https://github.com/shuji-bonji/e-shiwake)：フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ 👉 さらに、総勘定元帳の生成など確定申告に利用できるレベルの会計アプリにまで育てたい思います。
 - [📱](https://fact-checklist.vercel.app/)：[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度PWAアプリ
 - [👷🚧🏗️](https://shuji-bonji.github.io/websocket-practical-guide/)：[WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)：ブラウザ標準WebSocket APIを中心としたリアルタイムWebアプリ実践ガイドPWAアプリ
 - [📝](https://shuji-bonji.github.io/resume_editting/)：[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting)：first commit: 2021/4/7：履歴書作成ウェブアプリ。履歴書（JIS規格）見た目のままで編集・作成可能です。JavaScriptを学び初めての作ったアプリで、一旦アーカイブにしたのものですが、記念に残しておきたいと思い残してます。ソースなど今見るととても恥ずかしいですが、ここが僕にとってスタート地点なのです。
