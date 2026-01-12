@@ -66,7 +66,7 @@
 
 ## これからの興味
 
-- リアクティブUI: RxJS / SvelteKit - (データの流れを明示する。非同期と状態変化の一貫性を保つ)
+- リアクティブUI / データフロー: RxJS + SvelteKit - (データの流れを明示する。非同期と状態変化の一貫性を保つ)
 - リアルタイム通信	: WebSocket / WebRTC - (サーバーやP2P間でリアルタイム更新・同期を行う)
 - オフライン＋継続性: PWA - (Service Worker, Cache, Background Sync, Push通知)
 - ネイティブ性能・軽量実行: AssemblyScript / Rust / WebAssembly	 - (高速な数値計算・暗号・メディア処理・AI推論をブラウザで行う)
