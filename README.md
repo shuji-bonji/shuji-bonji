@@ -5,6 +5,7 @@
 
 ### MCP Server
 
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp)：[W3C MCP Server](https://github.com/shuji-bonji/w3c-mcp)：W3C/WHATWG/IETF の Web 仕様にアクセスするための MCP Server です。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp)：[RFCXML MCP Server](https://github.com/shuji-bonji/rfcxml-mcp)：RFC 文書を AIが構造的に理解 するための MCP サーバー
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/xcomet-mcp-server)：[xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server)：xCOMET（eXplainable COMET）を利用した、翻訳品質評価を AI エージェントから行えるようにした、MCP サーバーです。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp)：[RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server)：Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
