@@ -5,42 +5,43 @@
 
 ### MCP Server
 
-- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp)：[W3C MCP Server](https://github.com/shuji-bonji/w3c-mcp)：W3C/WHATWG/IETF の Web 仕様にアクセスするための MCP Server です。
-- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp)：[RFCXML MCP Server](https://github.com/shuji-bonji/rfcxml-mcp)：RFC 文書を AIが構造的に理解 するための MCP サーバー
-- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/xcomet-mcp-server)：[xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server)：xCOMET（eXplainable COMET）を利用した、翻訳品質評価を AI エージェントから行えるようにした、MCP サーバーです。
-- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp)：[RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server)：Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) : [W3C MCP Server](https://github.com/shuji-bonji/w3c-mcp) : W3C/WHATWG/IETF の Web 仕様にアクセスするための MCP Server です。
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) : [RFCXML MCP Server](https://github.com/shuji-bonji/rfcxml-mcp) : RFC 文書を AIが構造的に理解 するための MCP サーバー
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/xcomet-mcp-server) : [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価を AI エージェントから行えるようにした、MCP サーバーです。
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) : [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
 
 ### Web アプリ
 
-- [![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://shuji-bonji.github.io/e-shiwake/)：[e-shiwake](https://github.com/shuji-bonji/e-shiwake)：フリーランス・個人事業主向けの仕訳帳 + 証憑管理、さらに、総勘定元帳の生成など確定申告に利用可能な PWA アプリ
-- [![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://fact-checklist.vercel.app/)：[事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist)：情報の信頼性を科学的・体系的に評価するための企業レベル高度 PWA アプリ
-- [👷🚧🏗️![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://shuji-bonji.github.io/websocket-practical-guide/)：[WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide)：ブラウザ標準 WebSocket API を中心としたリアルタイム Web アプリ実践ガイド PWA アプリ
-- [![JavaScript](https://img.shields.io/badge/_-F7DF1E?logo=javascript&logoColor=000&style=flat-square)](https://shuji-bonji.github.io/resume_editting/)：[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting)：first commit: 2021/4/7：履歴書作成ウェブアプリ。履歴書（JIS 規格）見た目のままで編集・作成可能です。JavaScript を学び初めての作ったアプリで、一旦アーカイブにしたのものですが、記念に残しておきたいと思い残してます。ソースなど今見るととても恥ずかしいですが、ここが僕にとってスタート地点なのです。
+- [![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://shuji-bonji.github.io/e-shiwake/) : [e-shiwake](https://github.com/shuji-bonji/e-shiwake) : フリーランス・個人事業主向けの仕訳帳 + 証憑管理、さらに、総勘定元帳の生成など確定申告に利用可能な PWA アプリ
+- [![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://fact-checklist.vercel.app/) : [事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist) : 情報の信頼性を科学的・体系的に評価するための企業レベル高度 PWA アプリ
+- [👷🚧🏗️![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://shuji-bonji.github.io/websocket-practical-guide/) : [WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide) : ブラウザ標準 WebSocket API を中心としたリアルタイム Web アプリ実践ガイド PWA アプリ
+- [![JavaScript](https://img.shields.io/badge/_-F7DF1E?logo=javascript&logoColor=000&style=flat-square)](https://shuji-bonji.github.io/resume_editting/) : [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) : first commit: 2021/4/7 : 履歴書作成ウェブアプリ。履歴書（JIS 規格）見た目のままで編集・作成可能です。JavaScript を学び初めての作ったアプリで、一旦アーカイブにしたのものですが、記念に残しておきたいと思い残してます。ソースなど今見るととても恥ずかしいですが、ここが僕にとってスタート地点なのです。
 
 ### Tools
 
-- [🔧](https://shuji-bonji.github.io/marble-to-svg/)：[マーブル図 SVG 変換ツール](https://github.com/shuji-bonji/marble-to-svg)：RxJS の TestScheduler で使用されるマーブル記法を SVG 図に変換するツール
-- [🧪](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)：[Step CI WebAPI 実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)：Step CI / runner を利用した WebAPI テスト実行ツール
+- [![GitHub](https://img.shields.io/badge/-_-181717?logo=github&logoColor=fff)](https://github.com/shuji-bonji/ai-agent-toolkit) : [AI Agent Toolkit](https://github.com/shuji-bonji/ai-agent-toolkit) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ
+- [🔧](https://shuji-bonji.github.io/marble-to-svg/) : [マーブル図 SVG 変換ツール](https://github.com/shuji-bonji/marble-to-svg) : RxJS の TestScheduler で使用されるマーブル記法を SVG 図に変換するツール
+- [🧪](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) : [Step CI WebAPI 実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) : Step CI / runner を利用した WebAPI テスト実行ツール
 
 ### Web サイト
 
-- [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/)：[TypeScript で学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)：SPA 経験者向けの Svelte5/SvelteKit 学習サイト
-- [🌐](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/)：[状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making)：認知、判断、行動を最適化するための理論、モデル、アプリに関する情報をまとめたサイト
-- [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/)：[TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript)：TypeScript での利用を前提とした、Web Components の学び場
-- [🌐](https://shuji-bonji.github.io/RxJS-with-TypeScript/)：[TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript)：TypeScript での利用を前提とした、RxJS の学び場です。
-- [🌐](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/)：[TypeScript で学ぶ SOLID 設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)：SOLID の原則について、TypeScript によるサンプルコード付きで解説
-- [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/)：[TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)：TypeScript と Vitest で学ぶ、テスト駆動開発
+- [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) : [TypeScript で学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript) : SPA 経験者向けの Svelte5/SvelteKit 学習サイト
+- [🌐](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) : [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) : 認知、判断、行動を最適化するための理論、モデル、アプリに関する情報をまとめたサイト
+- [🌐](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) : [TypeScript で Web Components](https://github.com/shuji-bonji/WebComponents-with-TypeScript) : TypeScript での利用を前提とした、Web Components の学び場
+- [🌐](https://shuji-bonji.github.io/RxJS-with-TypeScript/) : [TypeScript で RxJS](https://github.com/shuji-bonji/RxJS-with-TypeScript) : TypeScript での利用を前提とした、RxJS の学び場です。
+- [🌐](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) : [TypeScript で学ぶ SOLID 設計原則](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) : SOLID の原則について、TypeScript によるサンプルコード付きで解説
+- [🌐](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) : [TypeScript で テスト駆動開発(TDD)](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) : TypeScript と Vitest で学ぶ、テスト駆動開発
   す。
 
 ## 📚 学習ノート & テンプレート
 
-- [簿記についてのノート](https://github.com/shuji-bonji/Note-on-bookkeeping)：個人事業主として簿記を体系的に学び、実務に役立つ知識を蓄積するためのノートです。 Github 上で順番に読み進められるよう、学習マップを用意しました。
-- [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)：電子署名及び電子契約サービスの開発業務に携わり、この時の最低限必要な業務知識をそれぞれのメモをここにまとめてみました
+- [簿記についてのノート](https://github.com/shuji-bonji/Note-on-bookkeeping) : 個人事業主として簿記を体系的に学び、実務に役立つ知識を蓄積するためのノートです。 Github 上で順番に読み進められるよう、学習マップを用意しました。
+- [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps) : 電子署名及び電子契約サービスの開発業務に携わり、この時の最低限必要な業務知識をそれぞれのメモをここにまとめてみました
 - [PWA ノート](https://github.com/shuji-bonji/Notes-on-PWA)
 - [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
 - [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
-- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)：TypeScript+RxJS テンプレ
-- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)：Vite と TypeScript を使用して Web Components を開発するためテンプレ
+- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit) : TypeScript+RxJS テンプレ
+- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit) : Vite と TypeScript を使用して Web Components を開発するためテンプレ
 
 ## 🛠 技術スタック
 
