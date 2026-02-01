@@ -5,7 +5,7 @@
 
 ### MCP Server
 
-- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) : [W3C MCP Server](https://github.com/shuji-bonji/epsg-mcp) : 座標参照系（CRS: Coordinate Reference System）に関する知識提供を行うMCPサーバーです。
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) : [EPSG MCP Server](https://github.com/shuji-bonji/epsg-mcp) : 座標参照系（CRS: Coordinate Reference System）に関する知識提供を行うMCPサーバーです。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) : [W3C MCP Server](https://github.com/shuji-bonji/w3c-mcp) : W3C/WHATWG/IETF の Web 仕様にアクセスするための MCP Server です。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) : [RFCXML MCP Server](https://github.com/shuji-bonji/rfcxml-mcp) : RFC 文書を AIが構造的に理解 するための MCP サーバー
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/xcomet-mcp-server) : [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価を AI エージェントから行えるようにした、MCP サーバーです。
