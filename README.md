@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋 I'm shuji-bonji</h1>
 <p align="center"><b>TypeScript / Web技術が好きなエンジニア🐱</b></p>
 
-## 🚀 プロジェクト
+## MCP Server
 
-### MCP Server
+d
 
-#### Standards Knowledge（標準規格の知識提供）
+### Standards Knowledge（標準規格の知識提供）
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) : [PDF SPEC MCP Server](https://github.com/shuji-bonji/pdf-spec-mcp) : ISO 32000（PDF）仕様書への構造化アクセスを提供する MCP（Model Context Protocol）サーバーです。LLM が PDF 仕様書をナビゲート・検索・分析するためのツールを提供します。
   - → 実装: [PDF Reader MCP Server](https://github.com/shuji-bonji/pdf-reader-mcp) — 仕様に基づくPDF内部構造解析
@@ -13,36 +13,36 @@
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) : [W3C MCP Server](https://github.com/shuji-bonji/w3c-mcp) : W3C/WHATWG/IETF の Web 仕様にアクセスするための MCP Server です。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) : [RFCXML MCP Server](https://github.com/shuji-bonji/rfcxml-mcp) : RFC 文書を AIが構造的に理解 するための MCP サーバー
 
-#### Quality & Analysis Tools（品質評価・分析ツール）
+### Quality & Analysis Tools（品質評価・分析ツール）
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) : [PDF Reader MCP Server](https://github.com/shuji-bonji/pdf-reader-mcp) : PDF 内部構造解析に特化した MCP (Model Context Protocol) サーバー。[PDF SPEC MCP Server](https://github.com/shuji-bonji/pdf-spec-mcp) の仕様知識に基づく実装です。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/xcomet-mcp-server) : [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価を AI エージェントから行えるようにした、MCP サーバーです。
 
-#### Developer Tools（開発支援ツール）
+### Developer Tools（開発支援ツール）
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) : [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
 
-#### 🔗 Orchestration Guide
+### 🔗 Orchestration Guide
 
 - [![GitHub](https://img.shields.io/badge/-_-181717?logo=github&logoColor=fff)](https://github.com/shuji-bonji/ai-agent-toolkit) : [AI Agent Toolkit](https://github.com/shuji-bonji/ai-agent-toolkit) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.com/shuji-bonji/ai-agent-toolkit))
 
-### Skills
+## Skills
 
 [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills) : W3C/IETF 仕様準拠チェック用の Cowork プラグインです。 仕様の規範的要件（MUST/SHOULD/MAY）を事前パースしたデータに基づき、 構造化された検証レポートを生成します。
 
-### Web アプリ
+## Web アプリ
 
 - [![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://shuji-bonji.github.io/e-shiwake/) : [e-shiwake](https://github.com/shuji-bonji/e-shiwake) : フリーランス・個人事業主向けの仕訳帳 + 証憑管理、さらに、総勘定元帳の生成など確定申告に利用可能な PWA アプリ
 - [![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://fact-checklist.vercel.app/) : [事実確認チェックシート](https://github.com/shuji-bonji/fact-checklist) : 情報の信頼性を科学的・体系的に評価するための企業レベル高度 PWA アプリ
 - [👷🚧🏗️![Svelte](https://img.shields.io/badge/_-FF3E00?logo=svelte&logoColor=fff&style=flat-square)](https://shuji-bonji.github.io/websocket-practical-guide/) : [WebSocket 実践ガイド](https://github.com/shuji-bonji/websocket-practical-guide) : ブラウザ標準 WebSocket API を中心としたリアルタイム Web アプリ実践ガイド PWA アプリ
 - [![JavaScript](https://img.shields.io/badge/_-F7DF1E?logo=javascript&logoColor=000&style=flat-square)](https://shuji-bonji.github.io/resume_editting/) : [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) : first commit: 2021/4/7 : 履歴書作成ウェブアプリ。履歴書（JIS 規格）見た目のままで編集・作成可能です。JavaScript を学び初めての作ったアプリで、一旦アーカイブにしたのものですが、記念に残しておきたいと思い残してます。ソースなど今見るととても恥ずかしいですが、ここが僕にとってスタート地点なのです。
 
-### Tools
+## Tools
 
 - [🔧](https://shuji-bonji.github.io/marble-to-svg/) : [マーブル図 SVG 変換ツール](https://github.com/shuji-bonji/marble-to-svg) : RxJS の TestScheduler で使用されるマーブル記法を SVG 図に変換するツール
 - [🧪](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) : [Step CI WebAPI 実行ツール](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner) : Step CI / runner を利用した WebAPI テスト実行ツール
 
-### Web サイト
+## Web サイト
 
 - [👷](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) : [TypeScript で学ぶ Svelte 5/SvelteKit](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript) : SPA 経験者向けの Svelte5/SvelteKit 学習サイト
 - [🌐](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) : [状況認識と意思決定](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) : 認知、判断、行動を最適化するための理論、モデル、アプリに関する情報をまとめたサイト
