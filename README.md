@@ -19,7 +19,11 @@
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) : [PDF Reader MCP Server](https://github.com/shuji-bonji/pdf-reader-mcp) : PDF 内部構造解析に特化した MCP (Model Context Protocol) サーバー。[PDF SPEC MCP Server](https://github.com/shuji-bonji/pdf-spec-mcp)  の仕様知識に基づく実装です。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/xcomet-mcp-server) : [xCOMET MCP Server](https://github.com/shuji-bonji/xcomet-mcp-server) : xCOMET（eXplainable COMET）を利用した、翻訳品質評価を AI エージェントから行えるようにした、MCP サーバーです。
+
+
+#### Developer Tools（開発支援ツール）
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) : [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
+
 
 #### 🔗 Orchestration Guide
 - [![GitHub](https://img.shields.io/badge/-_-181717?logo=github&logoColor=fff)](https://github.com/shuji-bonji/ai-agent-toolkit) : [AI Agent Toolkit](https://github.com/shuji-bonji/ai-agent-toolkit) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.com/shuji-bonji/ai-agent-toolkit)) 
