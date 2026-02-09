@@ -3,7 +3,7 @@
 
 ## MCP Server
 
-d
+
 
 ### Standards Knowledge（標準規格の知識提供）
 
