@@ -3,8 +3,6 @@
 
 ## MCP Server
 
-
-
 ### Standards Knowledge（標準規格の知識提供）
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) : [PDF SPEC MCP Server](https://github.com/shuji-bonji/pdf-spec-mcp) : ISO 32000（PDF）仕様書への構造化アクセスを提供する MCP（Model Context Protocol）サーバーです。LLM が PDF 仕様書をナビゲート・検索・分析するためのツールを提供します。
@@ -23,13 +21,14 @@
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) : [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
 
-### 🔗 Orchestration Guide
-
-- [![GitHub](https://img.shields.io/badge/-_-181717?logo=github&logoColor=fff)](https://github.com/shuji-bonji/ai-agent-toolkit) : [AI Agent Toolkit](https://github.com/shuji-bonji/ai-agent-toolkit) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.com/shuji-bonji/ai-agent-toolkit))
-
-## Skills
+## Agent Skills
 
 [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills) : W3C/IETF 仕様準拠チェック用の Cowork プラグインです。 仕様の規範的要件（MUST/SHOULD/MAY）を事前パースしたデータに基づき、 構造化された検証レポートを生成します。
+
+
+## AI Orchestration Guide
+
+- [![GitHub](https://img.shields.io/badge/-_-181717?logo=github&logoColor=fff)](https://github.com/shuji-bonji/ai-agent-toolkit) : [AI Agent Toolkit](https://github.com/shuji-bonji/ai-agent-toolkit) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.com/shuji-bonji/ai-agent-toolkit))
 
 ## Web アプリ
 
