@@ -106,7 +106,13 @@
 ![DeepL MCP](https://img.shields.io/badge/-DeepL_MCP_Server-0F2B46?logo=deepl&logoColor=fff)
 ![GitHub Copilot](https://img.shields.io/badge/-GitHub_Copilot-181717?logo=githubcopilot&logoColor=fff)
 
+### 課題：「AIに何をさせられるか」の設計力を磨く
+- LLMの内部動作の概念理解 — トークン、アテンション、プロンプトがなぜ効くのかの直感
+- エージェントデザインパターンの体系的知識 — ReAct、Chain-of-Thought、Tree-of-Thoughtなどの「名前と使い分け」
+- マルチエージェント協調のプロトコル層 — MCP、A2A、ACPの違いと棲み分け（これはもう追っている）
+
 <!--
+
 ## Github Stats
 
 <div align="center">
