@@ -54,7 +54,7 @@
 
 ## 📚 学習ノート & テンプレート
 
-- [ソフトウェア・システム・サービスに関わる管理視点](https://github.com/shuji-bonji/Management-of-software-systems-and-services) : ソフトウェア・システム・サービスの管理を 9つの視点 から包括的に整理したナレッジベース
+- [ソフトウェア・システム・サービスに関わる管理視点](https://github.com/shuji-bonji/Management-of-software-systems-and-services) : ソフトウェア・システム・サービスの管理を 9つの視点 から包括的に整理したナレッジベース。AIを活用領域は、この中のほんの一部でしか過ぎない。また、これらを整理していくことで、今後のAI駆動開発において何を補っていくべきか？の指標にもなると思う。
 - [簿記についてのノート](https://github.com/shuji-bonji/Note-on-bookkeeping) : 個人事業主として簿記を体系的に学び、実務に役立つ知識を蓄積するためのノートです。 Github 上で順番に読み進められるよう、学習マップを用意しました。
 - [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps) : 電子署名及び電子契約サービスの開発業務に携わり、この時の最低限必要な業務知識をそれぞれのメモをここにまとめてみました
 - [PWA ノート](https://github.com/shuji-bonji/Notes-on-PWA)
