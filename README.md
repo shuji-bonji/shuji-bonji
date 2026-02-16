@@ -28,7 +28,7 @@
 
 ## AI Orchestration Guide
 
-- [🌐](https://shuji-bonji.github.io/ai-agent-toolkit/) : [AI Agent Architecture](https://github.com/shuji-bonji/ai-agent-architecture) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ)
+- [🌐](https://shuji-bonji.github.io/ai-agent-architecture/) : [AI Agent Architecture](https://github.com/shuji-bonji/ai-agent-architecture) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ)
 
 ## Web アプリ
 
