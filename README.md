@@ -7,6 +7,7 @@
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) : [PDF SPEC MCP Server](https://github.com/shuji-bonji/pdf-spec-mcp) : ISO 32000（PDF）仕様書への構造化アクセスを提供する MCP（Model Context Protocol）サーバーです。LLM が PDF 仕様書をナビゲート・検索・分析するためのツールを提供します。
   - → 実装: [PDF Reader MCP Server](https://github.com/shuji-bonji/pdf-reader-mcp) — 仕様に基づくPDF内部構造解析
+- [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) : [Web Compat MCP Server](https://github.com/shuji-bonji/web-compat-mcp) : Web Platform 全体のブラウザ互換性データを提供する MCP サーバーです。「この機能、本当にブラウザで動くの？」 という質問に答えます。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) : [W3C MCP Server](https://github.com/shuji-bonji/w3c-mcp) : W3C/WHATWG/IETF の Web 仕様にアクセスするための MCP Server です。
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) : [RFCXML MCP Server](https://github.com/shuji-bonji/rfcxml-mcp) : RFC 文書を AIが構造的に理解 するための MCP サーバー
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) : [IFC Core MCP Server](https://github.com/shuji-bonji/ifc-core-mcp) : IFC4.3 仕様リファレンス MCP サーバー — IFC エンティティ定義・属性・継承関係・PropertySet を検索・参照するための MCP サーバーです。
