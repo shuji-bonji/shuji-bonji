@@ -28,7 +28,7 @@
 
 ## AI Orchestration Guide
 
-- [![GitHub](https://img.shields.io/badge/-_-181717?logo=github&logoColor=fff)](https://github.com/shuji-bonji/ai-agent-toolkit) : [AI Agent Toolkit](https://github.com/shuji-bonji/ai-agent-toolkit) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.com/shuji-bonji/ai-agent-toolkit))
+- [🌐](https://shuji-bonji.github.io/ai-agent-toolkit/) : [AI Agent Architecture](https://github.com/shuji-bonji/ai-agent-architecture) : AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ)
 
 ## Web アプリ
 
