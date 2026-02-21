@@ -26,6 +26,7 @@
 
 - [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills) : W3C/IETF 仕様準拠チェック用の Cowork プラグインです。 仕様の規範的要件（MUST/SHOULD/MAY）を事前パースしたデータに基づき、 構造化された検証レポートを生成します。
 - [code-review-skill](https://github.com/shuji-bonji/code-review-skill) : TypeScript / MCP Server プロジェクトを中心としたコードレビューを用のスキル
+- [deepl-glossary-translation](https://github.com/shuji-bonji/deepl-glossary-translation) : pdf-spec-mcp と DeepL MCP Server を連携させ、PDF仕様書（ISO 32000-2）を用語統一された日本語に翻訳するSkill
 
 
 ## AI Orchestration Guide
