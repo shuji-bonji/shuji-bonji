@@ -22,6 +22,9 @@
 
 - [![npm](https://img.shields.io/badge/-_-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) : [RxJS MCP Server](https://github.com/shuji-bonji/rxjs-mcp-server) : Claude などの AI アシスタント向け RxJS デバッグツールキット - ストリームの実行、マーブル図の生成、メモリリークの検出ができます。
 
+### Application Integration（業務アプリ連携）
+- [e-shiwake-ai](https://github.com/shuji-bonji/e-shiwake-ai) : e-shiwake PWA の AI 統合レイヤー。仕訳入力・帳簿生成を自然言語で操作
+
 ## Agent Skills
 
 - [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills) : W3C/IETF 仕様準拠チェック用の Cowork プラグインです。 仕様の規範的要件（MUST/SHOULD/MAY）を事前パースしたデータに基づき、 構造化された検証レポートを生成します。
