@@ -33,8 +33,7 @@ Structured access to specification documents and developer tools for LLMs.
 | **epsg-mcp** | Query EPSG coordinate reference systems | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp) |
 | **ifc-core-mcp** | IFC 4.3 (BIM) schema & entity search | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
 
-### Quality & Analysis Tools（品質評価・分析ツール）
-Tools & Utilities
+### Quality & Analysis Tools
 
 | MCP Server | Description | Links |
 |---|---|---|
