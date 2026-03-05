@@ -80,6 +80,7 @@ Translation workflow with glossary-enabled consistency.
 <details>
 <summary>📓 その他のノート・テンプレート</summary>
 
+- [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
 - [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
 - [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA)
 - [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
