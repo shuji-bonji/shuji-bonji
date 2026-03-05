@@ -2,13 +2,13 @@
 
 **Building an AI agent tool ecosystem — MCP servers, agent skills, and orchestration architecture.**
 
-TypeScript / Node.js developer focused on creating structured tools that give AI agents access to authoritative specification documents and developer workflows.
+TypeScript developer — Angular/RxJS frontend engineer & AI agent tooling builder.
 
 > TypeScript / Node.js 開発者。AI エージェントが信頼できる仕様ドキュメントや開発者ワークフローにアクセスできるようにする構造化ツールの作成に重点を置いています。
 
 ## 🏗️ AI Orchestration Guide
 
-Architecture documentation for MCP, Skills, and Agent integration — including design patterns, roadmaps, and composition strategies.
+Architecture guide for building reliable AI agent systems with MCP + Skills + orchestration patterns — including design patterns, roadmaps, and composition strategies.
 
 > AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.
 
@@ -60,7 +60,7 @@ Translation workflow with glossary-enabled consistency.
 
 | Project | Description | Links |
 |---|---|---|
-| **e-shiwake**| フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [[📱 App](https://shuji-bonji.github.io/e-shiwake/) · [Github](https://github.com/shuji-bonji/e-shiwake)　|
+| **e-shiwake**| フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [Github](https://github.com/shuji-bonji/e-shiwake)　|
 | **e-shiwake-ai** | AIエージェントをフロントエンドとして利用した、e-shiwake |　 [Github](https://github.com/shuji-bonji/e-shiwake-ai)　|
 | **fact-checklist** | 事実確認チェックシート — 情報の信頼性を評価するPWAアプリ | [📱 App](https://fact-checklist.vercel.app/) · [GitHub](https://github.com/shuji-bonji/fact-checklist) |
 | **websocket-practical-guide** | WebSocket 実践ガイド — リアルタイムWebアプリ実践PWA | [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
@@ -98,7 +98,7 @@ Translation workflow with glossary-enabled consistency.
 [![TypeScript](https://img.shields.io/badge/-TypeScript-3178c6?logo=typescript&logoColor=fff)](https://www.typescriptlang.org/)
 [![Angular](https://img.shields.io/badge/-Angular-DD0031?logo=angular&logoColor=white)](https://angular.dev/)
 [![RxJS](https://img.shields.io/badge/-RxJS-B7178C?logo=reactivex&logoColor=fff)](https://rxjs.dev/)
-[![Svelte](https://img.shields.io/badge/-Svelte-orange?logo=svelte&logoColor=fff)](https://svelte.dev/)
+[![Svelte](https://img.shields.io/badge/-Svelte-FF3E00?logo=svelte&logoColor=fff)](https://svelte.dev/)
 [![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=fff)](https://nodejs.org/)
 [![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=fff)](https://www.docker.com/)
 
