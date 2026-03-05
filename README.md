@@ -4,10 +4,13 @@
 
 TypeScript / Node.js developer focused on creating structured tools that give AI agents access to authoritative specification documents and developer workflows.
 
+> TypeScript / Node.js 開発者。AI エージェントが信頼できる仕様ドキュメントや開発者ワークフローにアクセスできるようにする構造化ツールの作成に重点を置いています。
 
 ## 🏗️ AI Orchestration Guide
 
 Architecture documentation for MCP, Skills, and Agent integration — including design patterns, roadmaps, and composition strategies.
+
+> AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.
 
 | | Links |
 |---|---|
@@ -28,15 +31,21 @@ Structured access to specification documents and developer tools for LLMs.
 | **rfcxml-mcp** | Navigate IETF RFC specifications | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp) |
 | **w3c-mcp** | Access W3C/WHATWG web standards | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp) |
 | **epsg-mcp** | Query EPSG coordinate reference systems | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp) |
-| **ifc-core-mcp** | IFC 4.3 (BIM) schema & entity search | [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
+| **ifc-core-mcp** | IFC 4.3 (BIM) schema & entity search | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
 
-### Tools & Utilities
+### Quality & Analysis Tools（品質評価・分析ツール）
+Tools & Utilities
 
 | MCP Server | Description | Links |
 |---|---|---|
 | **pdf-reader-mcp** | Structure-aware PDF reading with semantic parsing | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
-| **rxjs-mcp-server** | Execute, debug, and visualize RxJS streams | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
 | **xcomet-mcp-server** | Translation quality evaluation with xCOMET | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
+
+### Developer Tools & Utilities
+
+| MCP Server | Description | Links |
+|---|---|---|
+| **rxjs-mcp-server** | Execute, debug, and visualize RxJS streams | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
 
 
 ## 📋 Agent Skills
@@ -46,7 +55,7 @@ Translation workflow with glossary-enabled consistency.
 | Skill | Description | Links |
 |---|---|---|
 | **deepl-glossary-translation** | PDF spec translation workflow (DeepL + glossary) | [GitHub](https://github.com/shuji-bonji/deepl-glossary-translation) |
-
+| **spec-compliance-skills** | A Cowork plugin for W3C/IETF specification compliance checking.| [Github](https://github.com/shuji-bonji/spec-compliance-skills/) |
 
 ## 🌐 Web Apps & Tools
 
