@@ -60,6 +60,8 @@ Translation workflow with glossary-enabled consistency.
 
 | Project | Description | Links |
 |---|---|---|
+| **e-shiwake**| フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [[📱 App](https://shuji-bonji.github.io/e-shiwake/) · [Github](https://github.com/shuji-bonji/e-shiwake)　|
+| **e-shiwake-ai** | AIエージェントをフロントエンドとして利用した、e-shiwake |　 [Github](https://github.com/shuji-bonji/e-shiwake-ai)　|
 | **fact-checklist** | 事実確認チェックシート — 情報の信頼性を評価するPWAアプリ | [📱 App](https://fact-checklist.vercel.app/) · [GitHub](https://github.com/shuji-bonji/fact-checklist) |
 | **websocket-practical-guide** | WebSocket 実践ガイド — リアルタイムWebアプリ実践PWA | [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
 | **marble-to-svg** | RxJS マーブル記法 → SVG 変換ツール | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg) |
