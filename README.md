@@ -18,11 +18,13 @@ Architecture guide for building reliable AI agent systems with MCP + Skills + or
 
 > Includes: [MCP Roadmap](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/mcp-roadmap) · [Skill Roadmap](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/skill-roadmap) · [Composition Patterns](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/composition-patterns)
 
+<!--
 > [!NOTE]
 > ソフトウェア開発においてのAI利用方法は、それぞれシステムに関わる立場や視点によって異なってきます。
 > まずは、既存のソフトウェアへの人の関与に関する、9つの視点を割り出してます。
 > これにどのようにAIが関与していけば良いか？単純に当てはまるのではく、まるっきり変わってくることも含めて、確認して行こうと思います。
 > - [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
+-->
 
 ## 🔧 MCP Servers
 
