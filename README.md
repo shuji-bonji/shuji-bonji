@@ -6,18 +6,20 @@ TypeScript developer — Angular/RxJS frontend engineer & AI agent tooling build
 
 > TypeScript / Node.js 開発者。AI エージェントが信頼できる仕様ドキュメントや開発者ワークフローにアクセスできるようにする構造化ツールの作成に重点を置いています。
 
-## 🏗️ AI Orchestration Guide
+## 🏗️ AI-Assisted Development Guide
 
-Architecture guide for building reliable AI agent systems with MCP + Skills + orchestration patterns — including design patterns, roadmaps, and composition strategies.
+「LLM を知る → エージェント設計を知る → 実務に適用する」の 3 フェーズで構成された学習パス。
 
-> AIエージェント構成（MCP・Skills・Agent統合）に関する設計思想・アーキテクチャ・実践ノウハウをまとめたリポジトリ.
+> LLM の構造的制約の理解から始め、AI エージェントの設計原則、
+> そしてソフトウェア開発ライフサイクルへの AI 適用までを体系的にカバー。
 
-| | Links |
-|---|---|
-| **ai-agent-architecture** | [📖 Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture) |
+| Phase | Project | Description | Links |
+| :---: | :--- | :--- | :--- |
+| 1 | **understanding-llm-through-claude-code** | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ | [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
+| 2 | **ai-agent-architecture** | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ | [📖 Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture) |
+| 3 | **Management-of-software-systems-and-services** | ソフトウェアシステム・サービスへの AI 適用 | [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) |
 
 > Includes: [MCP Roadmap](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/mcp-roadmap) · [Skill Roadmap](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/skill-roadmap) · [Composition Patterns](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/composition-patterns)
-
 <!--
 > [!NOTE]
 > ソフトウェア開発におけるAI活用は、関わる立場・役割によって大きく異なります。
