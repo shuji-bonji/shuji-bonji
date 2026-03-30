@@ -19,7 +19,6 @@ TypeScript developer — Angular/RxJS frontend engineer & AI agent tooling build
 | 2 | **ai-agent-architecture** | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture) |
 | 3 | **Management-of-software-systems-and-services** | ソフトウェアシステム・サービスへの AI 適用 | [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) |
 
-> Includes: [MCP Roadmap](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/mcp-roadmap) · [Skill Roadmap](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/skill-roadmap) · [Composition Patterns](https://shuji-bonji.github.io/ai-agent-architecture/ja/strategy/composition-patterns)
 <!--
 > [!NOTE]
 > ソフトウェア開発におけるAI活用は、関わる立場・役割によって大きく異なります。
