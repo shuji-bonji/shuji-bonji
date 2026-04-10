@@ -15,7 +15,7 @@ TypeScript developer — Angular/RxJS frontend engineer & AI agent tooling build
 
 | Phase | Project | Description | Links |
 | :---: | :--- | :--- | :--- |
-| 1 | **understanding-llm-through-claude-code** | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ | [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
+| 1 | **understanding-llm-through-claude-code** | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ | [Site](http://localhost:4173/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
 | 2 | **ai-agent-architecture** | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture) |
 | 3 | **Management-of-software-systems-and-services** | ソフトウェアシステム・サービスへの AI 適用 | [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) |
 
