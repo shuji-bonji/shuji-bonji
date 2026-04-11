@@ -63,6 +63,8 @@ Translation workflow with glossary-enabled consistency.
 |---|---|---|
 | **deepl-glossary-translation** | PDF spec translation workflow (DeepL + glossary) | [GitHub](https://github.com/shuji-bonji/deepl-glossary-translation) |
 | **spec-compliance-skills** | A Cowork plugin for W3C/IETF specification compliance checking.| [Github](https://github.com/shuji-bonji/spec-compliance-skills/) |
+| **factcheck-skill** |LLM skills to verify the veracity of specific claims and information that have been disseminated.| [Github](https://github.com/shuji-bonji/factcheck-skill) |
+| **media-literacycheck-skill** |LLM skills for detecting misinformation, manipulation, and bias.| [Github](https://github.com/shuji-bonji/media-literacycheck-skill) |
 
 ## 🌐 Web Apps & Tools
 
