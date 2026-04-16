@@ -38,6 +38,7 @@ Structured access to specification documents and developer tools for LLMs.
 | **pdf-spec-mcp** | Query ISO 32000 (PDF) spec — 8 tools, 17 docs, version comparison | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp) |
 | **rfcxml-mcp** | Navigate IETF RFC specifications | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp) |
 | **w3c-mcp** | Access W3C/WHATWG web standards | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp) |
+| **web-compat-mcp** | Browser compatibility data — MDN BCD (15K+ features) & W3C Baseline status | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
 | **epsg-mcp** | Query EPSG coordinate reference systems | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp) |
 | **ifc-core-mcp** | IFC 4.3 (BIM) schema & entity search | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
 
