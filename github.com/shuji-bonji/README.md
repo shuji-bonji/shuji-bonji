@@ -44,11 +44,10 @@ Structured access to specification documents and developer tools for LLMs.
 
 ### Laws & Regulations — houki-hub MCP family 🇯🇵
 
-日本の法令（法律・政令・省令・通達・Q&A 等）を階層構造のまま LLM から扱うための MCP family。共有辞書層に [`houki-abbreviations`](https://github.com/shuji-bonji/houki-abbreviations) を置き、各 MCP は機械的な fetch + parse に専念する設計。
+日本の法令（法律・政令・省令・通達・Q&A 等）を階層構造のまま LLM から扱うための MCP family。共有辞書層に [`@shuji-bonji/houki-abbreviations`](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) を置き、各 MCP は機械的な fetch + parse に専念する設計。
 
-| Package | Description | Links |
+| MCP Server | Description | Links |
 |---|---|---|
-| **houki-abbreviations** | 法令略称・通称の共有辞書（共有ライブラリ／174 エントリ・6 分野） | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
 | **houki-egov-mcp** | e-Gov 法令API v2 経由で憲法・法律・政令・省令・規則の本文／目次／改正履歴を取得 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-egov-mcp) · [GitHub](https://github.com/shuji-bonji/houki-egov-mcp) |
 | **houki-nta-mcp** | 国税庁の基本通達・改正通達・事務運営指針・文書回答事例・Q&A・タックスアンサーを SQLite + FTS5 で全文検索 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-nta-mcp) · [GitHub](https://github.com/shuji-bonji/houki-nta-mcp) |
 
@@ -63,7 +62,16 @@ Structured access to specification documents and developer tools for LLMs.
 
 | MCP Server | Description | Links |
 |---|---|---|
-| **rxjs-mcp-server** | Execute, debug, and visualize RxJS streams | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
+| **rxjs-mcp** | Execute, debug, and visualize RxJS streams | [npm](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
+
+
+## 📚 Shared Libraries
+
+MCP family が共通で参照するライブラリ層。各 MCP に同じデータを持たせない設計。
+
+| Package | Description | Links |
+|---|---|---|
+| **houki-abbreviations** | 日本の法令略称・通称の共有辞書（174 エントリ・6 分野）。houki-hub MCP family が共通で利用 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
 
 
 ## 📋 Agent Skills
