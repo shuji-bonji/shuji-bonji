@@ -42,18 +42,36 @@ Structured access to specification documents and developer tools for LLMs.
 | **epsg-mcp** | Query EPSG coordinate reference systems | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp) |
 | **ifc-core-mcp** | IFC 4.3 (BIM) schema & entity search | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
 
+### Laws & Regulations — houki-hub MCP family 🇯🇵
+
+日本の法令（法律・政令・省令・通達・Q&A 等）を階層構造のまま LLM から扱うための MCP family。共有辞書層に [`@shuji-bonji/houki-abbreviations`](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) を置き、各 MCP は機械的な fetch + parse に専念する設計。
+
+| MCP Server | Description | Links |
+|---|---|---|
+| **houki-egov-mcp** | e-Gov 法令API v2 経由で憲法・法律・政令・省令・規則の本文／目次／改正履歴を取得 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-egov-mcp) · [GitHub](https://github.com/shuji-bonji/houki-egov-mcp) |
+| **houki-nta-mcp** | 国税庁の基本通達・改正通達・事務運営指針・文書回答事例・Q&A・タックスアンサーを SQLite + FTS5 で全文検索 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-nta-mcp) · [GitHub](https://github.com/shuji-bonji/houki-nta-mcp) |
+
 ### Quality & Analysis Tools
 
 | MCP Server | Description | Links |
 |---|---|---|
-| **pdf-reader-mcp** | Structure-aware PDF reading with semantic parsing | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
+| **pdf-reader-mcp** | Structure-aware PDF reading with semantic parsing（houki-nta-mcp の改正通達 PDF 抽出にも利用） | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
 | **xcomet-mcp-server** | Translation quality evaluation with xCOMET | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
 
 ### Developer Tools & Utilities
 
 | MCP Server | Description | Links |
 |---|---|---|
-| **rxjs-mcp-server** | Execute, debug, and visualize RxJS streams | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
+| **rxjs-mcp** | Execute, debug, and visualize RxJS streams | [npm](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
+
+
+## 📚 Shared Libraries
+
+MCP family が共通で参照するライブラリ層。各 MCP に同じデータを持たせない設計。
+
+| Package | Description | Links |
+|---|---|---|
+| **houki-abbreviations** | 日本の法令略称・通称の共有辞書（174 エントリ・6 分野）。houki-hub MCP family が共通で利用 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
 
 
 ## 📋 Agent Skills
@@ -66,6 +84,7 @@ Translation workflow with glossary-enabled consistency.
 | **spec-compliance-skills** | A Cowork plugin for W3C/IETF specification compliance checking.| [Github](https://github.com/shuji-bonji/spec-compliance-skills/) |
 | **factcheck-skill** |LLM skills to verify the veracity of specific claims and information that have been disseminated.| [Github](https://github.com/shuji-bonji/factcheck-skill) |
 | **media-literacycheck-skill** |LLM skills for detecting misinformation, manipulation, and bias.| [Github](https://github.com/shuji-bonji/media-literacycheck-skill) |
+| **houki-research-skill** | houki-hub MCP family を横断する法令リサーチのオーケストレーション Skill（法律→政令→省令→通達→PDF→判例の参照順序・業法独占への配慮を内蔵） | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
 
 ## 🌐 Web Apps & Tools
 
