@@ -142,33 +142,6 @@ Each family member ships as a one-set bundle: an MCP server, a TypeScript librar
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **houki-abbreviations** | Shared dictionary of Japanese statute abbreviations and common names (174 entries across 6 domains). Used across the houki-hub MCP family. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
 
-### Ecosystem overview
-
-```mermaid
-graph TB
-    subgraph "houki-hub family"
-        direction TB
-        Lib["📦 npm Library<br/>(types & API client)"]
-        MCP["🔌 MCP Server<br/>(AI agent integration)"]
-        Skill["🧩 Claude Skill<br/>(domain workflows)"]
-        Docs["📖 Doc Site<br/>(spec & usage guide)"]
-    end
-
-    Source[("External APIs / Official sources<br/>e-Gov / NTA / MHLW, etc.")] --> Lib
-    Lib --> MCP
-    Lib --> Skill
-    MCP --> AI(("🤖 Claude /<br/>AI Agent"))
-    Skill --> AI
-    Docs -.references.-> Lib
-    Docs -.references.-> MCP
-    Docs -.references.-> Skill
-
-    classDef source fill:#fef3c7,stroke:#f59e0b,color:#92400e
-    classDef ai fill:#dbeafe,stroke:#3b82f6,color:#1e40af
-    class Source source
-    class AI ai
-```
-
 ## 📬 Contact
 
 [![GitHub](https://img.shields.io/badge/GitHub-shuji--bonji-181717?style=flat&logo=github&logoColor=white)](https://github.com/shuji-bonji)
