@@ -27,7 +27,7 @@
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 
-## 🌐 Web Apps & Tools
+## 📱 Web Apps & Tools
 
 Practical tools and personal products.
 
@@ -96,6 +96,32 @@ A collection of workflows and notes for collaborating with AI agents (Claude / C
 > and looking at how AI can plug in — not as a drop-in replacement, but possibly as something that reshapes the picture entirely.
 > - [Software Systems & Services Management](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
 -->
+
+## 📦 Claude Plugins (Marketplace)
+
+A marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions from Claude Code or Cowork via `/plugin install`. Same form factor as Anthropic's official marketplace ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)).
+
+| Marketplace                    | Description                                                                                                                       | Links                                                   |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **shuji-bonji/claude-plugins** | Catalog of shuji-bonji plugins (5 categories: houki / web-spec / quality-tools / domain-specific / dev-meta)                      | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
+
+### Install
+
+```bash
+# Claude Code
+/plugin marketplace add shuji-bonji/claude-plugins
+/plugin install houki-research@shuji-bonji
+```
+
+For Cowork mode, add `https://github.com/shuji-bonji/claude-plugins` as a marketplace under Settings → Plugins.
+
+### Available plugins
+
+| Plugin             | Category | Status    | Links                                                         |
+| ------------------ | -------- | --------- | ------------------------------------------------------------- |
+| **houki-research** | houki    | ✅ v0.1.0 | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
+
+See the [marketplace README](https://github.com/shuji-bonji/claude-plugins#収録予定-plugin-計画中) for the list of 19 planned plugins (🚧 in progress).
 
 ## 🔌 MCP Servers
 

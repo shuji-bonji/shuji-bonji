@@ -27,7 +27,7 @@
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 
-## 🌐 Web Apps & Tools
+## 📱 Web Apps & Tools
 
 実用ツール・自作プロダクト群
 
@@ -95,6 +95,32 @@ AI エージェント（Claude / Claude Code / GitHub Copilot 等）と協働し
 > これにどのようにAIが関与していけば良いか？単純に当てはまるのではく、まるっきり変わってくることも含めて、確認して行こうと思います。
 > - [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
 -->
+
+## 📦 Claude Plugins (Marketplace)
+
+自作の MCP / Skill / Slash Command / Sub-agent を Claude Code・Cowork から `/plugin install` で導入できる marketplace。Anthropic 公式 ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)) と同じ form factor。
+
+| Marketplace                    | 説明                                                                                                          | リンク                                                  |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **shuji-bonji/claude-plugins** | shuji-bonji 製 plugin の catalog（houki / web-spec / quality-tools / domain-specific / dev-meta の5カテゴリ） | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
+
+### インストール
+
+```bash
+# Claude Code
+/plugin marketplace add shuji-bonji/claude-plugins
+/plugin install houki-research@shuji-bonji
+```
+
+Cowork mode の場合、Settings → Plugins に `https://github.com/shuji-bonji/claude-plugins` を marketplace として追加。
+
+### 収録 plugin
+
+| Plugin             | カテゴリ | 状態      | リンク                                                        |
+| ------------------ | -------- | --------- | ------------------------------------------------------------- |
+| **houki-research** | houki    | ✅ v0.1.0 | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
+
+収録予定 plugin（19件、🚧 計画中）の一覧は [marketplace の README](https://github.com/shuji-bonji/claude-plugins#収録予定-plugin-計画中) を参照してください。
 
 ## 🔌 MCP Servers
 
