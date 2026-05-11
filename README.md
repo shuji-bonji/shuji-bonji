@@ -27,53 +27,6 @@
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 
-## 📱 Web Apps & Tools
-
-実用ツール・自作プロダクト群
-
-| プロジェクト                  | 説明                                                      | リンク                                                                                                                                  |
-| ----------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **e-shiwake**                 | フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                 |
-| **e-shiwake-ai**              | AIエージェントをフロントエンドとして利用した、e-shiwake   | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                   |
-| **fact-checklist**            | 事実確認チェックシート — 情報の信頼性を評価するPWAアプリ  | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                   |
-| **websocket-practical-guide** | WebSocket 実践ガイド — リアルタイムWebアプリ実践PWA       | [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
-| **marble-to-svg**             | RxJS マーブル記法 → SVG 変換ツール                        | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                        |
-| **WebAPI Test Tool**          | Step CI を利用した WebAPI テスト実行ツール                | [GitHub](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                |
-
-## 📖 Learning Sites & Notes
-
-学習中・整備中のドキュメントサイト／公開ノート
-| サイト | リンク |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| TypeScriptで学ぶ Svelte 5 / SvelteKit | [📖 Site](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript) |
-| TypeScript で RxJS | [📖 Site](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/RxJS-with-TypeScript) |
-| TypeScript で Web Components | [📖 Site](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/WebComponents-with-TypeScript) |
-| TypeScriptで学ぶ SOLID設計原則 | [📖 Site](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) · [GitHub](https://github.com/shuji-bonji/Notes-on-SOLID-Principle) |
-| TypeScript で テスト駆動開発(TDD) | [📖 Site](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) · [GitHub](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development) |
-| 状況認識と意思決定 | [📖 Site](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) · [GitHub](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) |
-
-<details>
-<summary>📓 その他のノート・テンプレート</summary>
-
-- [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
-- [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
-- [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA)
-- [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
-- [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
-- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)
-- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)
-
-</details>
-
-## 🏠 記念碑
-
-<details>
-<summary>僕のプログラミングの原点</summary>
-
-[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) — 2021年、JavaScriptを学び初めて作ったWebアプリ。ソースは今見るととても恥ずかしいですが、ここが僕にとってスタート地点です。
-
-</details>
-
 ## 🤖 AI-Assisted Development Guide
 
 AI エージェント（Claude / Claude Code / GitHub Copilot 等）と協働して開発を進めるためのワークフロー・ノウハウをまとめています。
@@ -130,7 +83,7 @@ AI エージェント（Claude 等）から外部仕様・データを扱える�
 | --------------------- | ------------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | **rfcxml-mcp**        | 標準・仕様   | IETF RFC（XML2RFC v3）の構造解析・要件抽出       | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
 | **pdf-spec-mcp**      | 標準・仕様   | PDF 仕様（ISO 32000 系）の構造化参照             | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **w3c-mcp**           | 標準・仕様   | W3C / WHATWG Web 標準（HTML / CSS / WebIDL 等）  | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
+| **w3c-mcp**           | 標準・仕様   | W3C / WHATWG Web 標準(HTML / CSS / WebIDL 等)    | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
 | **web-compat-mcp**    | 標準・仕様   | Web 互換性（Baseline / BCD）チェック             | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
 | **pdf-reader-mcp**    | ファイル処理 | PDF テキスト・表・署名・タグ抽出                 | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
 | **epsg-mcp**          | 地理空間     | EPSG 測地系（CRS）検索・変換推奨                 | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)             |
@@ -166,6 +119,54 @@ MCP サーバ、TypeScript ライブラリ、Claude Skill、ドキュメント�
 | パッケージ              | 説明                                                                                      | リンク                                                                                                                               |
 | ----------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **houki-abbreviations** | 日本の法令略称・通称の共有辞書（174 エントリ・6 分野）。houki-hub MCP family が共通で利用 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
+
+## 📱 Web Apps & Tools
+
+実用ツール・自作プロダクト群
+
+| プロジェクト                  | 説明                                                      | リンク                                                                                                                                           |
+| ----------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **e-shiwake**                 | フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                          |
+| **e-shiwake-ai**              | AIエージェントをフロントエンドとして利用した、e-shiwake   | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                            |
+| **fact-checklist**            | 事実確認チェックシート — 情報の信頼性を評価するPWAアプリ  | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                            |
+| **websocket-practical-guide** | WebSocket 実践ガイド — リアルタイムWebアプリ実践PWA       | 工事中🏗️ [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
+| **marble-to-svg**             | RxJS マーブル記法 → SVG 変換ツール                        | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                                 |
+| **WebAPI Test Tool**          | Step CI を利用した WebAPI テスト実行ツール                | [GitHub](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                         |
+
+## 📖 Learning Sites & Notes
+
+学習中・整備中のドキュメントサイト／公開ノート
+
+| サイト                                | リンク                                                                                                                                                                   |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| TypeScriptで学ぶ Svelte 5 / SvelteKit | [📖 Site](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)           |
+| TypeScript で RxJS                    | [📖 Site](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/RxJS-with-TypeScript)                                           |
+| TypeScript で Web Components          | [📖 Site](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/WebComponents-with-TypeScript)                         |
+| TypeScriptで学ぶ SOLID設計原則        | [📖 Site](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) · [GitHub](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)                                   |
+| TypeScript で テスト駆動開発(TDD)     | [📖 Site](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) · [GitHub](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)                   |
+| 状況認識と意思決定                    | [📖 Site](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) · [GitHub](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) |
+
+<details>
+<summary>📓 その他のノート・テンプレート</summary>
+
+- [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
+- [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
+- [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA)
+- [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
+- [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
+- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)
+- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)
+
+</details>
+
+## 🏠 記念碑
+
+<details>
+<summary>僕のプログラミングの原点</summary>
+
+[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) — 2021年、JavaScriptを学び初めて作ったWebアプリ。ソースは今見るととても恥ずかしいですが、ここが僕にとってスタート地点です。
+
+</details>
 
 ## 📬 Contact
 

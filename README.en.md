@@ -27,54 +27,6 @@
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 
-## 📱 Web Apps & Tools
-
-Practical tools and personal products.
-
-| Project                       | Description                                                                | Links                                                                                                                                   |
-| ----------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **e-shiwake**                 | Bookkeeping + receipt management PWA for freelancers and sole proprietors. | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                 |
-| **e-shiwake-ai**              | An AI-agent-fronted variant of e-shiwake.                                  | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                   |
-| **fact-checklist**            | Fact-check worksheet — a PWA for evaluating information reliability.       | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                   |
-| **websocket-practical-guide** | WebSocket Practical Guide — a hands-on PWA for real-time web apps.         | [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
-| **marble-to-svg**             | Convert RxJS marble notation into SVG diagrams.                            | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                        |
-| **WebAPI Test Tool**          | WebAPI test runner powered by Step CI.                                     | [GitHub](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                |
-
-## 📖 Learning Sites & Notes
-
-Documentation sites and public notes — many under active development.
-
-| Site                                          | Links                                                                                                                                                                    |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Svelte 5 / SvelteKit with TypeScript          | [📖 Site](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)           |
-| RxJS with TypeScript                          | [📖 Site](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/RxJS-with-TypeScript)                                           |
-| Web Components with TypeScript                | [📖 Site](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/WebComponents-with-TypeScript)                         |
-| SOLID Design Principles with TypeScript       | [📖 Site](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) · [GitHub](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)                                   |
-| Test-Driven Development (TDD) with TypeScript | [📖 Site](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) · [GitHub](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)                   |
-| Situational Awareness and Decision Making     | [📖 Site](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) · [GitHub](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) |
-
-<details>
-<summary>📓 Other notes & templates</summary>
-
-- [Software Systems & Services Management](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
-- [Notes about Digital Signatures and Timestamps](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
-- [Notes on PWA](https://github.com/shuji-bonji/Notes-on-PWA)
-- [Notes about Design Patterns](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
-- [Real-World Automation Challenges](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
-- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)
-- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)
-
-</details>
-
-## 🏠 Monuments
-
-<details>
-<summary>The origin of my programming journey</summary>
-
-[Resume editor](https://github.com/shuji-bonji/resume_editting) — built in 2021 as my very first web app while learning JavaScript. The source is genuinely embarrassing to look at now, but this is where it all started for me.
-
-</details>
-
 ## 🤖 AI-Assisted Development Guide
 
 A collection of workflows and notes for collaborating with AI agents (Claude / Claude Code / GitHub Copilot, etc.) during development.
@@ -101,9 +53,9 @@ A collection of workflows and notes for collaborating with AI agents (Claude / C
 
 A marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions from Claude Code or Cowork via `/plugin install`. Same form factor as Anthropic's official marketplace ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)).
 
-| Marketplace                    | Description                                                                                                                       | Links                                                   |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **shuji-bonji/claude-plugins** | Catalog of shuji-bonji plugins (5 categories: houki / web-spec / quality-tools / domain-specific / dev-meta)                      | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
+| Marketplace                    | Description                                                                                                  | Links                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| **shuji-bonji/claude-plugins** | Catalog of shuji-bonji plugins (5 categories: houki / web-spec / quality-tools / domain-specific / dev-meta) | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
 
 ### Install
 
@@ -167,6 +119,54 @@ Each family member ships as a one-set bundle: an MCP server, a TypeScript librar
 | Package                 | Description                                                                                                                                | Links                                                                                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **houki-abbreviations** | Shared dictionary of Japanese statute abbreviations and common names (174 entries across 6 domains). Used across the houki-hub MCP family. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
+
+## 📱 Web Apps & Tools
+
+Practical tools and personal products.
+
+| Project                       | Description                                                                | Links                                                                                                                                                         |
+| ----------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **e-shiwake**                 | Bookkeeping + receipt management PWA for freelancers and sole proprietors. | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                                       |
+| **e-shiwake-ai**              | An AI-agent-fronted variant of e-shiwake.                                  | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                                         |
+| **fact-checklist**            | Fact-check worksheet — a PWA for evaluating information reliability.       | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                                         |
+| **websocket-practical-guide** | WebSocket Practical Guide — a hands-on PWA for real-time web apps.         | Under construction 🏗️ [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
+| **marble-to-svg**             | Convert RxJS marble notation into SVG diagrams.                            | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                                              |
+| **WebAPI Test Tool**          | WebAPI test runner powered by Step CI.                                     | [GitHub](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                                      |
+
+## 📖 Learning Sites & Notes
+
+Documentation sites and public notes — many under active development.
+
+| Site                                          | Links                                                                                                                                                                    |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Svelte 5 / SvelteKit with TypeScript          | [📖 Site](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)           |
+| RxJS with TypeScript                          | [📖 Site](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/RxJS-with-TypeScript)                                           |
+| Web Components with TypeScript                | [📖 Site](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/WebComponents-with-TypeScript)                         |
+| SOLID Design Principles with TypeScript       | [📖 Site](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) · [GitHub](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)                                   |
+| Test-Driven Development (TDD) with TypeScript | [📖 Site](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) · [GitHub](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)                   |
+| Situational Awareness and Decision Making     | [📖 Site](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) · [GitHub](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) |
+
+<details>
+<summary>📓 Other notes & templates</summary>
+
+- [Software Systems & Services Management](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
+- [Notes about Digital Signatures and Timestamps](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
+- [Notes on PWA](https://github.com/shuji-bonji/Notes-on-PWA)
+- [Notes about Design Patterns](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
+- [Real-World Automation Challenges](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
+- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)
+- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)
+
+</details>
+
+## 🏠 Monuments
+
+<details>
+<summary>The origin of my programming journey</summary>
+
+[Resume editor](https://github.com/shuji-bonji/resume_editting) — built in 2021 as my very first web app while learning JavaScript. The source is genuinely embarrassing to look at now, but this is where it all started for me.
+
+</details>
 
 ## 📬 Contact
 
