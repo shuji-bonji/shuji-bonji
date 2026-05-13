@@ -107,18 +107,18 @@ The **spec side** (IETF RFCs and W3C / WHATWG — HTML / CSS / WebIDL / PWA, etc
 > [!TIP]
 > Useful when you want AI to surface **spec × implementation** discrepancies — "the spec says MUST but the feature isn't in Baseline yet", "this RFC Updates that other RFC" — by invoking all three MCPs from the same conversation.
 
-### 🧭 Domain-specific
+### 🧰 Other MCP servers
 
-MCPs that provide structured access to specifications and datasets in specific domains.
+Standalone MCPs that don't belong to a family.
+
+**Domain-specific** — structured access to specifications and datasets in specific domains.
 
 | MCP Server       | Category           | Description                                            | Links                                                                                                                  |
 | ---------------- | ------------------ | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | **epsg-mcp**     | Geospatial         | EPSG CRS lookup and transformation suggestions         | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)         |
 | **ifc-core-mcp** | Architecture (BIM) | IFC 4.3 entities, inheritance, and PropertySet lookup  | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
 
-### 🛠 Quality / Dev tooling
-
-MCPs for quality evaluation and developer support (note: no npm scope — naming differs from the others).
+**Quality / Dev tooling** — quality evaluation and developer support (no npm scope — naming differs from the others).
 
 | MCP Server            | Category           | Description                                              | Links                                                                                                               |
 | --------------------- | ------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
