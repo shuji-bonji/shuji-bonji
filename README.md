@@ -77,19 +77,53 @@ Cowork mode の場合、Settings → Plugins に `https://github.com/shuji-bonji
 
 ## 🔌 MCP Servers
 
-AI エージェント（Claude 等）から外部仕様・データを扱えるようにする MCP サーバ群
+AI エージェント（Claude 等）から外部仕様・データを扱えるようにする MCP サーバ群。
+ドメイン横断で物語性のあるものは **family** として独立した小見出しでまとめています。
 
-| MCPサーバ             | カテゴリ     | 説明                                             | リンク                                                                                                                     |
-| --------------------- | ------------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| **rfcxml-mcp**        | 標準・仕様   | IETF RFC（XML2RFC v3）の構造解析・要件抽出       | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
-| **pdf-spec-mcp**      | 標準・仕様   | PDF 仕様（ISO 32000 系）の構造化参照             | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **w3c-mcp**           | 標準・仕様   | W3C / WHATWG Web 標準(HTML / CSS / WebIDL 等)    | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
-| **web-compat-mcp**    | 標準・仕様   | Web 互換性（Baseline / BCD）チェック             | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
-| **pdf-reader-mcp**    | ファイル処理 | PDF テキスト・表・署名・タグ抽出                 | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
-| **epsg-mcp**          | 地理空間     | EPSG 測地系（CRS）検索・変換推奨                 | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)             |
-| **ifc-core-mcp**      | 建築 (BIM)   | IFC 4.3 エンティティ・継承関係・PropertySet 参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp)     |
-| **xcomet-mcp-server** | 翻訳評価     | xCOMET による機械翻訳の品質評価・エラー検出      | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server)        |
-| **rxjs-mcp-server**   | 開発支援     | RxJS ストリームの実行・デバッグ・可視化          | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)            |
+### 📄 PDF family
+
+**PDF を「正典 × 実体」の二層で扱う MCP ファミリー**。
+ISO 32000（PDF 2.0）/ PDF 1.7 / PDF/UA / TS 32001 系などの **仕様書そのものを構造化正典として LLM に提供する層** と、PDF ファイルの **オブジェクト・xref・ストリーム・タグ構造を低レベルで解析する層** を組み合わせ、「仕様準拠を意識した PDF 解析・検証」を成立させることを狙っています。
+
+| MCPサーバ          | レイヤ           | 説明                                                                                                  | リンク                                                                                                                     |
+| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **pdf-spec-mcp**   | 仕様書層（正典） | ISO 32000 系 PDF 仕様の構造化参照。セクション取得・要件抽出（shall / must）・定義参照・バージョン比較 | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
+| **pdf-reader-mcp** | 実体層（解析）   | PDF テキスト・表・署名・タグ・フォント・メタデータの抽出と、内部構造（オブジェクト・xref 等）の検査   | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
+
+> [!TIP]
+> 多くの PDF 系 MCP が「テキストを抜く」抽出ツールに留まる中、本ファミリーは **PDF 仕様書を一次資料としてクエリ可能な状態に正典化し、実体解析と双方向に参照する** ことを目的としています。電子署名・PDF/UA 準拠・PDF/A 検証など、仕様準拠が問われるユースケース向け。
+
+### 🌐 Web Spec family
+
+**Web / Internet 標準を AI から構造化されたまま扱うための MCP ファミリー**。
+IETF（RFC）・W3C / WHATWG（HTML / CSS / WebIDL / PWA 等）の **仕様書側** と、ブラウザ実装の **互換性データ（Baseline / BCD）** を、それぞれ専用 MCP として分離し、「仕様で何が要求されているか」と「いまブラウザで何が使えるか」を同じ会話の中で照合できるようにしています。
+
+| MCPサーバ          | レイヤ               | 説明                                                                 | リンク                                                                                                                     |
+| ------------------ | -------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **rfcxml-mcp**     | IETF（仕様）         | IETF RFC（XML2RFC v3）の構造解析・要件抽出・RFC 間依存の参照         | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
+| **w3c-mcp**        | W3C / WHATWG（仕様） | W3C / WHATWG 仕様（HTML 要素・CSS プロパティ・WebIDL・PWA 等）の参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
+| **web-compat-mcp** | 実装（互換性）       | Baseline / Browser Compat Data に基づくブラウザ互換性チェック        | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
+
+> [!TIP]
+> 「仕様では MUST なのに、現実のブラウザでは Baseline 入りしていない」「この RFC は別の RFC を Update している」といった、**仕様 × 実装** の不一致を AI に検証させたいときに、3 件を同じ会話から呼び出して使うことを想定しています。
+
+### 🧭 Domain-specific
+
+特定ドメインの仕様・データセットを構造化して提供する MCP。
+
+| MCPサーバ        | カテゴリ    | 説明                                             | リンク                                                                                                                 |
+| ---------------- | ----------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| **epsg-mcp**     | 地理空間    | EPSG 測地系（CRS）検索・変換推奨                 | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)         |
+| **ifc-core-mcp** | 建築（BIM） | IFC 4.3 エンティティ・継承関係・PropertySet 参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
+
+### 🛠 Quality / Dev tooling
+
+品質評価や開発支援に使う MCP（npm スコープなし・命名揺れあり）。
+
+| MCPサーバ             | カテゴリ      | 説明                                        | リンク                                                                                                              |
+| --------------------- | ------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **xcomet-mcp-server** | 翻訳品質評価  | xCOMET による機械翻訳の品質評価・エラー検出 | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
+| **rxjs-mcp-server**   | RxJS 開発支援 | RxJS ストリームの実行・デバッグ・可視化     | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)     |
 
 ## 🧩 Claude Skills
 

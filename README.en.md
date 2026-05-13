@@ -78,18 +78,52 @@ See the [marketplace README](https://github.com/shuji-bonji/claude-plugins#収�
 ## 🔌 MCP Servers
 
 MCP servers that let AI agents (Claude, etc.) interact with external specs and data sources.
+Cross-domain groupings with a coherent story are split out as **families** under their own subheadings.
 
-| MCP Server            | Category           | Description                                                        | Links                                                                                                                      |
-| --------------------- | ------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| **rfcxml-mcp**        | Standards & Specs  | IETF RFC (XML2RFC v3) — structure parsing & requirement extraction | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
-| **pdf-spec-mcp**      | Standards & Specs  | Structured access to the PDF specification (ISO 32000 series)      | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **w3c-mcp**           | Standards & Specs  | W3C / WHATWG web standards (HTML / CSS / WebIDL, etc.)             | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
-| **web-compat-mcp**    | Standards & Specs  | Web compatibility (Baseline / BCD) checks                          | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
-| **pdf-reader-mcp**    | File processing    | Extract text, tables, signatures, and tags from PDFs               | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
-| **epsg-mcp**          | Geospatial         | EPSG CRS lookup and transformation suggestions                     | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)             |
-| **ifc-core-mcp**      | Architecture (BIM) | IFC 4.3 entities, inheritance, and PropertySet lookup              | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp)     |
-| **xcomet-mcp-server** | MT evaluation      | Machine translation quality evaluation powered by xCOMET           | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server)        |
-| **rxjs-mcp-server**   | Dev tooling        | Execute, debug, and visualize RxJS streams                         | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)            |
+### 📄 PDF family
+
+**A two-layer MCP family that treats PDF as "canon × substance"**.
+One layer **delivers the PDF specifications themselves — ISO 32000 (PDF 2.0), PDF 1.7, PDF/UA, the TS 32001 series — as a structured canonical reference for LLMs**, while the other **inspects the internals of actual PDF files at a low level (objects, xref tables, streams, tag structure)**. Combined, they enable PDF analysis and verification that is genuinely aware of spec compliance.
+
+| MCP Server         | Layer                       | Description                                                                                                                                                   | Links                                                                                                                      |
+| ------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **pdf-spec-mcp**   | Spec layer (canon)          | Structured access to the ISO 32000-series PDF specification. Section retrieval, requirement extraction (shall / must), definition lookup, version comparison. | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
+| **pdf-reader-mcp** | Substance layer (parsing)   | Extract text, tables, signatures, tags, fonts, and metadata, plus inspect internal structure (objects, xref tables, etc.).                                    | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
+
+> [!TIP]
+> Most PDF MCPs stop at "extract text". This family **canonicalizes the PDF specification itself as a first-class queryable reference and cross-links it with substance-level analysis**. Aimed at use cases where spec compliance actually matters: digital signatures, PDF/UA conformance, PDF/A validation, and so on.
+
+### 🌐 Web Spec family
+
+**An MCP family for handling Web / Internet standards as structured data, accessible from AI**.
+The **spec side** (IETF RFCs and W3C / WHATWG — HTML / CSS / WebIDL / PWA, etc.) and the **implementation compatibility data (Baseline / BCD)** are separated into dedicated MCPs, so "what the spec requires" and "what browsers actually support today" can be cross-referenced within the same conversation.
+
+| MCP Server         | Layer                      | Description                                                                                            | Links                                                                                                                      |
+| ------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| **rfcxml-mcp**     | IETF (spec)                | IETF RFC (XML2RFC v3) — structure parsing, requirement extraction, RFC dependency lookups.             | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
+| **w3c-mcp**        | W3C / WHATWG (spec)        | Lookups across W3C / WHATWG specifications (HTML elements, CSS properties, WebIDL, PWA, etc.).         | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
+| **web-compat-mcp** | Implementation (compat)    | Browser compatibility checks based on Baseline / Browser Compat Data.                                  | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
+
+> [!TIP]
+> Useful when you want AI to surface **spec × implementation** discrepancies — "the spec says MUST but the feature isn't in Baseline yet", "this RFC Updates that other RFC" — by invoking all three MCPs from the same conversation.
+
+### 🧭 Domain-specific
+
+MCPs that provide structured access to specifications and datasets in specific domains.
+
+| MCP Server       | Category           | Description                                            | Links                                                                                                                  |
+| ---------------- | ------------------ | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| **epsg-mcp**     | Geospatial         | EPSG CRS lookup and transformation suggestions         | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)         |
+| **ifc-core-mcp** | Architecture (BIM) | IFC 4.3 entities, inheritance, and PropertySet lookup  | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
+
+### 🛠 Quality / Dev tooling
+
+MCPs for quality evaluation and developer support (note: no npm scope — naming differs from the others).
+
+| MCP Server            | Category           | Description                                              | Links                                                                                                               |
+| --------------------- | ------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **xcomet-mcp-server** | MT quality         | Machine translation quality evaluation powered by xCOMET | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
+| **rxjs-mcp-server**   | RxJS dev tooling   | Execute, debug, and visualize RxJS streams               | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)     |
 
 ## 🧩 Claude Skills
 
