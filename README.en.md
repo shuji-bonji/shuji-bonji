@@ -154,6 +154,20 @@ Each family member ships as a one-set bundle: an MCP server, a TypeScript librar
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **houki-abbreviations** | Shared dictionary of Japanese statute abbreviations and common names (174 entries across 6 domains). Used across the houki-hub MCP family. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
 
+## 🌍 DTIR family
+
+**A pipeline that translates mixed-language documents without breaking their formatting, pagination, or image placement.**
+A `.docx` containing several languages in one file is translated into a single language through reader → translate → quality check → writer stages, anchored by **DTIR** (Document Translation Intermediate Representation), the shared intermediate representation across each MCP.
+
+| Package                        | Layer        | Description                                                                                  | Links                                                              |
+| ------------------------------ | ------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **doc-translation-ir**         | Contract (IR)| Design doc, type definitions, and JSON Schema (v0.1) for DTIR, the shared intermediate representation. | [GitHub](https://github.com/shuji-bonji/doc-translation-ir)         |
+| **dtir-ooxml-reader-mcp**      | reader       | Converts `.docx` into a DTIR segment table; reconciles language via tag × local detection.   | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-reader-mcp)      |
+| **dtir-translate-mcp**         | translate    | Fills DTIR `translation`/`quality`. Per-`group` batching, engine-agnostic (DeepL / LLM).     | [GitHub](https://github.com/shuji-bonji/dtir-translate-mcp)         |
+| **dtir-ooxml-writer-mcp**      | writer       | Generates the translated `.docx` by patching the original by `id` from translated DTIR.       | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-writer-mcp)      |
+| **dtir-docx-pipeline**         | pipeline     | End-to-end harness binding reader → translate → writer together.                              | [GitHub](https://github.com/shuji-bonji/dtir-docx-pipeline)         |
+| **local-llm-on-apple-silicon** | Support (env)| Local LLM runtime on Apple Silicon (for translate's local engine). 🚧 In progress.           | [GitHub](https://github.com/shuji-bonji/local-llm-on-apple-silicon) |
+
 ## 📱 Web Apps & Tools
 
 Practical tools and personal products.
