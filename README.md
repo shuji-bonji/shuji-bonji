@@ -200,7 +200,7 @@ MCP サーバ、TypeScript ライブラリ、Claude Skill、ドキュメント�
 
 | 書籍                                                                     | 説明                                                                                                                              | リンク                                                                                                                            |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **AI駆動開発時代のNeovim — Mac × ローカルLLM × tmux で作る統合開発環境** | Neovim 0.12 + tmux + Ghostty で「AI 駆動開発の土俵」を組み、Claude Code からローカル LLM まで繋いで協働する実践本（無料・全14章） | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/neovim-ide-on-mac) |
+| **AI駆動開発時代のNeovim — Mac × ローカルLLM × tmux で作る統合開発環境** | Neovim 0.12 + tmux + Ghostty で「AI 駆動開発の土俵」を組み、Claude Code からローカル LLM まで繋いで協働する実践本（無料・全14章） | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/neovim-ide-on-mac/) |
 
 ## Notes
 
