@@ -200,7 +200,7 @@ Documentation sites and public notes.
 
 | Book                                                                             | Description                                                                                                                                                                     | Links                                                                                                                             |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Neovim for the AI-Driven Development Era — Mac × Local LLM × tmux** (Japanese) | A hands-on book that builds an "AI-driven development arena" with Neovim 0.12 + tmux + Ghostty, wiring in agents from Claude Code to self-hosted local LLMs (free, 14 chapters) | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/neovim-ide-on-mac) |
+| **Neovim for the AI-Driven Development Era — Mac × Local LLM × tmux** (Japanese) | A hands-on book that builds an "AI-driven development arena" with Neovim 0.12 + tmux + Ghostty, wiring in agents from Claude Code to self-hosted local LLMs (free, 14 chapters) | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/neovim-ide-on-mac/) |
 
 ## Notes
 
