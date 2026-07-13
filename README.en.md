@@ -53,9 +53,9 @@ A collection of workflows and notes for collaborating with AI agents (Claude / C
 
 A marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions from Claude Code or Cowork via `/plugin install`. Same form factor as Anthropic's official marketplace ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)).
 
-| Marketplace                    | Description                                                                                                  | Links                                                   |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| **shuji-bonji/claude-plugins** | Catalog of shuji-bonji plugins (5 categories: houki / web-spec / quality-tools / domain-specific / dev-meta) | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
+| Marketplace                    | Description                                                                                             | Links                                                   |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **shuji-bonji/claude-plugins** | Catalog of shuji-bonji plugins (5 categories: houki / pdf / web-spec / quality-tools / domain-specific) | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
 
 ### Install
 
@@ -63,17 +63,15 @@ A marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensio
 # Claude Code
 /plugin marketplace add shuji-bonji/claude-plugins
 /plugin install houki-research@shuji-bonji
+
+# e.g. PDF trust auditing (pdf-trust requires pdf-verify-mcp)
+/plugin install pdf-verify-mcp@shuji-bonji
+/plugin install pdf-trust@shuji-bonji
 ```
 
-For Cowork mode, add `https://github.com/shuji-bonji/claude-plugins` as a marketplace under Settings → Plugins.
+Personal Cowork has no UI for adding a marketplace URL — download each plugin's `.plugin` file from its Releases and add it via Plugins → "Upload plugin". Cowork Enterprise admins can register the marketplace URL in Organization Settings (see the [marketplace README](https://github.com/shuji-bonji/claude-plugins#インストール)).
 
-### Available plugins
-
-| Plugin             | Category | Status    | Links                                                         |
-| ------------------ | -------- | --------- | ------------------------------------------------------------- |
-| **houki-research** | houki    | ✅ v0.1.0 | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
-
-See the [marketplace README](https://github.com/shuji-bonji/claude-plugins#収録予定-plugin-計画中) for the list of 19 planned plugins (🚧 in progress).
+For the full list of bundled plugins (17), their versions, and per-plugin caveats, see the [marketplace README](https://github.com/shuji-bonji/claude-plugins#収録済み-plugin).
 
 ## 🔌 MCP Servers
 

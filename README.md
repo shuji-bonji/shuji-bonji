@@ -53,9 +53,9 @@ AI エージェント（Claude / Claude Code / GitHub Copilot 等）と協働し
 
 自作の MCP / Skill / Slash Command / Sub-agent を Claude Code・Cowork から `/plugin install` で導入できる marketplace。Anthropic 公式 ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)) と同じ form factor。
 
-| Marketplace                    | 説明                                                                                                          | リンク                                                  |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **shuji-bonji/claude-plugins** | shuji-bonji 製 plugin の catalog（houki / web-spec / quality-tools / domain-specific / dev-meta の5カテゴリ） | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
+| Marketplace                    | 説明                                                                                                     | リンク                                                  |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **shuji-bonji/claude-plugins** | shuji-bonji 製 plugin の catalog（houki / pdf / web-spec / quality-tools / domain-specific の5カテゴリ） | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
 
 ### インストール
 
@@ -63,17 +63,15 @@ AI エージェント（Claude / Claude Code / GitHub Copilot 等）と協働し
 # Claude Code
 /plugin marketplace add shuji-bonji/claude-plugins
 /plugin install houki-research@shuji-bonji
+
+# 例: PDF 信頼性監査（pdf-trust は pdf-verify-mcp が必須）
+/plugin install pdf-verify-mcp@shuji-bonji
+/plugin install pdf-trust@shuji-bonji
 ```
 
-Cowork mode の場合、Settings → Plugins に `https://github.com/shuji-bonji/claude-plugins` を marketplace として追加。
+個人 Cowork は marketplace URL の追加 UI を持たないため、各 plugin の Releases から `.plugin` ファイルをダウンロードして Plugins →「Upload plugin」で追加してください。Cowork Enterprise では Organization Settings に marketplace URL を登録できます（詳細は [marketplace の README](https://github.com/shuji-bonji/claude-plugins#インストール)）。
 
-### 収録 plugin
-
-| Plugin             | カテゴリ | 状態      | リンク                                                        |
-| ------------------ | -------- | --------- | ------------------------------------------------------------- |
-| **houki-research** | houki    | ✅ v0.1.0 | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
-
-収録予定 plugin（19件、🚧 計画中）の一覧は [marketplace の README](https://github.com/shuji-bonji/claude-plugins#収録予定-plugin-計画中) を参照してください。
+収録 plugin（17件）の一覧・バージョン・各 plugin の注意事項は [marketplace の README](https://github.com/shuji-bonji/claude-plugins#収録済み-plugin) を参照してください。
 
 ## 🔌 MCP Servers
 
