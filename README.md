@@ -91,6 +91,8 @@ ISO 32000（PDF 2.0）/ PDF 1.7 / PDF/UA / TS 32001 系などの **仕様書そ�
 | **pdf-reader-mcp** | 実体層（解析）   | PDF テキスト・表・署名・タグ・フォント・メタデータの抽出と、内部構造（オブジェクト・xref 等）の検査   | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
 | **pdf-verify-mcp** | 検証層（真正性） | 電子署名の暗号学的検証・改ざん検知・PAdES ベースラインレベル判定・PDF/A / PDF/UA 準拠の識別と検証     | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
 
+このファミリーを編成して「この PDF は信用できるか」を監査する Skill として [pdf-trust-skill](https://github.com/shuji-bonji/pdf-trust-skill) があります（→ [Claude Skills](#-claude-skills)）。
+
 > [!NOTE]
 > **pdf-reader-mcp** が「PDF に *何が入っているか*」を答えるのに対し、**pdf-verify-mcp** は「その PDF が *本物かどうか*」を答えます。署名の暗号学的検証・署名後の変更検知・LTV（B-LT / B-LTA）判定まで踏み込む点が検証層の役割です。
 
@@ -139,6 +141,7 @@ Claude / Claude Code から呼び出して、特定領域の作業ワークフ�
 | **spec-compliance-skills**     | W3C/IETF仕様への準拠性をチェックするためのCoworkプラグイン                                   | [GitHub](https://github.com/shuji-bonji/spec-compliance-skills/)    |
 | **factcheck-skill**            | 情報の信頼性を科学的・体系的に評価する、Claude Code / Cowork 用ファクトチェック・スキル      | [GitHub](https://github.com/shuji-bonji/factcheck-skill)            |
 | **media-literacycheck-skill**  | インターネット上の情報の信頼性を メディアリテラシー の観点から体系的に評価する、LLM 用スキル | [GitHub](https://github.com/shuji-bonji/media-literacycheck-skill)  |
+| **pdf-trust-skill**            | PDF family MCP 群を編成し、PDF の真正性（署名検証・改ざん検知・PAdES / PDF/A・法令照合）を監査して推奨判定付き Trust Report を返すスキル | [GitHub](https://github.com/shuji-bonji/pdf-trust-skill)            |
 
 ## 📚 houki-hub family
 

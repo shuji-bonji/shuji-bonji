@@ -91,6 +91,8 @@ One layer **delivers the PDF specifications themselves — ISO 32000 (PDF 2.0), 
 | **pdf-reader-mcp** | Substance layer (parsing)         | Extract text, tables, signatures, tags, fonts, and metadata, plus inspect internal structure (objects, xref tables, etc.).                                    | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
 | **pdf-verify-mcp** | Verification layer (authenticity) | Cryptographic signature verification, tamper detection, PAdES baseline level detection, PDF/A / PDF/UA conformance identification and validation.             | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
 
+[pdf-trust-skill](https://github.com/shuji-bonji/pdf-trust-skill) is the Skill that orchestrates this family to audit "can I trust this PDF?" (→ [Claude Skills](#-claude-skills)).
+
 > [!NOTE]
 > Where **pdf-reader-mcp** tells you _what is in_ a PDF, **pdf-verify-mcp** tells you _whether it is genuine_ — cryptographic signature verification, detection of changes after signing, and LTV (B-LT / B-LTA) assessment.
 
@@ -139,6 +141,7 @@ Skills callable from Claude / Claude Code to reuse domain-specific workflows.
 | **spec-compliance-skills**     | Cowork plugin for checking compliance against W3C / IETF specifications.                             | [GitHub](https://github.com/shuji-bonji/spec-compliance-skills/)    |
 | **factcheck-skill**            | Fact-checking skill for Claude Code / Cowork — evaluates information reliability scientifically.     | [GitHub](https://github.com/shuji-bonji/factcheck-skill)            |
 | **media-literacycheck-skill**  | LLM skill that evaluates online information from a media-literacy perspective.                       | [GitHub](https://github.com/shuji-bonji/media-literacycheck-skill)  |
+| **pdf-trust-skill**            | Orchestrates the PDF family MCPs to audit PDF authenticity (signature verification, tamper detection, PAdES / PDF/A, legal cross-referencing) and returns a Trust Report with an explicit recommendation. | [GitHub](https://github.com/shuji-bonji/pdf-trust-skill)            |
 
 ## 📚 houki-hub family
 
