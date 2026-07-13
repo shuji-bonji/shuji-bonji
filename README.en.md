@@ -82,16 +82,20 @@ Cross-domain groupings with a coherent story are split out as **families** under
 
 ### 📄 PDF family
 
-**A two-layer MCP family that treats PDF as "canon × substance"**.
-One layer **delivers the PDF specifications themselves — ISO 32000 (PDF 2.0), PDF 1.7, PDF/UA, the TS 32001 series — as a structured canonical reference for LLMs**, while the other **inspects the internals of actual PDF files at a low level (objects, xref tables, streams, tag structure)**. Combined, they enable PDF analysis and verification that is genuinely aware of spec compliance.
+**A three-layer MCP family that treats PDF as "canon × substance × authenticity"**.
+One layer **delivers the PDF specifications themselves — ISO 32000 (PDF 2.0), PDF 1.7, PDF/UA, the TS 32001 series — as a structured canonical reference for LLMs**, another **inspects the internals of actual PDF files at a low level (objects, xref tables, streams, tag structure)**, and a third **cryptographically verifies digital signatures and detects tampering**. Combined, they enable PDF analysis and verification that is genuinely aware of spec compliance.
 
-| MCP Server         | Layer                     | Description                                                                                                                                                   | Links                                                                                                                      |
-| ------------------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **pdf-spec-mcp**   | Spec layer (canon)        | Structured access to the ISO 32000-series PDF specification. Section retrieval, requirement extraction (shall / must), definition lookup, version comparison. | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **pdf-reader-mcp** | Substance layer (parsing) | Extract text, tables, signatures, tags, fonts, and metadata, plus inspect internal structure (objects, xref tables, etc.).                                    | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
+| MCP Server         | Layer                             | Description                                                                                                                                                   | Links                                                                                                                      |
+| ------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **pdf-spec-mcp**   | Spec layer (canon)                | Structured access to the ISO 32000-series PDF specification. Section retrieval, requirement extraction (shall / must), definition lookup, version comparison. | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
+| **pdf-reader-mcp** | Substance layer (parsing)         | Extract text, tables, signatures, tags, fonts, and metadata, plus inspect internal structure (objects, xref tables, etc.).                                    | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
+| **pdf-verify-mcp** | Verification layer (authenticity) | Cryptographic signature verification, tamper detection, PAdES baseline level detection, PDF/A / PDF/UA conformance identification and validation.             | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
+
+> [!NOTE]
+> Where **pdf-reader-mcp** tells you _what is in_ a PDF, **pdf-verify-mcp** tells you _whether it is genuine_ — cryptographic signature verification, detection of changes after signing, and LTV (B-LT / B-LTA) assessment.
 
 > [!TIP]
-> Most PDF MCPs stop at "extract text". This family **canonicalizes the PDF specification itself as a first-class queryable reference and cross-links it with substance-level analysis**. Aimed at use cases where spec compliance actually matters: digital signatures, PDF/UA conformance, PDF/A validation, and so on.
+> Most PDF MCPs stop at "extract text". This family **canonicalizes the PDF specification itself as a first-class queryable reference and cross-links it with substance-level analysis and authenticity verification**. Aimed at use cases where spec compliance actually matters: digital signatures, PDF/UA conformance, PDF/A validation, and so on.
 
 ### 🌐 Web Spec family
 
@@ -198,8 +202,8 @@ Documentation sites and public notes.
 
 ### 📕 Books
 
-| Book                                                                             | Description                                                                                                                                                                     | Links                                                                                                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Book                                                                             | Description                                                                                                                                                                     | Links                                                                                                                                                            |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Neovim for the AI-Driven Development Era — Mac × Local LLM × tmux** (Japanese) | A hands-on book that builds an "AI-driven development arena" with Neovim 0.12 + tmux + Ghostty, wiring in agents from Claude Code to self-hosted local LLMs (free, 14 chapters) | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/neovim-ide-on-mac/) |
 
 ## Notes
