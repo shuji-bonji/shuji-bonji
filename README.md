@@ -31,12 +31,12 @@
 
 | カテゴリ                                                                         | 概要                                                                                                  |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 📱 [Web Apps & Tools](./docs/web-apps.md)                                        | e-shiwake / fact-checklist / marble-to-svg などの PWA・実用ツール                                     |
+| 📖 [Sites & Books](./docs/sites-books.md)                                        | RxJS・Svelte・Web Components などの学習サイトと Zenn 書籍                                             |
 | 🤖 [AI-Assisted Development Guide](./docs/ai-assisted-development.md)            | AI エージェントと協働開発するためのワークフロー・ノウハウ（understanding-llm-through-claude-code 等） |
 | 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | 自作 MCP / Skill / Slash Command / Sub-agent を `/plugin install` で導入できる marketplace            |
 | 🔌 [MCP Servers](./docs/mcp-servers.md)                                          | PDF・Web Spec・houki-hub・DTIR の4ファミリー + 単発 MCP（epsg / ifc-core / xcomet / rxjs）            |
 | 🧩 [Claude Skills](./docs/claude-skills.md)                                      | pdf-trust / houki-research / factcheck など、作業ワークフローを再利用する Skill 群                    |
-| 📱 [Web Apps & Tools](./docs/web-apps.md)                                        | e-shiwake / fact-checklist / marble-to-svg などの PWA・実用ツール                                     |
-| 📖 [Sites & Books](./docs/sites-books.md)                                        | RxJS・Svelte・Web Components などの学習サイトと Zenn 書籍                                             |
 | 📓 [Notes](./docs/notes.md)                                                      | デジタル署名・PWA・デザインパターンなどのノート・スターターキット                                     |
 
 ## 🏠 記念碑

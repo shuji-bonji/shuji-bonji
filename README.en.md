@@ -31,12 +31,12 @@
 
 | Category                                                                         | Overview                                                                                                |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 📱 [Web Apps & Tools](./docs/web-apps.en.md)                                     | PWAs and practical tools: e-shiwake, fact-checklist, marble-to-svg, etc.                                |
+| 📖 [Sites & Books](./docs/sites-books.en.md)                                     | Learning sites (RxJS, Svelte, Web Components, etc.) and a Zenn book                                     |
 | 🤖 [AI-Assisted Development Guide](./docs/ai-assisted-development.en.md)         | Workflows and notes for collaborating with AI agents (understanding-llm-through-claude-code, etc.)      |
 | 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | Marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions via `/plugin install`  |
 | 🔌 [MCP Servers](./docs/mcp-servers.en.md)                                       | Four families — PDF, Web Spec, houki-hub, DTIR — plus standalone MCPs (epsg / ifc-core / xcomet / rxjs) |
 | 🧩 [Claude Skills](./docs/claude-skills.en.md)                                   | Reusable workflow skills: pdf-trust, houki-research, factcheck, and more                                |
-| 📱 [Web Apps & Tools](./docs/web-apps.en.md)                                     | PWAs and practical tools: e-shiwake, fact-checklist, marble-to-svg, etc.                                |
-| 📖 [Sites & Books](./docs/sites-books.en.md)                                     | Learning sites (RxJS, Svelte, Web Components, etc.) and a Zenn book                                     |
 | 📓 [Notes](./docs/notes.en.md)                                                   | Notes and starter kits: digital signatures, PWA, design patterns, etc.                                  |
 
 ## 🏠 Monuments
