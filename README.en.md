@@ -27,209 +27,21 @@
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 
-## 🤖 AI-Assisted Development Guide
+## 🗂 Contents
 
-A collection of workflows and notes for collaborating with AI agents (Claude / Claude Code / GitHub Copilot, etc.) during development.
-
-- **Design-first**: humans stay responsible for spec and architecture; AI is not asked to make those calls.
-- **Structured documentation**: MCP servers, Skills, and specs are organized so AI can read them reliably.
-- **Tight verification loop**: prompt → output → spec check → fix, iterated quickly.
-
-| Phase | Project                                         | Description                                                                                                                                                                              | Links                                                                                                                                                            |
-| :---: | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1   | **understanding-llm-through-claude-code**       | Understand the structural constraints of LLMs and learn the design philosophy of Claude Code — _why_ a setting is what it is.                                                            | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
-|   2   | **ai-agent-architecture**                       | Design philosophy, architecture, and field notes for integrating MCP, Skills, and AI agents.                                                                                             | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
-|   3   | **Management-of-software-systems-and-services** | Apply AI to the body of [software systems & services management](https://github.com/shuji-bonji/Management-of-software-systems-and-services) practice that engineers built up before us. | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
-
-<!--
-> [!NOTE]
-> The way AI is leveraged in software development depends heavily on the role and stance involved.
-> I'm starting by organizing nine perspectives on how humans engage with existing software,
-> and looking at how AI can plug in — not as a drop-in replacement, but possibly as something that reshapes the picture entirely.
-> - [Software Systems & Services Management](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
--->
-
-## 📦 Claude Plugins (Marketplace)
-
-A marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions from Claude Code or Cowork via `/plugin install`. Same form factor as Anthropic's official marketplace ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)).
-
-| Marketplace                    | Description                                                                                             | Links                                                   |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **shuji-bonji/claude-plugins** | Catalog of shuji-bonji plugins (5 categories: houki / pdf / web-spec / quality-tools / domain-specific) | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
-
-### Install
-
-```bash
-# Claude Code
-/plugin marketplace add shuji-bonji/claude-plugins
-/plugin install houki-research@shuji-bonji
-
-# e.g. PDF trust auditing (pdf-trust requires pdf-verify-mcp)
-/plugin install pdf-verify-mcp@shuji-bonji
-/plugin install pdf-trust@shuji-bonji
-```
-
-Personal Cowork has no UI for adding a marketplace URL — download each plugin's `.plugin` file from its Releases and add it via Plugins → "Upload plugin". Cowork Enterprise admins can register the marketplace URL in Organization Settings (see the [marketplace README](https://github.com/shuji-bonji/claude-plugins#インストール)).
-
-For the full list of bundled plugins (17), their versions, and per-plugin caveats, see the [marketplace README](https://github.com/shuji-bonji/claude-plugins#収録済み-plugin).
-
-## 🔌 MCP Servers
-
-MCP servers that let AI agents (Claude, etc.) interact with external specs and data sources.
-Cross-domain groupings with a coherent story are split out as **families** under their own subheadings.
-
-### 📄 PDF family
-
-**A three-layer MCP family that treats PDF as "canon × substance × authenticity"**.
-One layer **delivers the PDF specifications themselves — ISO 32000 (PDF 2.0), PDF 1.7, PDF/UA, the TS 32001 series — as a structured canonical reference for LLMs**, another **inspects the internals of actual PDF files at a low level (objects, xref tables, streams, tag structure)**, and a third **cryptographically verifies digital signatures and detects tampering**. Combined, they enable PDF analysis and verification that is genuinely aware of spec compliance.
-
-| MCP Server         | Layer                             | Description                                                                                                                                                   | Links                                                                                                                      |
-| ------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **pdf-spec-mcp**   | Spec layer (canon)                | Structured access to the ISO 32000-series PDF specification. Section retrieval, requirement extraction (shall / must), definition lookup, version comparison. | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **pdf-reader-mcp** | Substance layer (parsing)         | Extract text, tables, signatures, tags, fonts, and metadata, plus inspect internal structure (objects, xref tables, etc.).                                    | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
-| **pdf-verify-mcp** | Verification layer (authenticity) | Cryptographic signature verification, tamper detection, PAdES baseline level detection, PDF/A / PDF/UA conformance identification and validation.             | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
-
-[pdf-trust-skill](https://github.com/shuji-bonji/pdf-trust-skill) is the Skill that orchestrates this family to audit "can I trust this PDF?" (→ [Claude Skills](#-claude-skills)).
-
-> [!NOTE]
-> Where **pdf-reader-mcp** tells you _what is in_ a PDF, **pdf-verify-mcp** tells you _whether it is genuine_ — cryptographic signature verification, detection of changes after signing, and LTV (B-LT / B-LTA) assessment.
-
-> [!TIP]
-> Most PDF MCPs stop at "extract text". This family **canonicalizes the PDF specification itself as a first-class queryable reference and cross-links it with substance-level analysis and authenticity verification**. Aimed at use cases where spec compliance actually matters: digital signatures, PDF/UA conformance, PDF/A validation, and so on.
-
-### 🌐 Web Spec family
-
-**An MCP family for handling Web / Internet standards as structured data, accessible from AI**.
-The **spec side** (IETF RFCs and W3C / WHATWG — HTML / CSS / WebIDL / PWA, etc.) and the **implementation compatibility data (Baseline / BCD)** are separated into dedicated MCPs, so "what the spec requires" and "what browsers actually support today" can be cross-referenced within the same conversation.
-
-| MCP Server         | Layer                   | Description                                                                                    | Links                                                                                                                      |
-| ------------------ | ----------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **rfcxml-mcp**     | IETF (spec)             | IETF RFC (XML2RFC v3) — structure parsing, requirement extraction, RFC dependency lookups.     | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
-| **w3c-mcp**        | W3C / WHATWG (spec)     | Lookups across W3C / WHATWG specifications (HTML elements, CSS properties, WebIDL, PWA, etc.). | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
-| **web-compat-mcp** | Implementation (compat) | Browser compatibility checks based on Baseline / Browser Compat Data.                          | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
-
-> [!TIP]
-> Useful when you want AI to surface **spec × implementation** discrepancies — "the spec says MUST but the feature isn't in Baseline yet", "this RFC Updates that other RFC" — by invoking all three MCPs from the same conversation.
-
-### 🧰 Other MCP servers
-
-Standalone MCPs that don't belong to a family.
-
-**Domain-specific** — structured access to specifications and datasets in specific domains.
-
-| MCP Server       | Category           | Description                                           | Links                                                                                                                  |
-| ---------------- | ------------------ | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **epsg-mcp**     | Geospatial         | EPSG CRS lookup and transformation suggestions        | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)         |
-| **ifc-core-mcp** | Architecture (BIM) | IFC 4.3 entities, inheritance, and PropertySet lookup | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
-
-**Quality / Dev tooling** — quality evaluation and developer support (no npm scope — naming differs from the others).
-
-| MCP Server            | Category         | Description                                              | Links                                                                                                               |
-| --------------------- | ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **xcomet-mcp-server** | MT quality       | Machine translation quality evaluation powered by xCOMET | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
-| **rxjs-mcp-server**   | RxJS dev tooling | Execute, debug, and visualize RxJS streams               | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)     |
-
-## 🧩 Claude Skills
-
-Skills callable from Claude / Claude Code to reuse domain-specific workflows.
-
-| Skill                          | Description                                                                                          | Links                                                               |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **deepl-glossary-translation** | Translation workflow for PDF specifications using DeepL with a shared glossary for term consistency. | [GitHub](https://github.com/shuji-bonji/deepl-glossary-translation) |
-| **spec-compliance-skills**     | Cowork plugin for checking compliance against W3C / IETF specifications.                             | [GitHub](https://github.com/shuji-bonji/spec-compliance-skills/)    |
-| **factcheck-skill**            | Fact-checking skill for Claude Code / Cowork — evaluates information reliability scientifically.     | [GitHub](https://github.com/shuji-bonji/factcheck-skill)            |
-| **media-literacycheck-skill**  | LLM skill that evaluates online information from a media-literacy perspective.                       | [GitHub](https://github.com/shuji-bonji/media-literacycheck-skill)  |
-| **pdf-trust-skill**            | Orchestrates the PDF family MCPs to audit PDF authenticity (signature verification, tamper detection, PAdES / PDF/A, legal cross-referencing) and returns a Trust Report with an explicit recommendation. | [GitHub](https://github.com/shuji-bonji/pdf-trust-skill)            |
-
-## 📚 houki-hub family
-
-**An integrated ecosystem for handling Japanese laws, regulations, and authority notices with AI.**
-Each family member ships as a one-set bundle: an MCP server, a TypeScript library, a Claude Skill, and a documentation site.
-
-| MCP Server         | Description                                                                                                                                                                   | Links                                                                                                                      |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **houki-egov-mcp** | Fetch the body, table of contents, and revision history of Japanese constitutions, laws, cabinet/ministerial orders, and rules via the e-Gov Law API v2.                      | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-egov-mcp) · [GitHub](https://github.com/shuji-bonji/houki-egov-mcp) |
-| **houki-nta-mcp**  | Full-text search (SQLite + FTS5) over the National Tax Agency's basic notices, amendment notices, administrative guidelines, written-answer cases, Q&A, and Tax Answer pages. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-nta-mcp) · [GitHub](https://github.com/shuji-bonji/houki-nta-mcp)   |
-
-| Skill                    | Description                                                                                                                                                                                                                           | Links                                                         |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| **houki-research-skill** | Orchestration skill for legal research across the houki-hub MCP family. Encodes the lookup order (statute → cabinet order → ministerial order → notice → PDF → case law) and built-in safeguards for regulated-profession boundaries. | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
-
-| Package                 | Description                                                                                                                                | Links                                                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **houki-abbreviations** | Shared dictionary of Japanese statute abbreviations and common names (174 entries across 6 domains). Used across the houki-hub MCP family. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
-
-## 🌍 DTIR family
-
-**A pipeline that translates mixed-language documents without breaking their formatting, pagination, or image placement.**
-A `.docx` containing several languages in one file is translated into a single language through reader → translate → quality check → writer stages, anchored by **DTIR** (Document Translation Intermediate Representation), the shared intermediate representation across each MCP.
-
-| Package                        | Layer         | Description                                                                                            | Links                                                               |
-| ------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| **doc-translation-ir**         | Contract (IR) | Design doc, type definitions, and JSON Schema (v0.1) for DTIR, the shared intermediate representation. | [GitHub](https://github.com/shuji-bonji/doc-translation-ir)         |
-| **dtir-ooxml-reader-mcp**      | reader        | Converts `.docx` into a DTIR segment table; reconciles language via tag × local detection.             | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-reader-mcp)      |
-| **dtir-translate-mcp**         | translate     | Fills DTIR `translation`/`quality`. Per-`group` batching, engine-agnostic (DeepL / LLM).               | [GitHub](https://github.com/shuji-bonji/dtir-translate-mcp)         |
-| **dtir-ooxml-writer-mcp**      | writer        | Generates the translated `.docx` by patching the original by `id` from translated DTIR.                | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-writer-mcp)      |
-| **dtir-docx-pipeline**         | pipeline      | End-to-end harness binding reader → translate → writer together.                                       | [GitHub](https://github.com/shuji-bonji/dtir-docx-pipeline)         |
-| **local-llm-on-apple-silicon** | Support (env) | Local LLM runtime on Apple Silicon (for translate's local engine). 🚧 In progress.                     | [GitHub](https://github.com/shuji-bonji/local-llm-on-apple-silicon) |
-
-## 📱 Web Apps & Tools
-
-Practical tools and personal products.
-
-| Project                       | Description                                                                | Links                                                                                                                                                         |
-| ----------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **e-shiwake**                 | Bookkeeping + receipt management PWA for freelancers and sole proprietors. | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                                       |
-| **e-shiwake-ai**              | An AI-agent-fronted variant of e-shiwake.                                  | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                                         |
-| **fact-checklist**            | Fact-check worksheet — a PWA for evaluating information reliability.       | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                                         |
-| **websocket-practical-guide** | WebSocket Practical Guide — a hands-on PWA for real-time web apps.         | Under construction 🏗️ [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
-| **marble-to-svg**             | Convert RxJS marble notation into SVG diagrams.                            | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                                              |
-| **WebAPI Test Tool**          | WebAPI test runner powered by Step CI.                                     | [GitHub](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                                      |
-
-## 📖 Sites & Books
-
-### 📖 Document Sites
-
-Documentation sites and public notes.
-
-| Site                                          | Links                                                                                                                                                                    |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Svelte 5 / SvelteKit with TypeScript          | [📖 Site](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)           |
-| RxJS with TypeScript                          | [📖 Site](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/RxJS-with-TypeScript)                                           |
-| Web Components with TypeScript                | [📖 Site](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/WebComponents-with-TypeScript)                         |
-| SOLID Design Principles with TypeScript       | [📖 Site](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) · [GitHub](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)                                   |
-| Test-Driven Development (TDD) with TypeScript | [📖 Site](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) · [GitHub](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)                   |
-| Situational Awareness and Decision Making     | [📖 Site](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) · [GitHub](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) |
-
-### 📕 Books
-
-| Book                                                                             | Description                                                                                                                                                                     | Links                                                                                                                                                            |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Neovim for the AI-Driven Development Era — Mac × Local LLM × tmux** (Japanese) | A hands-on book that builds an "AI-driven development arena" with Neovim 0.12 + tmux + Ghostty, wiring in agents from Claude Code to self-hosted local LLMs (free, 14 chapters) | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/neovim-ide-on-mac/) |
-
-## Notes
-
-<details>
-<summary>📓 Other notes & templates</summary>
-
-- [Software Systems & Services Management](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
-- [Notes about Digital Signatures and Timestamps](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
-- [Notes on PWA](https://github.com/shuji-bonji/Notes-on-PWA)
-- [Notes about Design Patterns](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
-- [Real-World Automation Challenges](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
-- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)
-- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)
-
-</details>
+| Category                                                                         | Overview                                                                                                |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 🤖 [AI-Assisted Development Guide](./docs/ai-assisted-development.en.md)         | Workflows and notes for collaborating with AI agents (understanding-llm-through-claude-code, etc.)      |
+| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | Marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions via `/plugin install`  |
+| 🔌 [MCP Servers](./docs/mcp-servers.en.md)                                       | Four families — PDF, Web Spec, houki-hub, DTIR — plus standalone MCPs (epsg / ifc-core / xcomet / rxjs) |
+| 🧩 [Claude Skills](./docs/claude-skills.en.md)                                   | Reusable workflow skills: pdf-trust, houki-research, factcheck, and more                                |
+| 📱 [Web Apps & Tools](./docs/web-apps.en.md)                                     | PWAs and practical tools: e-shiwake, fact-checklist, marble-to-svg, etc.                                |
+| 📖 [Sites & Books](./docs/sites-books.en.md)                                     | Learning sites (RxJS, Svelte, Web Components, etc.) and a Zenn book                                     |
+| 📓 [Notes](./docs/notes.en.md)                                                   | Notes and starter kits: digital signatures, PWA, design patterns, etc.                                  |
 
 ## 🏠 Monuments
 
-<details>
-<summary>The origin of my programming journey</summary>
-
 [Resume editor](https://github.com/shuji-bonji/resume_editting) — built in 2021 as my very first web app while learning JavaScript. The source is genuinely embarrassing to look at now, but this is where it all started for me.
-
-</details>
 
 ## 📬 Contact
 

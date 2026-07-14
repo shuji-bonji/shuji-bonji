@@ -27,209 +27,21 @@
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 
-## 🤖 AI-Assisted Development Guide
+## 🗂 Contents
 
-AI エージェント（Claude / Claude Code / GitHub Copilot 等）と協働して開発を進めるためのワークフロー・ノウハウをまとめています。
-
-- **設計指向**：AIに「何をどう作るか」を判断させすぎず、人間が仕様・アーキテクチャの責任を持つ
-- **構造化ドキュメント**：MCP / Skill / 仕様書を、AI が読み解きやすい形で整備する
-- **検証ループ**：プロンプト → 出力 → 仕様書チェック → 修正、を高速に回す
-
-| Phase | プロジェクト                                    | 説明                                                                                                                                                 | リンク                                                                                                                                                           |
-| :---: | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1   | **understanding-llm-through-claude-code**       | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ                                                                   | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
-|   2   | **ai-agent-architecture**                       | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ                                                                                      | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
-|   3   | **Management-of-software-systems-and-services** | 先人達が培ってきた[ソフトウェアシステム・サービス開発・管理](https://github.com/shuji-bonji/Management-of-software-systems-and-services)へ AI を適用 | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
-
-<!--
-> [!NOTE]
-> ソフトウェア開発におけるAI活用は、関わる立場・役割によって大きく異なります。
-> まずは、既存のソフトウェアへの人の関与に関する、9つの視点を整理しています。
-> これにどのようにAIが関与していけば良いか？単純に当てはまるのではく、まるっきり変わってくることも含めて、確認して行こうと思います。
-> - [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
--->
-
-## 📦 Claude Plugins (Marketplace)
-
-自作の MCP / Skill / Slash Command / Sub-agent を Claude Code・Cowork から `/plugin install` で導入できる marketplace。Anthropic 公式 ([`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)) と同じ form factor。
-
-| Marketplace                    | 説明                                                                                                     | リンク                                                  |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **shuji-bonji/claude-plugins** | shuji-bonji 製 plugin の catalog（houki / pdf / web-spec / quality-tools / domain-specific の5カテゴリ） | [GitHub](https://github.com/shuji-bonji/claude-plugins) |
-
-### インストール
-
-```bash
-# Claude Code
-/plugin marketplace add shuji-bonji/claude-plugins
-/plugin install houki-research@shuji-bonji
-
-# 例: PDF 信頼性監査（pdf-trust は pdf-verify-mcp が必須）
-/plugin install pdf-verify-mcp@shuji-bonji
-/plugin install pdf-trust@shuji-bonji
-```
-
-個人 Cowork は marketplace URL の追加 UI を持たないため、各 plugin の Releases から `.plugin` ファイルをダウンロードして Plugins →「Upload plugin」で追加してください。Cowork Enterprise では Organization Settings に marketplace URL を登録できます（詳細は [marketplace の README](https://github.com/shuji-bonji/claude-plugins#インストール)）。
-
-収録 plugin（17件）の一覧・バージョン・各 plugin の注意事項は [marketplace の README](https://github.com/shuji-bonji/claude-plugins#収録済み-plugin) を参照してください。
-
-## 🔌 MCP Servers
-
-AI エージェント（Claude 等）から外部仕様・データを扱えるようにする MCP サーバ群。
-ドメイン横断で物語性のあるものは **family** として独立した小見出しでまとめています。
-
-### 📄 PDF family
-
-**PDF を「正典 × 実体 × 真正性」の三層で扱う MCP ファミリー**。
-ISO 32000（PDF 2.0）/ PDF 1.7 / PDF/UA / TS 32001 系などの **仕様書そのものを構造化正典として LLM に提供する層**、PDF ファイルの **オブジェクト・xref・ストリーム・タグ構造を低レベルで解析する層**、そして **電子署名・改ざんの有無を暗号学的に検証する層** を組み合わせ、「仕様準拠を意識した PDF 解析・検証」を成立させることを狙っています。
-
-| MCPサーバ          | レイヤ           | 説明                                                                                                  | リンク                                                                                                                     |
-| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **pdf-spec-mcp**   | 仕様書層（正典） | ISO 32000 系 PDF 仕様の構造化参照。セクション取得・要件抽出（shall / must）・定義参照・バージョン比較 | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **pdf-reader-mcp** | 実体層（解析）   | PDF テキスト・表・署名・タグ・フォント・メタデータの抽出と、内部構造（オブジェクト・xref 等）の検査   | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
-| **pdf-verify-mcp** | 検証層（真正性） | 電子署名の暗号学的検証・改ざん検知・PAdES ベースラインレベル判定・PDF/A / PDF/UA 準拠の識別と検証     | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
-
-このファミリーを編成して「この PDF は信用できるか」を監査する Skill として [pdf-trust-skill](https://github.com/shuji-bonji/pdf-trust-skill) があります（→ [Claude Skills](#-claude-skills)）。
-
-> [!NOTE]
-> **pdf-reader-mcp** が「PDF に *何が入っているか*」を答えるのに対し、**pdf-verify-mcp** は「その PDF が *本物かどうか*」を答えます。署名の暗号学的検証・署名後の変更検知・LTV（B-LT / B-LTA）判定まで踏み込む点が検証層の役割です。
-
-> [!TIP]
-> 多くの PDF 系 MCP が「テキストを抜く」抽出ツールに留まる中、本ファミリーは **PDF 仕様書を一次資料としてクエリ可能な状態に正典化し、実体解析・真正性検証と双方向に参照する** ことを目的としています。電子署名・PDF/UA 準拠・PDF/A 検証など、仕様準拠が問われるユースケース向け。
-
-### 🌐 Web Spec family
-
-**Web / Internet 標準を AI から構造化されたまま扱うための MCP ファミリー**。
-IETF（RFC）・W3C / WHATWG（HTML / CSS / WebIDL / PWA 等）の **仕様書側** と、ブラウザ実装の **互換性データ（Baseline / BCD）** を、それぞれ専用 MCP として分離し、「仕様で何が要求されているか」と「いまブラウザで何が使えるか」を同じ会話の中で照合できるようにしています。
-
-| MCPサーバ          | レイヤ               | 説明                                                                 | リンク                                                                                                                     |
-| ------------------ | -------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **rfcxml-mcp**     | IETF（仕様）         | IETF RFC（XML2RFC v3）の構造解析・要件抽出・RFC 間依存の参照         | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
-| **w3c-mcp**        | W3C / WHATWG（仕様） | W3C / WHATWG 仕様（HTML 要素・CSS プロパティ・WebIDL・PWA 等）の参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
-| **web-compat-mcp** | 実装（互換性）       | Baseline / Browser Compat Data に基づくブラウザ互換性チェック        | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
-
-> [!TIP]
-> 「仕様では MUST なのに、現実のブラウザでは Baseline 入りしていない」「この RFC は別の RFC を Update している」といった、**仕様 × 実装** の不一致を AI に検証させたいときに、3 件を同じ会話から呼び出して使うことを想定しています。
-
-### 🧰 Other MCP servers
-
-ファミリーには属さない単発の MCP。
-
-**Domain-specific** — 特定ドメインの仕様・データセットを構造化提供。
-
-| MCPサーバ        | カテゴリ    | 説明                                             | リンク                                                                                                                 |
-| ---------------- | ----------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| **epsg-mcp**     | 地理空間    | EPSG 測地系（CRS）検索・変換推奨                 | [npm](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) · [GitHub](https://github.com/shuji-bonji/epsg-mcp)         |
-| **ifc-core-mcp** | 建築（BIM） | IFC 4.3 エンティティ・継承関係・PropertySet 参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) · [GitHub](https://github.com/shuji-bonji/ifc-core-mcp) |
-
-**Quality / Dev tooling** — 品質評価・開発支援（npm スコープなし・命名揺れあり）。
-
-| MCPサーバ             | カテゴリ      | 説明                                        | リンク                                                                                                              |
-| --------------------- | ------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **xcomet-mcp-server** | 翻訳品質評価  | xCOMET による機械翻訳の品質評価・エラー検出 | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
-| **rxjs-mcp-server**   | RxJS 開発支援 | RxJS ストリームの実行・デバッグ・可視化     | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)     |
-
-## 🧩 Claude Skills
-
-Claude / Claude Code から呼び出して、特定領域の作業ワークフローを再利用するための Skill
-
-| スキル                         | 説明                                                                                         | リンク                                                              |
-| ------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **deepl-glossary-translation** | PDF仕様書翻訳ワークフロー（DeepL＋用語集）                                                   | [GitHub](https://github.com/shuji-bonji/deepl-glossary-translation) |
-| **spec-compliance-skills**     | W3C/IETF仕様への準拠性をチェックするためのCoworkプラグイン                                   | [GitHub](https://github.com/shuji-bonji/spec-compliance-skills/)    |
-| **factcheck-skill**            | 情報の信頼性を科学的・体系的に評価する、Claude Code / Cowork 用ファクトチェック・スキル      | [GitHub](https://github.com/shuji-bonji/factcheck-skill)            |
-| **media-literacycheck-skill**  | インターネット上の情報の信頼性を メディアリテラシー の観点から体系的に評価する、LLM 用スキル | [GitHub](https://github.com/shuji-bonji/media-literacycheck-skill)  |
-| **pdf-trust-skill**            | PDF family MCP 群を編成し、PDF の真正性（署名検証・改ざん検知・PAdES / PDF/A・法令照合）を監査して推奨判定付き Trust Report を返すスキル | [GitHub](https://github.com/shuji-bonji/pdf-trust-skill)            |
-
-## 📚 houki-hub family
-
-**法令・通達・実務情報を AI で扱うための統合エコシステム**。
-MCP サーバ、TypeScript ライブラリ、Claude Skill、ドキュメントサイトをワンセットで提供することを目指しています。
-
-| MCPサーバ          | 説明                                                                                                     | リンク                                                                                                                     |
-| ------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **houki-egov-mcp** | e-Gov 法令API v2 経由で憲法・法律・政令・省令・規則の本文／目次／改正履歴を取得                          | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-egov-mcp) · [GitHub](https://github.com/shuji-bonji/houki-egov-mcp) |
-| **houki-nta-mcp**  | 国税庁の基本通達・改正通達・事務運営指針・文書回答事例・Q&A・タックスアンサーを SQLite + FTS5 で全文検索 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-nta-mcp) · [GitHub](https://github.com/shuji-bonji/houki-nta-mcp)   |
-
-| スキル                   | 説明                                                                                                                                      | リンク                                                        |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| **houki-research-skill** | houki-hub MCP family を横断する法令リサーチのオーケストレーション Skill（法律→政令→省令→通達→PDF→判例の参照順序・業法独占への配慮を内蔵） | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
-
-| パッケージ              | 説明                                                                                      | リンク                                                                                                                               |
-| ----------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **houki-abbreviations** | 日本の法令略称・通称の共有辞書（174 エントリ・6 分野）。houki-hub MCP family が共通で利用 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
-
-## 🌍 DTIR family
-
-**混在言語ドキュメントを、書式・ページ・画像位置を崩さずに翻訳するパイプライン**。
-1ファイルに複数言語が混在した `.docx` を、各 MCP が共有する中間表現 **DTIR**（Document Translation Intermediate Representation）を背骨に、reader → 翻訳 → 品質検証 → writer のステージで単一言語へ翻訳します。
-
-| パッケージ                     | レイヤ       | 説明                                                                                      | リンク                                                              |
-| ------------------------------ | ------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **doc-translation-ir**         | 契約（IR）   | パイプライン共通の中間表現 DTIR の設計ドキュメント・型定義・JSON Schema（v0.1）           | [GitHub](https://github.com/shuji-bonji/doc-translation-ir)         |
-| **dtir-ooxml-reader-mcp**      | reader       | `.docx` を DTIR セグメント表に変換。言語をタグ×ローカル判定で調停                         | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-reader-mcp)      |
-| **dtir-translate-mcp**         | translate    | DTIR の `translation`/`quality` を充填。`group` 単位バッチ＋エンジン非依存（DeepL / LLM） | [GitHub](https://github.com/shuji-bonji/dtir-translate-mcp)         |
-| **dtir-ooxml-writer-mcp**      | writer       | 翻訳済み DTIR ＋ 元 `.docx` から `id` パッチで訳 `.docx` を生成                           | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-writer-mcp)      |
-| **dtir-docx-pipeline**         | pipeline     | reader → translate → writer を束ねる end-to-end ハーネス                                  | [GitHub](https://github.com/shuji-bonji/dtir-docx-pipeline)         |
-| **local-llm-on-apple-silicon** | 補助（環境） | Apple Silicon でのローカル LLM 実行環境（translate のローカルエンジン用）🚧 製作中        | [GitHub](https://github.com/shuji-bonji/local-llm-on-apple-silicon) |
-
-## 📱 Web Apps & Tools
-
-実用ツール・自作プロダクト群
-
-| プロジェクト                  | 説明                                                      | リンク                                                                                                                                           |
-| ----------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **e-shiwake**                 | フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                          |
-| **e-shiwake-ai**              | AIエージェントをフロントエンドとして利用した、e-shiwake   | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                            |
-| **fact-checklist**            | 事実確認チェックシート — 情報の信頼性を評価するPWAアプリ  | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                            |
-| **websocket-practical-guide** | WebSocket 実践ガイド — リアルタイムWebアプリ実践PWA       | 工事中🏗️ [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
-| **marble-to-svg**             | RxJS マーブル記法 → SVG 変換ツール                        | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                                 |
-| **WebAPI Test Tool**          | Step CI を利用した WebAPI テスト実行ツール                | [GitHub](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                         |
-
-## 📖 Sites & Books
-
-### 📖 Document Sites
-
-ドキュメントサイト／公開ノート
-
-| サイト                                | リンク                                                                                                                                                                   |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| TypeScriptで学ぶ Svelte 5 / SvelteKit | [📖 Site](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/Svelte-and-SvelteKit-with-TypeScript)           |
-| TypeScript で RxJS                    | [📖 Site](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/RxJS-with-TypeScript)                                           |
-| TypeScript で Web Components          | [📖 Site](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) · [GitHub](https://github.com/shuji-bonji/WebComponents-with-TypeScript)                         |
-| TypeScriptで学ぶ SOLID設計原則        | [📖 Site](https://shuji-bonji.github.io/Notes-on-SOLID-Principle/) · [GitHub](https://github.com/shuji-bonji/Notes-on-SOLID-Principle)                                   |
-| TypeScript で テスト駆動開発(TDD)     | [📖 Site](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) · [GitHub](https://github.com/shuji-bonji/Notes-on-Test-Driven-Development)                   |
-| 状況認識と意思決定                    | [📖 Site](https://shuji-bonji.github.io/Situational-Awareness-and-Decision-Making/) · [GitHub](https://github.com/shuji-bonji/Situational-Awareness-and-Decision-Making) |
-
-### 📕 Books
-
-| 書籍                                                                     | 説明                                                                                                                              | リンク                                                                                                                            |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **AI駆動開発時代のNeovim — Mac × ローカルLLM × tmux で作る統合開発環境** | Neovim 0.12 + tmux + Ghostty で「AI 駆動開発の土俵」を組み、Claude Code からローカル LLM まで繋いで協働する実践本（無料・全14章） | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/neovim-ide-on-mac/) |
-
-## Notes
-
-<details>
-<summary>📓 その他のノート・テンプレート</summary>
-
-- [ソフトウェアシステム・サービスのマネジメント](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
-- [デジタル署名ノート](https://github.com/shuji-bonji/Notes-about-Digital-Signatures-and-Timestamps)
-- [PWAノート](https://github.com/shuji-bonji/Notes-on-PWA)
-- [デザインパターンノート](https://github.com/shuji-bonji/Notes-about-Design-Patterns)
-- [現実世界の自動化における課題](https://github.com/shuji-bonji/Real-World-Automation-Challenges)
-- [rxjs-with-typescript-starter-kit](https://github.com/shuji-bonji/rxjs-with-typescript-starter-kit)
-- [typescript-webcomponents-starter-kit](https://github.com/shuji-bonji/typescript-webcomponents-starter-kit)
-
-</details>
+| カテゴリ                                                                         | 概要                                                                                                  |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 🤖 [AI-Assisted Development Guide](./docs/ai-assisted-development.md)            | AI エージェントと協働開発するためのワークフロー・ノウハウ（understanding-llm-through-claude-code 等） |
+| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | 自作 MCP / Skill / Slash Command / Sub-agent を `/plugin install` で導入できる marketplace            |
+| 🔌 [MCP Servers](./docs/mcp-servers.md)                                          | PDF・Web Spec・houki-hub・DTIR の4ファミリー + 単発 MCP（epsg / ifc-core / xcomet / rxjs）            |
+| 🧩 [Claude Skills](./docs/claude-skills.md)                                      | pdf-trust / houki-research / factcheck など、作業ワークフローを再利用する Skill 群                    |
+| 📱 [Web Apps & Tools](./docs/web-apps.md)                                        | e-shiwake / fact-checklist / marble-to-svg などの PWA・実用ツール                                     |
+| 📖 [Sites & Books](./docs/sites-books.md)                                        | RxJS・Svelte・Web Components などの学習サイトと Zenn 書籍                                             |
+| 📓 [Notes](./docs/notes.md)                                                      | デジタル署名・PWA・デザインパターンなどのノート・スターターキット                                     |
 
 ## 🏠 記念碑
 
-<details>
-<summary>僕のプログラミングの原点</summary>
-
 [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) — 2021年、JavaScriptを学び初めて作ったWebアプリ。ソースは今見るととても恥ずかしいですが、ここが僕にとってスタート地点です。
-
-</details>
 
 ## 📬 Contact
 
