@@ -49,7 +49,7 @@ Each family member aims to ship as a one-set bundle: an MCP server, a TypeScript
 | **houki-nta-mcp**  | Full-text search (SQLite + FTS5) over the National Tax Agency's basic notices, amendment notices, administrative guidelines, written-answer cases, Q&A, and Tax Answer pages. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-nta-mcp) · [GitHub](https://github.com/shuji-bonji/houki-nta-mcp)   |
 
 | Skill                    | Description                                                                                                                                                                                                                           | Links                                                         |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | **houki-research-skill** | Orchestration skill for legal research across the houki-hub MCP family. Encodes the lookup order (statute → cabinet order → ministerial order → notice → PDF → case law) and built-in safeguards for regulated-profession boundaries. | [GitHub](https://github.com/shuji-bonji/houki-research-skill) |
 
 | Package                 | Description                                                                                                                                | Links                                                                                                                                |
@@ -83,10 +83,10 @@ Standalone MCPs that don't belong to a family.
 
 **Quality / Dev tooling** — quality evaluation and developer support (no npm scope — naming differs from the others).
 
-| MCP Server            | Category         | Description                                              | Links                                                                                                               |
-| --------------------- | ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **xcomet-mcp-server** | MT quality       | Machine translation quality evaluation powered by xCOMET | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
-| **rxjs-mcp-server**   | RxJS dev tooling | Execute, debug, and visualize RxJS streams               | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)     |
+| MCP Server            | Category         | Description                                              | Links                                                                                                                 |
+| --------------------- | ---------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **xcomet-mcp-server** | MT quality       | Machine translation quality evaluation powered by xCOMET | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server)   |
+| **rxjs-mcp-server**   | RxJS dev tooling | Execute, debug, and visualize RxJS streams               | [npm](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
 
 ---
 

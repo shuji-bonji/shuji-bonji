@@ -61,14 +61,14 @@ MCP サーバ、TypeScript ライブラリ、Claude Skill、ドキュメント�
 **多言語混在ドキュメントを、書式・ページネーション・画像配置を壊さずに翻訳するパイプライン**。
 1ファイルに複数言語が混在する `.docx` を、reader → translate → 品質評価 → writer の各段階を経て単一言語へ翻訳します。各 MCP が共有する中間表現 **DTIR**（Document Translation Intermediate Representation）を軸に構成しています。
 
-| パッケージ                     | レイヤ        | 説明                                                                                    | リンク                                                              |
-| ------------------------------ | ------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **doc-translation-ir**         | 契約（IR）    | 共有中間表現 DTIR の設計書・型定義・JSON Schema（v0.1）                                 | [GitHub](https://github.com/shuji-bonji/doc-translation-ir)         |
-| **dtir-ooxml-reader-mcp**      | reader        | `.docx` を DTIR セグメント表へ変換。タグ × ローカル検出で言語を照合                     | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-reader-mcp)      |
-| **dtir-translate-mcp**         | translate     | DTIR の `translation` / `quality` を充填。`group` 単位バッチ、エンジン非依存（DeepL / LLM） | [GitHub](https://github.com/shuji-bonji/dtir-translate-mcp)         |
-| **dtir-ooxml-writer-mcp**      | writer        | 翻訳済み DTIR から `id` 単位で原本にパッチし、翻訳版 `.docx` を生成                     | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-writer-mcp)      |
-| **dtir-docx-pipeline**         | pipeline      | reader → translate → writer を束ねるエンドツーエンドのハーネス                          | [GitHub](https://github.com/shuji-bonji/dtir-docx-pipeline)         |
-| **local-llm-on-apple-silicon** | 支援（環境）  | Apple Silicon 上のローカル LLM 実行環境（translate のローカルエンジン用）🚧 構築中      | [GitHub](https://github.com/shuji-bonji/local-llm-on-apple-silicon) |
+| パッケージ                     | レイヤ       | 説明                                                                                        | リンク                                                              |
+| ------------------------------ | ------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **doc-translation-ir**         | 契約（IR）   | 共有中間表現 DTIR の設計書・型定義・JSON Schema（v0.1）                                     | [GitHub](https://github.com/shuji-bonji/doc-translation-ir)         |
+| **dtir-ooxml-reader-mcp**      | reader       | `.docx` を DTIR セグメント表へ変換。タグ × ローカル検出で言語を照合                         | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-reader-mcp)      |
+| **dtir-translate-mcp**         | translate    | DTIR の `translation` / `quality` を充填。`group` 単位バッチ、エンジン非依存（DeepL / LLM） | [GitHub](https://github.com/shuji-bonji/dtir-translate-mcp)         |
+| **dtir-ooxml-writer-mcp**      | writer       | 翻訳済み DTIR から `id` 単位で原本にパッチし、翻訳版 `.docx` を生成                         | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-writer-mcp)      |
+| **dtir-docx-pipeline**         | pipeline     | reader → translate → writer を束ねるエンドツーエンドのハーネス                              | [GitHub](https://github.com/shuji-bonji/dtir-docx-pipeline)         |
+| **local-llm-on-apple-silicon** | 支援（環境） | Apple Silicon 上のローカル LLM 実行環境（translate のローカルエンジン用）🚧 構築中          | [GitHub](https://github.com/shuji-bonji/local-llm-on-apple-silicon) |
 
 ## 🧰 Other MCP servers
 
@@ -83,10 +83,10 @@ MCP サーバ、TypeScript ライブラリ、Claude Skill、ドキュメント�
 
 **Quality / Dev tooling** — 品質評価・開発支援（npm スコープなし・命名揺れあり）。
 
-| MCPサーバ             | カテゴリ      | 説明                                        | リンク                                                                                                              |
-| --------------------- | ------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **xcomet-mcp-server** | 翻訳品質評価  | xCOMET による機械翻訳の品質評価・エラー検出 | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server) |
-| **rxjs-mcp-server**   | RxJS 開発支援 | RxJS ストリームの実行・デバッグ・可視化     | [npm](https://www.npmjs.com/package/rxjs-mcp-server) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server)     |
+| MCPサーバ             | カテゴリ      | 説明                                        | リンク                                                                                                                |
+| --------------------- | ------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **xcomet-mcp-server** | 翻訳品質評価  | xCOMET による機械翻訳の品質評価・エラー検出 | [npm](https://www.npmjs.com/package/xcomet-mcp-server) · [GitHub](https://github.com/shuji-bonji/xcomet-mcp-server)   |
+| **rxjs-mcp-server**   | RxJS 開発支援 | RxJS ストリームの実行・デバッグ・可視化     | [npm](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp) · [GitHub](https://github.com/shuji-bonji/rxjs-mcp-server) |
 
 ---
 
