@@ -2,7 +2,9 @@
 
 🌐 [日本語版 (README.md)](./README.md)
 
-**TypeScript / Node.js developer building structured tooling**, focused on giving AI agents reliable access to specification documents and developer workflows.
+**Build the tools that let AI build — then use them to build things that last.**
+
+With TypeScript / Node.js, I build MCP servers and Skills that give AI agents reliable access to specifications, statutes, and documentation — and use those tools to ship apps, learning sites, and books.
 
 ## 🛠 Tech Stack
 
