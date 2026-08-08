@@ -7,22 +7,28 @@ AI エージェント（Claude 等）から外部仕様・データを扱える�
 
 ## 📄 PDF family
 
-**PDF を「正典 × 実体 × 真正性」の三層で扱う MCP ファミリー**。
-ISO 32000（PDF 2.0）/ PDF 1.7 / PDF/UA / TS 32001 系などの **仕様書そのものを構造化正典として LLM に提供する層**、PDF ファイルの **オブジェクト・xref・ストリーム・タグ構造を低レベルで解析する層**、そして **電子署名・改ざんの有無を暗号学的に検証する層** を組み合わせ、「仕様準拠を意識した PDF 解析・検証」を成立させることを狙っています。
+**PDF を「正典 × 実体 × 真正性 × 生成」の四層で扱う MCP ファミリー**。読む・検証する・書く・仕様で裏付ける。
+ISO 32000（PDF 2.0）/ PDF 1.7 / PDF/UA / TS 32001 系などの **仕様書そのものを構造化正典として LLM に提供する層**、PDF の **中身と位置（テキスト・表・タグ構造・bbox）を観測する層**、**電子署名・改ざん・規格準拠を判定する層**、そして **仕様を意識して PDF を生成・編集する層** で構成します。
+全体像は **[PDF Agent Stack サイト](https://shuji-bonji.github.io/pdf-agent-stack/ja/)** ・ [ハブリポジトリ](https://github.com/shuji-bonji/pdf-agent-stack) を参照。
 
-| MCPサーバ          | レイヤ           | 説明                                                                                                  | リンク                                                                                                                     |
-| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **pdf-spec-mcp**   | 仕様書層（正典） | ISO 32000 系 PDF 仕様の構造化参照。セクション取得・要件抽出（shall / must）・定義参照・バージョン比較 | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
-| **pdf-reader-mcp** | 実体層（解析）   | PDF テキスト・表・署名・タグ・フォント・メタデータの抽出と、内部構造（オブジェクト・xref 等）の検査   | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
-| **pdf-verify-mcp** | 検証層（真正性） | 電子署名の暗号学的検証・改ざん検知・PAdES ベースラインレベル判定・PDF/A / PDF/UA 準拠の識別と検証     | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
+| MCPサーバ          | レイヤ               | 説明                                                                                                                                        | リンク                                                                                                                     |
+| ------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **pdf-spec-mcp**   | 仕様書層（正典）     | ISO 32000 系 PDF 仕様の構造化参照。セクション取得・要件抽出（shall / must）・定義参照・バージョン比較                                       | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-spec-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-spec-mcp)     |
+| **pdf-reader-mcp** | 実体層（観測）       | テキスト・表・タグ・フォント・署名フィールド・内部構造（オブジェクト・xref）の観測と、「それはどこに描かれているか」の位置特定（bbox）      | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-reader-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-reader-mcp) |
+| **pdf-verify-mcp** | 検証層（真正性・準拠性） | 電子署名の暗号学的検証・改ざん検知・PAdES ベースラインレベル観測・PDF/A / PDF/UA 検証・ISO 32000 条文検査・決定論的 4 値判定（evaluate_policy） | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-verify-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-verify-mcp) |
+| **pdf-writer-mcp** | 生成層（作成・編集） | text / Markdown / 表からの PDF 生成と 20 種の編集（結合・分割・注釈・しおり・フォーム・PDF/A / タグ付き宣言）。日本語フォント埋め込み対応   | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-writer-mcp) · [GitHub](https://github.com/shuji-bonji/pdf-writer-mcp) |
 
-このファミリーを編成して「この PDF は信用できるか」を監査する Skill として [pdf-trust-skill](https://github.com/shuji-bonji/pdf-trust-skill) があります（→ [Claude Skills](./claude-skills.md)）。
+このファミリーを編成する Skill が 2 つあります（→ [Claude Skills](./claude-skills.md)）: 入口の [pdf-trust-skill](https://github.com/shuji-bonji/pdf-trust-skill)（受入監査 — 「この PDF は信用できるか」を監査し Trust Report を返す）と、出口の [pdf-publish-skill](https://github.com/shuji-bonji/pdf-publish-skill)（納品 — write → read-back → verify の品質ゲートを回し Publish Report 付きで納品する）。
+
+| パッケージ          | 説明                                                                                                             | リンク                                                                                                                             |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **pdf-constraints** | ISO 32000 条文を機械検査可能な制約テーブルへ写像したデータライブラリ。pdf-verify-mcp の条文検査（validate_clauses）が利用 | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-constraints) · [GitHub](https://github.com/shuji-bonji/pdf-constraints) |
 
 > [!NOTE]
-> **pdf-reader-mcp** が「PDF に _何が入っているか_」を答えるのに対し、**pdf-verify-mcp** は「その PDF が _本物かどうか_」を答えます。署名の暗号学的検証・署名後の変更検知・LTV（B-LT / B-LTA）判定まで踏み込む点が検証層の役割です。
+> **pdf-reader-mcp** が「PDF に _何が入っているか_」を答えるのに対し、**pdf-verify-mcp** は「その PDF が _本物かどうか_」を答えます。そして **pdf-writer-mcp** は「宣言は書けるが準拠は作れない」— 書いたら必ず verify で測る、という分業がファミリーの設計思想です（ジャッジはコード、ナラティブは LLM）。
 
 > [!TIP]
-> 多くの PDF 系 MCP が「テキストを抜く」抽出ツールに留まる中、本ファミリーは **PDF 仕様書を一次資料としてクエリ可能な状態に正典化し、実体解析・真正性検証と双方向に参照する** ことを目的としています。電子署名・PDF/UA 準拠・PDF/A 検証など、仕様準拠が問われるユースケース向け。
+> 多くの PDF 系 MCP が「テキストを抜く」抽出ツールに留まる中、本ファミリーは **PDF 仕様書を一次資料としてクエリ可能な状態に正典化し、実体観測・真正性検証・生成と双方向に参照する** ことを目的としています。電子署名・PDF/UA 準拠・PDF/A 検証・品質ゲート付き納品など、仕様準拠が問われるユースケース向け。
 
 ## 🌐 Web Spec family
 
