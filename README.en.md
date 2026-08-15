@@ -6,7 +6,7 @@
 
 With TypeScript / Node.js, I build MCP servers and Skills that give AI agents reliable access to specifications, statutes, and documentation — and use those tools to ship apps, learning sites, and books. Frontend by trade (Angular / RxJS / Svelte), backend on Node.js. Claude Code is the daily implementation engine: requirements through to implementation and quality gates, in one AI-driven loop.
 
-As coding-only work shrinks and demand grows for AI-agent applications and the infrastructure around them, this is the side of the market that is expanding — and where I work.
+As coding-only work shrinks and demand grows for AI-agent applications and the infrastructure around them, this is the side of the market that is expanding — and where I work. As of August 2026, the Skills / MCP design notes and the situational-awareness / decision-making material are still what search and Bing AI grounding cite.
 
 ## ⚙️ How I run AI-driven development
 
