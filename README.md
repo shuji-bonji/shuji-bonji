@@ -4,7 +4,18 @@
 
 **AI で作るための道具をまず作り、それを使って本物の資産を作る。**
 
-TypeScript / Node.js で、AI エージェントが信頼できる仕様・法令・ドキュメントにアクセスするための MCP / Skill をつくり、その道具でアプリ・学習サイト・書籍を形にしています。
+TypeScript / Node.js で、AI エージェントが信頼できる仕様・法令・ドキュメントにアクセスするための MCP / Skill をつくり、その道具でアプリ・学習サイト・書籍を形にしています。フロントは Angular / RxJS / Svelte、バックは Node.js。Claude Code を日常の実装エンジンにし、顧客の要件整理から実装・品質ゲートまでを AI 駆動で一気通貫します。
+
+コーディング中心の案件が減り、AI エージェント組み込みとインフラ・適用設計が増えるいま、自分の活動はその「増える仕事」側にあります。
+
+## ⚙️ 日常の AI 駆動開発
+
+Claude Code を主エンジンに、自作 MCP / Skill を開発フローへ組み込んで回しています。詳細は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめています。
+
+1. **規約を先に置く** — `AGENTS.md` / `CLAUDE.md` で設計方針・テスト手順を固定し、単発プロンプトに依存しない
+2. **役割を分ける** — 調査・実装・レビュー・品質評価をカスタムサブエージェント + Skill で分担。人は要件と受け入れ条件を握る
+3. **知識源は自作 MCP Family** — 仕様書側（正典）と実体側を双方向に照合（PDF / Web Spec / houki-hub）
+4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` に加え、仕様照合や xCOMET などの自動評価をパイプラインに載せる
 
 ## 🛠 Tech Stack
 
@@ -41,7 +52,7 @@ TypeScript / Node.js で、AI エージェントが信頼できる仕様・法�
 | 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins)                                                                                               | 自作 MCP / Skill / Slash Command / Sub-agent を `/plugin install` で導入できる marketplace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | 🔌 [MCP Servers](./docs/mcp-servers.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | [PDF](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-pdf-family)（→ [PDF Agent Stack サイト](https://shuji-bonji.github.io/pdf-agent-stack/ja/)）, [Web Spec](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-web-spec-family), [houki-hub](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-houki-hub-family), [DTIR](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-dtir-family) の4ファミリー + 単発 MCP（[epsg](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) / [ifc-core](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) / [xcomet](https://www.npmjs.com/package/xcomet-mcp-server) / [rxjs](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp)） |
 | 🧩 [Claude Skills](./docs/claude-skills.md)                                                                                                                                    | [pdf-trust](https://github.com/shuji-bonji/pdf-trust-skill) / [pdf-publish](https://github.com/shuji-bonji/pdf-publish-skill) / [houki-research](https://github.com/shuji-bonji/houki-research-skill) / [factcheck](https://github.com/shuji-bonji/factcheck-skill) / [media-literacycheck-skill](https://github.com/shuji-bonji/media-literacycheck-skill) / [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills/) / [deepl-glossary-translation](https://github.com/shuji-bonji/deepl-glossary-translation) など、作業ワークフローを再利用する Skill 群                                                                                                                                                                                 |
-| 📓 [Notes](./docs/notes.md)                                                                                                                                                    | デジタル署名・PWA・デザインパターンなどのノート・スターターキット                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 📓 [Notes](./docs/notes.md)                                                                                                                                                    | デジタル署名・PWA・デザインパターン、ローカルLLM基盤、PoC（DTIR 翻訳パイプライン）などのノート・スターターキット                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## 🏠 記念碑
 
