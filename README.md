@@ -6,8 +6,6 @@
 
 TypeScript / Node.js で、AI エージェントが信頼できる仕様・法令・ドキュメントにアクセスするための MCP / Skill をつくり、その道具でアプリ・学習サイト・書籍を形にしています。フロントは Angular / RxJS / Svelte、バックは Node.js。Claude Code を日常の実装エンジンにし、顧客の要件整理から実装・品質ゲートまでを AI 駆動で一気通貫します。PDF 系は [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) に束ね、ドキュメントハブとして公開しています。
 
-コーディング中心の案件が減り、AI エージェント組み込みとインフラ・適用設計が増えるいま、自分の活動はその「増える仕事」側にあります。公開した Skills / MCP の設計解説と、状況認識・意思決定の整理は、2026年8月時点でも検索と Bing AI 引用の主軸として参照されています。
-
 ## ⚙️ 日常の AI 駆動開発
 
 Claude Code を主エンジンに、自作 MCP / Skill を開発フローへ組み込んで回しています。詳細は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめています。
