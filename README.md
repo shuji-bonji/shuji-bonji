@@ -14,8 +14,8 @@
    個人事業主向けの仕訳 + 証憑 PWA。アプリ内に LLM エージェントを載せた。
    ツール17本をプレーンな TypeScript 関数で切り、同じ定義を WebMCP と function calling に供給する。
    ループは自前。破壊操作は HITL。接続先はローカル LLM / OpenAI / Anthropic / Gemini / Grok。
-2. **口** — AI エージェントが PDF / W3C / RFC / 法令などの正典に直接当たる [MCP](https://www.npmjs.com/~shuji-bonji) と [Claude Skills](https://github.com/shuji-bonji/claude-plugins)
-3. **束ね** — PDF 系は [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/)
+2. AI エージェントが PDF / W3C / RFC / 法令などの正典に直接当たる [MCP](https://www.npmjs.com/~shuji-bonji) と [Claude Skills](https://github.com/shuji-bonji/claude-plugins)
+3. PDF 系は [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/)
 
 Claude Code は実装エンジンで、規約と受け入れ条件は人が持つ方法で開発を行っています。
 ## ⚙️ 日常の AI 駆動開発
