@@ -4,8 +4,20 @@
 
 **AI で作るための道具をまず作り、それを使って本物の資産を作る。**
 
-TypeScript / Node.js で、AI エージェントが信頼できる仕様・法令・ドキュメントにアクセスするための MCP / Skill をつくり、その道具でアプリ・学習サイト・書籍を形にしています。フロントは Angular / RxJS / Svelte、バックは Node.js。Claude Code を日常の実装エンジンにし、顧客の要件整理から実装・品質ゲートまでを AI 駆動で一気通貫します。PDF 系は [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) に束ね、ドキュメントハブとして公開しています。
+フロントエンドは Angular / RxJS / NgRx / Svelte が主軸です。
+バックエンドは TypeScript / Node.js に加え、.NET C# の WebAPI 経験が若干あります。
+元々は運用・カスタマーエンジニア経験が長く、そこから開発へ転向した経緯があります。
 
+いま作っているものは3層
+
+1. **製品** — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)（[デモ](https://shuji-bonji.github.io/e-shiwake/)）
+   個人事業主向けの仕訳 + 証憑 PWA。アプリ内に LLM エージェントを載せた。
+   ツール17本をプレーンな TypeScript 関数で切り、同じ定義を WebMCP と function calling に供給する。
+   ループは自前。破壊操作は HITL。接続先はローカル LLM / OpenAI / Anthropic / Gemini / Grok。
+2. **口** — AI エージェントが PDF / W3C / RFC / 法令などの正典に直接当たる [MCP](https://www.npmjs.com/~shuji-bonji) と [Claude Skills](https://github.com/shuji-bonji/claude-plugins)
+3. **束ね** — PDF 系は [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/)
+
+Claude Code は実装エンジンで、規約と受け入れ条件は人が持つ方法で開発を行っています。
 ## ⚙️ 日常の AI 駆動開発
 
 Claude Code を主エンジンに、自作 MCP / Skill を開発フローへ組み込んで回しています。詳細は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめています。
