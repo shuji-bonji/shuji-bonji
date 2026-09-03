@@ -1,12 +1,22 @@
 # shuji-bonji
 
 🌐 [日本語版 (README.md)](./README.md)
-
 **Build the tools that let AI build — then use them to build things that last.**
 
-With TypeScript / Node.js, I build MCP servers and Skills that give AI agents reliable access to specifications, statutes, and documentation — and use those tools to ship apps, learning sites, and books. Frontend by trade (Angular / RxJS / Svelte), backend on Node.js. Claude Code is the daily implementation engine: requirements through to implementation and quality gates, in one AI-driven loop. PDF work is gathered under [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/), the documentation hub for that family.
+Frontend is centered on Angular / RxJS / NgRx / Svelte.
+Backend is TypeScript / Node.js, plus some .NET C# Web API experience.
+I spent a long time in operations and customer engineering before moving into software development.
 
-As coding-only work shrinks and demand grows for AI-agent applications and the infrastructure around them, this is the side of the market that is expanding — and where I work. As of August 2026, the Skills / MCP design notes and the situational-awareness / decision-making material are still what search and Bing AI grounding cite.
+What I build now sits in three layers.
+
+1. **Product** — e-shiwake
+   A journal + voucher PWA for sole proprietors, with an in-app LLM agent.
+   Seventeen tools are plain TypeScript functions. The same definitions feed WebMCP and function calling.
+   The loop is hand-rolled. Destructive actions go through HITL. Providers: local LLMs / OpenAI / Anthropic / Gemini / Grok.
+2. **Ports** — MCP servers and Claude Skills that let agents hit canonical sources directly
+3. **Hub** — PDF Agent Stack
+
+Claude Code is the implementation engine. Rules and acceptance criteria stay with the human.
 
 ## ⚙️ How I run AI-driven development
 
