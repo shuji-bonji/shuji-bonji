@@ -5,6 +5,9 @@
 MCP servers that let AI agents (Claude, etc.) interact with external specs and data sources.
 Cross-domain groupings with a coherent story are split out as **families** under their own headings.
 
+> [!NOTE]
+> All 13 published MCP servers now run on MCP SDK v2 (`@modelcontextprotocol/server` 2.x). The DTIR family and localllm-mcp are still on v1.
+
 ## 📄 PDF family
 
 **A four-layer MCP family that treats PDF as "canon × substance × authenticity × creation"**. Read, verify, write — grounded in the spec.
@@ -23,6 +26,7 @@ Two Skills orchestrate this family (→ [Claude Skills](./claude-skills.en.md)):
 | Package             | Description                                                                                                                     | Links                                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | **pdf-constraints** | A data library mapping ISO 32000 clauses to machine-checkable constraint tables, used by pdf-verify-mcp's clause checks (validate_clauses). | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-constraints) · [GitHub](https://github.com/shuji-bonji/pdf-constraints) |
+| **normativepdf** 🚧 | A pure-TypeScript PDF library where every behaviour is tied to a clause of the ISO specifications, measured against veraPDF release by release. Intended to replace the part of pdf-writer-mcp that delegates to `pdf-lib` (early development). | [GitHub](https://github.com/shuji-bonji/normativepdf) |
 
 > [!NOTE]
 > Where **pdf-reader-mcp** tells you _what is in_ a PDF, **pdf-verify-mcp** tells you _whether it is genuine_. And **pdf-writer-mcp** "can write a claim of conformance but cannot make a file conform" — whatever it writes, verify measures. That division of labour is the family's design philosophy: the judge is code, the narrative is the LLM.
@@ -37,7 +41,7 @@ The **spec side** (IETF RFCs and W3C / WHATWG — HTML / CSS / WebIDL / PWA, etc
 
 | MCP Server         | Layer                   | Description                                                                                    | Links                                                                                                                      |
 | ------------------ | ----------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **rfcxml-mcp**     | IETF (spec)             | IETF RFC (XML2RFC v3) — structure parsing, requirement extraction, RFC dependency lookups.     | [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp)         |
+| **rfcxml-mcp**     | IETF (spec)             | IETF RFC (XML2RFC v3) — structure parsing, requirement extraction, RFC dependency lookups.     | [Site](https://shuji-bonji.github.io/rfcxml-mcp/) · [npm](https://www.npmjs.com/package/@shuji-bonji/rfcxml-mcp) · [GitHub](https://github.com/shuji-bonji/rfcxml-mcp) |
 | **w3c-mcp**        | W3C / WHATWG (spec)     | Lookups across W3C / WHATWG specifications (HTML elements, CSS properties, WebIDL, PWA, etc.). | [npm](https://www.npmjs.com/package/@shuji-bonji/w3c-mcp) · [GitHub](https://github.com/shuji-bonji/w3c-mcp)               |
 | **web-compat-mcp** | Implementation (compat) | Browser compatibility checks based on Baseline / Browser Compat Data.                          | [npm](https://www.npmjs.com/package/@shuji-bonji/web-compat-mcp) · [GitHub](https://github.com/shuji-bonji/web-compat-mcp) |
 
@@ -48,6 +52,8 @@ The **spec side** (IETF RFCs and W3C / WHATWG — HTML / CSS / WebIDL / PWA, etc
 
 **An integrated ecosystem for handling Japanese laws, regulations, and authority notices with AI.**
 Each family member aims to ship as a one-set bundle: an MCP server, a TypeScript library, a Claude Skill, and a documentation site.
+Coverage today: all fields of statute law (via the e-Gov Law API v2), and notices and Q&A from the National Tax Agency only. Other ministries will be added one MCP at a time, each built to the same shape.
+See the **[houki-hub site](https://shuji-bonji.github.io/houki-hub/)** (published 2026-09-08) and the [hub repository](https://github.com/shuji-bonji/houki-hub) for the full picture.
 
 | MCP Server         | Description                                                                                                                                                                   | Links                                                                                                                      |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -74,7 +80,7 @@ A `.docx` containing several languages in one file is translated into a single l
 | **dtir-translate-mcp**         | translate     | Fills DTIR `translation`/`quality`. Per-`group` batching, engine-agnostic (DeepL / LLM).               | [GitHub](https://github.com/shuji-bonji/dtir-translate-mcp)         |
 | **dtir-ooxml-writer-mcp**      | writer        | Generates the translated `.docx` by patching the original by `id` from translated DTIR.                | [GitHub](https://github.com/shuji-bonji/dtir-ooxml-writer-mcp)      |
 | **dtir-docx-pipeline**         | pipeline      | End-to-end harness binding reader → translate → writer together.                                       | [GitHub](https://github.com/shuji-bonji/dtir-docx-pipeline)         |
-| **local-llm-on-apple-silicon** | Support (env) | Local LLM runtime on Apple Silicon (for translate's local engine). 🚧 In progress.                     | [GitHub](https://github.com/shuji-bonji/local-llm-on-apple-silicon) |
+| **local-llm-on-mac**           | Support (env) | Local LLM runtime on a Mac (for translate's local engine). 🚧 In progress.                             | [GitHub](https://github.com/shuji-bonji/local-llm-on-mac) |
 
 ## 🧰 Other MCP servers
 
