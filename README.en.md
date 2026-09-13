@@ -12,13 +12,14 @@ Since October 2025 I have worked as a freelancer on projects built with Angular 
 What I publish falls into six parts.
 
 1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/))
+
    A PWA for sole proprietors that brings the journal book and voucher management together in one place.
    - An LLM agent embedded in the app
+     - It uses the LLM the user already subscribes to
+       The AI chat feature connects to local LLMs / OpenAI / Anthropic / Gemini / Grok.
      - Seventeen tools are written as plain TypeScript functions, and the same definitions are passed to both function calling and WebMCP.
      - Human-in-the-Loop (HITL) is in place
        In the agent loop, any operation that rewrites application data is approved by a person before it runs (HITL).
-     - It uses the LLM the user already subscribes to
-       The AI chat feature connects to local LLMs / OpenAI / Anthropic / Gemini / Grok.
    - Invoicing
      v0.7.0 links invoices to journal entries, so payment status is derived from the entries.
 
@@ -30,12 +31,9 @@ What I publish falls into six parts.
 
 3. **A marketplace that installs them all — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)**
    It packages the MCP servers and Skills below so that Claude Code can install them with `/plugin install`.
-   As of 2026-09-08 it carries 24 plugins in 5 categories. This is the entry point.
 
 4. **MCP servers and Skills for reaching primary sources**
    [MCP servers](./docs/mcp-servers.en.md) and [Claude Skills](./docs/claude-skills.en.md) that let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law.
-   As of 2026-09-08, 13 MCP servers and 9 Skills are published.
-   The MCP servers have migrated to MCP SDK v2 (`@modelcontextprotocol/server` 2.x).
 
 5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)**
    A record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together.
