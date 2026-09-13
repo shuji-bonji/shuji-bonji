@@ -11,37 +11,12 @@
 
 公開しているものは、次の6つです。
 
-1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)）
-
-   個人事業主向けに、仕訳帳と証憑管理をひとつにまとめた PWA です。
-   - アプリの中に LLM エージェントの組み込み
-     - ユーザーの契約しているLLMを利用します
-       AIチャット機能の接続先は、ローカル LLM / OpenAI / Anthropic / Gemini / Grok です。
-     - 17 個のツールを素の TypeScript 関数として書き、同じ定義を function calling と WebMCP の両方に渡しています。
-     - Human-in-the-Loop (HITL)を採用  
-       エージェントのループでは、アプリデータを書き換える操作は、実行前に人が承認する(HITL)方法を採用しています。
-   - 請求書作成機能  
-     v0.7.0 で、請求書と仕訳を紐づけ、入金の状態を仕訳から導けるようにしました。
-
-2. **製品群 — [PDF Agent Stack](https://github.com/shuji-bonji/pdf-agent-stack) / [houki-hub](https://github.com/shuji-bonji/houki-hub)**  
-   個別のサーバーではなく、系列で使います。
-   - PDF：[サイト](https://shuji-bonji.github.io/pdf-agent-stack/ja/) — 読む / 調べる / 反証する / 書く。判定はコード、説明は LLM。
-   - 法規：[サイト](https://shuji-bonji.github.io/houki-hub/) — e-Gov の法令と国税庁の通達・Q&A を、出典付きで引く。当てはめは系の外に置きます。
-   - RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
-
-3. **まとめて導入できる marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)**
-   下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられるようにしたものです。
-
-4. **一次資料をそのまま引くための MCP と Skill**
-   AI エージェントが PDF / W3C / RFC / 日本の法令の原文に直接あたれるようにする [MCP サーバー](./docs/mcp-servers.md)と [Claude Skills](./docs/claude-skills.md) です。
-
-5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)**  
-   上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。  
-   Architecture が五層（Doctrine / Agent / Skills / Memory / MCP）と配置。Understanding LLMs が、その前提になる LLM の構造的制約です。
-
-6. **設計判断の支援 — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)**
-   生成 AI システムの構成を決めるときに、まだ決まっていないことを名指しして返す Skill です。
-   入力が足りないときに推測で埋めないことを、設計の中心に置いています。
+1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL）。
+2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/)** — PDF と日本の法令を、個別のサーバーではなく系列で引きます。判定はコード、説明は LLM。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
+3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
+4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令の原文に直接あたるためのものです。
+5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。
+6. **設計判断の支援 — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — 生成 AI システムの構成を決めるとき、まだ決まっていないことを名指しして返す Skill です。
 
 実装は Claude Code に任せ、設計方針と受け入れ条件は人が決める、という進め方をしています。
 

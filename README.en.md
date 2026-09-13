@@ -11,37 +11,12 @@ Since October 2025 I have worked as a freelancer on projects built with Angular 
 
 What I publish falls into six parts.
 
-1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/))
-
-   A PWA for sole proprietors that brings the journal book and voucher management together in one place.
-   - An LLM agent embedded in the app
-     - It uses the LLM the user already subscribes to
-       The AI chat feature connects to local LLMs / OpenAI / Anthropic / Gemini / Grok.
-     - Seventeen tools are written as plain TypeScript functions, and the same definitions are passed to both function calling and WebMCP.
-     - Human-in-the-Loop (HITL) is in place
-       In the agent loop, any operation that rewrites application data is approved by a person before it runs (HITL).
-   - Invoicing
-     v0.7.0 links invoices to journal entries, so payment status is derived from the entries.
-
-2. **Product families — [PDF Agent Stack](https://github.com/shuji-bonji/pdf-agent-stack) / [houki-hub](https://github.com/shuji-bonji/houki-hub)**
-   These are meant to be used as families, not as individual servers.
-   - PDF: [site](https://shuji-bonji.github.io/pdf-agent-stack/) — read / look up / falsify / write. Code decides, the LLM explains.
-   - Japanese law: [site](https://shuji-bonji.github.io/houki-hub/) — look up e-Gov statutes and National Tax Agency circulars and Q&A with citations. Applying a provision to a concrete case is kept outside the family.
-   - RFCs are collected in [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/).
-
-3. **A marketplace that installs them all — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)**
-   It packages the MCP servers and Skills below so that Claude Code can install them with `/plugin install`.
-
-4. **MCP servers and Skills for reaching primary sources**
-   [MCP servers](./docs/mcp-servers.en.md) and [Claude Skills](./docs/claude-skills.en.md) that let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law.
-
-5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)**
-   A record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together.
-   Architecture covers the five layers (Doctrine / Agent / Skills / Memory / MCP) and how they are arranged. Understanding LLMs covers the structural constraints of LLMs that those layers assume.
-
-6. **Design-decision support — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)**
-   A Skill that names what has not been decided yet when you are shaping a generative-AI system.
-   Its central rule is to leave missing input unfilled rather than guess.
+1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/)) — a journal and voucher-management PWA for sole proprietors. Seventeen tools are passed to both function calling and WebMCP, and any operation that rewrites data is approved by a person before it runs (HITL).
+2. **Product families — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/)** — PDF and Japanese law are looked up as families, not as individual servers. Code decides, the LLM explains. RFCs are collected in [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/).
+3. **Marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — installs the MCP servers and Skills below from Claude Code with `/plugin install`. This is the entry point.
+4. **The tools — [MCP servers](./docs/mcp-servers.en.md) / [Claude Skills](./docs/claude-skills.en.md)** — they let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law.
+5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — a record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together.
+6. **Design-decision support — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — a Skill that names what has not been decided yet when you are shaping a generative-AI system.
 
 Claude Code does the implementation; design policy and acceptance criteria stay with the human.
 
