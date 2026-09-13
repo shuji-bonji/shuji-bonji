@@ -2,13 +2,16 @@
 
 [← README に戻る](../README.md) · 🌐 [English version](./ai-assisted-development.en.md)
 
+公開している MCP サーバー・Skill・アプリを、なぜその構造にしたのかを書いたサイトと、その考え方で日々どう実装しているか、
 Claude / Claude Code / GitHub Copilot などの AI エージェントと一緒に開発を進めるための、手順とノウハウをまとめています。
+
+## 開発を進めるときの決めごと
 
 - **設計は人が決める** — 何をどう作るかの判断を AI に預けすぎず、仕様とアーキテクチャの責任は人が持ちます
 - **資料を構造化しておく** — MCP・Skill・仕様書を、AI が読み取りやすい形に整えます
 - **短く回して確かめる** — プロンプト → 出力 → 仕様との照合 → 修正、を素早く繰り返します
 
-### 日常の回し方（Claude Code）
+## 日常の回し方（Claude Code）
 
 毎日の実装は Claude Code で進めています。単発のチャットで補完させるのではなく、次の手順を繰り返します。
 
@@ -17,13 +20,15 @@ Claude / Claude Code / GitHub Copilot などの AI エージェントと一緒�
 3. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分担させます。要件の確定・受け入れ条件・設計レビューは人が持ちます。
 4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET による自動評価をパイプラインに載せます。基準に届かなければ、その工程からやり直します。
 
+## 公開している設計の根拠
+
 公開している e-shiwake では、開発に必要な MCP を先に作り、その道具で本体を実装しました。「AI で作るための道具をまず作り、それを使って本物の資産を作る」は標語ではなく、実際の作業手順です。
 
-| Phase | プロジェクト                                    | 説明                                                                                                                                                 | リンク                                                                                                                                                           |
-| :---: | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1   | **understanding-llm-through-claude-code**       | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ                                                                   | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
-|   2   | **ai-agent-architecture**                       | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ                                                                                      | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
-|   3   | **Management-of-software-systems-and-services** | 先人達が培ってきた[ソフトウェアシステム・サービス開発・管理](https://github.com/shuji-bonji/Management-of-software-systems-and-services)へ AI を適用 | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
+| Phase | 役割 | プロジェクト                                    | 説明                                                                                                                                                 | リンク                                                                                                                                                           |
+| :---: | :--- | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1   | Why  | **understanding-llm-through-claude-code**       | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ                                                                   | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
+|   2   | How  | **ai-agent-architecture**                       | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ                                                                                      | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
+|   3   |      | **Management-of-software-systems-and-services** | 先人達が培ってきた[ソフトウェアシステム・サービス開発・管理](https://github.com/shuji-bonji/Management-of-software-systems-and-services)へ AI を適用 | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
 
 <!--
 > [!NOTE]

@@ -2,28 +2,32 @@
 
 [← Back to README](../README.en.md) · 🌐 [日本語版](./ai-assisted-development.md)
 
-A collection of workflows and notes for collaborating with AI agents (Claude / Claude Code / GitHub Copilot, etc.) during development.
+The sites that explain why the MCP servers, Skills, and apps I publish are structured the way they are, and how I implement day to day on that basis — the workflows and notes for developing together with AI agents such as Claude / Claude Code / GitHub Copilot.
 
-- **Design-first**: humans stay responsible for spec and architecture; AI is not asked to make those calls.
-- **Structured documentation**: MCP servers, Skills, and specs are organized so AI can read them reliably.
-- **Tight verification loop**: prompt → output → spec check → fix, iterated quickly.
+## Ground rules for development
 
-### Daily loop (Claude Code)
+- **Humans decide the design** — the call on what to build and how is not handed over to AI; the spec and the architecture stay a human responsibility
+- **Keep the material structured** — MCP servers, Skills, and specs are arranged so that AI can read them reliably
+- **Verify in short cycles** — prompt → output → check against the spec → fix, repeated quickly
 
-Day-to-day implementation runs on Claude Code. This is not one-off chat completion; it is a loop.
+## Daily loop (Claude Code)
 
-1. **Rules first** — put `AGENTS.md` / `CLAUDE.md` in the repo so design, tests, and prohibitions stay fixed. Do not invent a new prompt every time.
-2. **Connect my own MCP / Skills** — let agents read specs (PDF / RFC / W3C / statutes) and artifacts (files, compat data, tax circulars) as families. Do not outsource research to a web search.
-3. **Split the roles** — research, implementation, review, and quality evaluation go to custom sub-agents + Skills. A human keeps requirements, acceptance criteria, and design review.
-4. **Pass quality gates** — lock `Issue → implement → test → PR`, and put spec checks and automatic evaluators such as xCOMET on the pipeline. Failures go back into the loop.
+Day-to-day implementation runs on Claude Code. Rather than completing things in a one-off chat, I repeat the following steps.
 
-On the public app (e-shiwake), I build the MCP the work needs first, then use that tool to build the product. “Build the tools that let AI build — then use them to build things that last” is a procedure, not a slogan.
+1. **Rules first** — put `AGENTS.md` / `CLAUDE.md` in the repository, recording the design policy, the test procedure, and what must not be done. That removes the need to rethink the prompt every time.
+2. **Connect my own MCP servers / Skills** — let agents read the source text of specifications (PDF / RFC / W3C / statutes) alongside actual files, compatibility data, and circulars, family by family. Research is not left to a web search.
+3. **Split the roles** — research, implementation, review, and quality evaluation are shared out across sub-agents and Skills. Fixing the requirements, the acceptance criteria, and the design review stays with the human.
+4. **Pass the quality gates** — fix the flow as `Issue → implement → test → PR`, and put spec checks and automatic evaluation such as xCOMET on the pipeline. If a result falls short of the criteria, the work goes back to that step.
 
-| Phase | Project                                         | Description                                                                                                                                                                              | Links                                                                                                                                                            |
-| :---: | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1   | **understanding-llm-through-claude-code**       | Understand the structural constraints of LLMs and learn the design philosophy of Claude Code — _why_ a setting is what it is.                                                            | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
-|   2   | **ai-agent-architecture**                       | Design philosophy, architecture, and field notes for integrating MCP, Skills, and AI agents.                                                                                             | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
-|   3   | **Management-of-software-systems-and-services** | Apply AI to the body of [software systems & services management](https://github.com/shuji-bonji/Management-of-software-systems-and-services) practice that engineers built up before us. | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
+## The rationale behind what I publish
+
+For e-shiwake, I built the MCP servers the work needed first, then implemented the product itself with those tools. "Build the tools that let AI build, then use them to build things that last" is a working procedure, not a slogan.
+
+| Phase | Role | Project                                         | Description                                                                                                                                                                              | Links                                                                                                                                                            |
+| :---: | :--- | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1   | Why  | **understanding-llm-through-claude-code**       | Understand the structural constraints of LLMs and learn the design philosophy of Claude Code — _why_ a setting is what it is.                                                            | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
+|   2   | How  | **ai-agent-architecture**                       | Design philosophy, architecture, and field notes for integrating MCP, Skills, and AI agents.                                                                                             | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
+|   3   |      | **Management-of-software-systems-and-services** | Apply AI to the body of [software systems & services management](https://github.com/shuji-bonji/Management-of-software-systems-and-services) practice that engineers built up before us. | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
 
 <!--
 > [!NOTE]
