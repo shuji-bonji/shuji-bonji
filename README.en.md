@@ -68,7 +68,17 @@ Claude Code is the main engine; my own MCP servers and Skills sit inside the dev
 
 ## 🧭 What I am working on next
 
-None of these are finished yet; they are the directions I am working toward.
+### Hands-on now
+
+- **Adapting spec-ids to OpenSpec and bringing it to the PDF series** — my own CLI [spec-ids](https://github.com/shuji-bonji/spec-ids) gives each requirement in a spec and its acceptance tests the same spec ID, and CI blocks the PR when the two sets disagree. This stops an AI coding agent from rewriting the spec to match its own implementation. The houki (Japanese law) series already runs on spec-ids, with the spec files (spec.md) as the source of truth. I am now extending spec-ids to fit [OpenSpec](https://github.com/Fission-AI/OpenSpec) and trying it on the PDF-series MCP servers. spec-ids 0.5.0 can read OpenSpec's directory layout, and pdf-reader-mcp has shipped two changes through this workflow. pdf-spec-mcp and pdf-verify-mcp come next, then pdf-writer-mcp
+
+### Trying next
+
+- **My own browser UI for [agentchattr](https://github.com/bcurts/agentchattr)** — agentchattr puts several AI coding agents into one chat so that they can talk to each other while they work. I plan to implement its browser UI myself and, as in [e-shiwake](https://github.com/shuji-bonji/e-shiwake), let the user call several LLMs they have configured (a local LLM, OpenAI, Anthropic, Gemini and others) directly from the browser
+
+### On hold
+
+These are still at the idea stage; none of them has taken shape yet.
 
 - **RAG for the houki (Japanese law) series ([houki-hub](https://shuji-bonji.github.io/houki-hub/))** — today every lookup goes straight to the e-Gov Law API and the National Tax Agency site. I want to add RAG to reduce missed hits, and I am also looking at KAG (Knowledge Augmented Generation) so that references between provisions survive retrieval
 - **Extending [normativepdf](https://github.com/shuji-bonji/normativepdf)** — a pure-TypeScript PDF library where every behaviour is tied to an ISO 32000 clause. The aim is to replace the part of pdf-writer-mcp that delegates to `pdf-lib`, so that a clause violation can be fixed and not merely reported

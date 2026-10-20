@@ -68,7 +68,17 @@
 
 ## 🧭 いま進めていること
 
-どれも着手または検討の段階で、まだ形にはなっていません。
+### 手を動かしていること
+
+- **spec-ids を OpenSpec に対応させ、PDF シリーズに入れる** — 自作の CLI [spec-ids](https://github.com/shuji-bonji/spec-ids) は、仕様書の要求とテスト名に同じ仕様 ID を付け、食い違いがあれば CI で PR を止めるためのものです。AI エージェントが実装に合わせて仕様書の文面を直してしまうことを防ぎます。法規シリーズではすでに spec-ids を入れ、仕様書（spec.md）を正本とする運用を続けています。今回はこれを [OpenSpec](https://github.com/Fission-AI/OpenSpec) の形式に合わせて改良し、PDF シリーズの MCP サーバーで試しています。spec-ids 0.5.0 で OpenSpec のディレクトリ構成を読めるようにし、pdf-reader-mcp ではこの手順で 2 件の変更を公開しました。次は pdf-spec-mcp・pdf-verify-mcp、最後に pdf-writer-mcp へ広げます
+
+### これから試すこと
+
+- **[agentchattr](https://github.com/bcurts/agentchattr) のブラウザー画面を自前で作る** — agentchattr は、複数の AI コーディングエージェントを 1 つのチャットにつなぎ、互いにやり取りさせながら作業させるためのツールです。この画面を自前で実装し、[e-shiwake](https://github.com/shuji-bonji/e-shiwake) と同じように、利用者が設定した複数の LLM（ローカル LLM・OpenAI・Anthropic・Gemini など）をブラウザーの中から使えるようにすることを試みます
+
+### 検討中のこと（いまは手を止めています）
+
+どれも検討の段階で、まだ形にはなっていません。
 
 - **法規シリーズ（[houki-hub](https://shuji-bonji.github.io/houki-hub/)）に RAG を入れる** — いまは e-Gov 法令 API と国税庁のサイトを、そのつど検索して引いています。取りこぼしを減らすために RAG を入れたいと考えています。条文どうしの参照関係を保ったまま引く KAG（Knowledge Augmented Generation）も併せて検討中です
 - **[normativepdf](https://github.com/shuji-bonji/normativepdf) を広げる** — ISO 32000 の条文と実装を1対1で対応させた、TypeScript 製の PDF ライブラリです。いま pdf-writer-mcp が `pdf-lib` に任せている部分をこれに置き換えて、条文違反を見つけても直せない、という状態をなくしたいと考えています
