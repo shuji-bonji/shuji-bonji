@@ -86,7 +86,9 @@
 
 ## 🏠 記念碑
 
-[履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) — 2021 年、JavaScript を学びながら初めて作った Web アプリです。いま読み返すとソースはとても恥ずかしいのですが、ここが出発点でした。[公開中のアプリはこちら](https://shuji-bonji.github.io/resume_editting/)
+- [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) — 2021 年、JavaScript を学びながら初めて作った Web アプリです。いま読み返すとソースはとても恥ずかしいのですが、ここが出発点でした。[公開中のアプリはこちら](https://shuji-bonji.github.io/resume_editting/)
+- 職業訓練時の卒業作品: [体験型操作説明](https://github.com/shuji-bonji/experience_based_operation_explanation) — 上の作品前の同じ 2021 年の職業訓練の制作課題です。券売機の画面画像にボタン領域を重ね、JSON で定義した画面遷移をブラウザー上で疑似体験できるようにしました。ATM の保守業務で保守モード画面の操作説明を自作していた経験が元になっており、いま構想している体験型マニュアル作成ツールと S1000D / IETM 向けの道具は、ここから続いています。
+
 
 ## 📬 Contact
 
