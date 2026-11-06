@@ -6,7 +6,7 @@ MCP servers that let AI agents (Claude, etc.) interact with external specs and d
 Cross-domain groupings with a coherent story are split out as **families** under their own headings.
 
 > [!NOTE]
-> All 13 published MCP servers now run on MCP SDK v2 (`@modelcontextprotocol/server` 2.x). The DTIR family and localllm-mcp are still on v1.
+> The published MCP servers run on MCP SDK v2 (`@modelcontextprotocol/server` 2.x): the 13 servers published through 2025 were migrated, and the four S1000D family servers were written on v2 from the start. The DTIR family and localllm-mcp are still on v1.
 
 ## 📄 PDF family
 
@@ -67,6 +67,31 @@ See the **[houki-hub site](https://shuji-bonji.github.io/houki-hub/)** (publishe
 | Package                 | Description                                                                                                                                | Links                                                                                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **houki-abbreviations** | Shared dictionary of Japanese statute abbreviations and common names (174 entries across 6 domains). Used across the houki-hub MCP family. | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
+
+## 🛫 S1000D family
+
+An MCP family that lets an LLM read, check and produce data modules of S1000D, the technical-publication standard used in aerospace and defence.
+Everything that can be checked deterministically — XSD, BREX (Business Rules Exchange: a data module carrying the customer's business rules), references and applicability — is done by the shared library s1000d-core; the LLM is limited to prose and explanation. The LLM never writes XML.
+Because the specification, the XSDs and the default BREX cannot be redistributed, the servers point at the copies the user obtains from s1000d.org.
+The overall layout is explained on the [s1000d-stack site](https://shuji-bonji.github.io/s1000d-stack/) and in the [hub repository](https://github.com/shuji-bonji/s1000d-stack).
+
+| MCP server | Layer | Description | Links |
+| --- | --- | --- | --- |
+| **s1000d-brex-mcp** | Rules (BREX) | Reads BREX data modules and checks data modules against them. Lookups for SNS, notations and values | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-brex-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-brex-mcp) |
+| **s1000d-verify-mcp** | Verification | Schema validation with the user's own XSDs, BREX checks, reference integrity, applicability, reconciliation with the DML, fix suggestions (suggest_fixes) and whole-CSDB verification | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-verify-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-verify-mcp) |
+| **s1000d-reader-mcp** | Observation | Reads data modules and publication modules as structure (sections, steps, warnings, figures, references). ICN metadata, reference resolution, applicability explained in words | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-reader-mcp) |
+| **s1000d-writer-mcp** | Authoring / repair | Builds data modules from a structured draft, applies fix candidates, extracts and re-applies segments for translation, converts experiential manuals (JSON), creates comment DMs | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-writer-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-writer-mcp) |
+
+| Package | Description | Links |
+| --- | --- | --- |
+| **s1000d-core** | The library shared by the four servers: DMC / ICN parsing, the identification and status section, the XML / XPath layer | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-core) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/lib/s1000d-core) |
+| **experiential-manual-model** | Data model for experiential manuals (screens with hotspots, screen flows, procedures, troubleshooting): TypeScript types and JSON Schema | [npm](https://www.npmjs.com/package/@shuji-bonji/experiential-manual-model) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/lib/experiential-manual-model) |
+
+Four Skills orchestrate this family (→ [Claude Skills](./claude-skills.en.md)): conversion from experiential manuals (experience-to-s1000d), authoring (s1000d-publish), review (s1000d-review) and translation (s1000d-translate).
+
+> [!NOTE]
+> **s1000d-reader-mcp** answers "what does this data module say"; **s1000d-verify-mcp** answers "does it conform to the standard and the BREX".
+> **s1000d-writer-mcp** assembles the XML but does not judge conformance. After writing, s1000d-verify-mcp always checks the result.
 
 ## 🌍 DTIR family
 

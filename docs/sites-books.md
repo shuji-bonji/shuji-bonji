@@ -19,6 +19,8 @@
 
 | 書籍                                                                     | 説明                                                                                                                              | リンク                                                                                                                                                           |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **S1000D入門 — 中心概念を仕様に沿って読む** | S1000D の中心概念（データモジュール、DMC、BREX、CSDB、適用性など）を、公式サイトと公開されている仕様の概要に沿って把握するための入門。版による違いにも触れる | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/s1000d-intro) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/s1000d-intro/) |
+| **IETM入門 — 概念から S1000D まで** | IETM（Interactive Electronic Technical Manual）の定義、米国 DoD のクラス分け、IETP との関係、S1000D の基本までを、公式情報に沿って整理した入門 | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/ietm-overview) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/ietm-overview/) |
 | **AI駆動開発時代のNeovim — Mac × ローカルLLM × tmux で作る統合開発環境** | Neovim 0.12 + tmux + Ghostty で「AI 駆動開発の土俵」を組み、Claude Code からローカル LLM まで繋いで協働する実践本（無料・全14章） | [📕 Zenn Book](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) · [GitHub](https://github.com/shuji-bonji/zenn-articles/tree/main/books/neovim-ide-on-mac/) |
 
 ---

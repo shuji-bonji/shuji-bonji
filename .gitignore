@@ -5,3 +5,5 @@
 Thumbs.db
 
 preliminary_evaluation/
+# ローカル専用（フォロワー一覧のスナップショットなど、公開しないもの）
+local/

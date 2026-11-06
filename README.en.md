@@ -2,23 +2,29 @@
 
 🌐 [日本語版 (README.md)](./README.md)
 
-**Lately I build MCP servers and Skills that let AI agents reach the source text of specs, statutes, and documentation, and then build the apps and validators that run on those tools.**
+**I build MCP (Model Context Protocol) servers and Skills that let AI agents read the source text of specifications, statutes and technical documents, and check or produce documents against fixed rules — and then build the apps and validators that run on those tools.**
 
 Frontend is mainly TypeScript / Angular / RxJS / Svelte.
 Backend is TypeScript / Node.js, plus some .NET C# Web API experience.
 I spent a long time in operations and customer engineering before moving into software development.
 Since October 2025 I have worked as a freelancer on projects built with Angular / RxJS / NgRx.
 
+Work you can bring to me:
+
+- Design and improvement of business SPAs in Angular / RxJS / NgRx (I have built an electronic-signature SPA and RESTful API + SPA systems)
+- Design and implementation of the plumbing (MCP servers / Skills) that lets AI agents read the source text of specifications, statutes and technical documents
+- Tools that check or generate technical documents such as PDF and S1000D against their standards
+
 What I publish falls into six parts.
 
-1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/)) — a journal and voucher-management PWA for sole proprietors. Seventeen tools are passed to both function calling and WebMCP, and any operation that rewrites data is approved by a person before it runs (HITL).
-2. **Product families — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/)** — PDF and Japanese law are looked up as families, not as individual servers. Code decides, the LLM explains. RFCs are collected in [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/).
+1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/)) — a journal and voucher-management PWA for sole proprietors. Seventeen tools are passed to both function calling and WebMCP (a way to expose tools to an AI agent from inside the browser), and any operation that rewrites data is approved by a person before it runs (HITL: Human in the Loop).
+2. **Product families — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF, Japanese law and S1000D technical documents are handled as families, not as individual servers. Code decides, the LLM explains. RFCs are collected in [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/).
 3. **Marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — installs the MCP servers and Skills below from Claude Code with `/plugin install`. This is the entry point.
-4. **The tools — [MCP servers](./docs/mcp-servers.en.md) / [Claude Skills](./docs/claude-skills.en.md)** — they let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law.
+4. **The tools — [MCP servers](./docs/mcp-servers.en.md) / [Claude Skills](./docs/claude-skills.en.md)** — they let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law / S1000D.
 5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — a record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together.
 6. **Design-decision support — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — a Skill that names what has not been decided yet when you are shaping a generative-AI system.
 
-Claude Code does the implementation; design policy and acceptance criteria stay with the human.
+Claude Code does the implementation; design policy and acceptance criteria stay with the human. Once something is published, I use it again from another host such as Grok Build, through the same path a user would take, and turn what breaks into Issues.
 
 ## ⚙️ How I run AI-driven development
 
@@ -26,8 +32,9 @@ Claude Code is the main engine; my own MCP servers and Skills sit inside the dev
 
 1. **Rules first** — lock design and test procedure in `AGENTS.md` / `CLAUDE.md`; do not depend on one-off prompts
 2. **Split the work** — research, implementation, review, and quality evaluation go to custom sub-agents + Skills. A human keeps the requirements and acceptance criteria
-3. **Knowledge via my MCP families** — cross-check the spec (canonical text) against the artifact (PDF / Web Spec / houki-hub)
-4. **Quality gates** — `Issue → implement → test → PR`, plus spec checks and automatic evaluators such as xCOMET
+3. **Knowledge via my MCP families** — cross-check the spec (canonical text: PDF / Web Spec / Japanese law / S1000D) against the actual files and compatibility data
+4. **Quality gates** — `Issue → implement → test → PR`, plus spec checks and automatic evaluators such as xCOMET (a model that scores translation quality)
+5. **Measure from outside after release** — run the published npm version end to end on another host, OS and distribution form, and feed the results back as Issues ([pdf-agent-stack eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval))
 
 ## 🛠 Tech Stack
 
@@ -54,39 +61,32 @@ Claude Code is the main engine; my own MCP servers and Skills sit inside the dev
 ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=white)
 
+
 ## 🗂 Contents
 
-| Category                                                                                                                                                                          | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins)                                                                                                  | Marketplace for installing my MCP / Skill / Slash Command / Sub-agent extensions via `/plugin install`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| 🔌 [MCP Servers](./docs/mcp-servers.en.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | Four families — [PDF](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.en.md#-pdf-family) (→ [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/), the family hub), [Web Spec](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.en.md#-web-spec-family), [houki-hub](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.en.md#-houki-hub-family) (→ [houki-hub site](https://shuji-bonji.github.io/houki-hub/), the family hub), [DTIR](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.en.md#-dtir-family) — plus standalone MCPs ([epsg](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) / [ifc-core](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) / [xcomet](https://www.npmjs.com/package/xcomet-mcp-server) / [rxjs](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp)) |
-| 🧩 [Claude Skills](./docs/claude-skills.en.md)                                                                                                                                    | Reusable workflow skills: [pdf-trust](https://github.com/shuji-bonji/pdf-trust-skill) , [pdf-publish](https://github.com/shuji-bonji/pdf-publish-skill) , [pdf-read](https://github.com/shuji-bonji/pdf-read-skill) , [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor) , [houki-research](https://github.com/shuji-bonji/houki-research-skill) , [factcheck](https://github.com/shuji-bonji/factcheck-skill) , [media-literacycheck-skill](https://github.com/shuji-bonji/media-literacycheck-skill) , [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills/) , [deepl-glossary-translation](https://github.com/shuji-bonji/deepl-glossary-translation), and more                                                                                                                                                                                 |
-| 📱 [Web Apps & Tools](./docs/web-apps.en.md)                                                                                                                                      | PWAs and practical tools such as [e-shiwake](https://github.com/shuji-bonji/e-shiwake) / [fact-checklist](https://github.com/shuji-bonji/fact-checklist) / [marble-to-svg](https://github.com/shuji-bonji/marble-to-svg) / [WebAPI Test Tool](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🧠 [Design rationale](./docs/ai-assisted-development.en.md)                                                                                                                       | Two sites on why the MCP servers, Skills, and apps above are structured the way they are ([Understanding LLMs through Claude Code](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) / [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/), both in Japanese), together with the day-to-day implementation procedure that follows from them                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 📖 [Sites & Books](./docs/sites-books.en.md)                                                                                                                                      | Learning sites on [RxJS](https://shuji-bonji.github.io/RxJS-with-TypeScript/) / [Svelte 5 / SvelteKit](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) / [Web Components](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) / [TDD](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/), plus the Zenn book [Neovim for the AI-Driven Development Era](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac)                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| 📓 [Notes](./docs/notes.en.md)                                                                                                                                                    | Notes and starter kits: digital signatures, PWA, design patterns, local-LLM infra, [Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity) (Draft — an open spec for describing digital-asset authenticity), and the DTIR translation pipeline (PoC)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Category | What is there |
+| --- | --- |
+| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | The entry point for installing my MCP / Skill / Slash Command / Sub-agent extensions with `/plugin install` |
+| 🔌 [MCP Servers](./docs/mcp-servers.en.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | Five families — PDF / Web Spec / houki-hub / S1000D / DTIR — and the standalone MCP servers |
+| 🧩 [Claude Skills](./docs/claude-skills.en.md) | Skills that package a working procedure so it can be reused as is |
+| 📱 [Web Apps & Tools](./docs/web-apps.en.md) | PWAs and practical tools |
+| 🧠 [Design rationale](./docs/ai-assisted-development.en.md) | Why the MCP servers, Skills and apps are structured the way they are, and the day-to-day implementation procedure |
+| 📖 [Sites & Books](./docs/sites-books.en.md) | Learning sites on RxJS / Svelte / Web Components / TDD, and Zenn books |
+| 📓 [Notes](./docs/notes.en.md) | Notes on digital signatures, PWA, local LLMs, [Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity) (an open spec for describing digital-asset authenticity) and more |
+| 🧭 [Now](./docs/now.en.md) | What I am working on, trying next, and considering |
 
-## 🧭 What I am working on next
+## 🧭 What I am working on (as of November 2026)
 
-### Hands-on now
+- **[s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — a family of MCP servers and Skills that lets an LLM read S1000D data modules (the technical-publication standard used in aerospace and defence), check them against BREX (the customer's business rules), and produce them without letting the LLM write XML
+- **Experiential-manual editor (SvelteKit / PWA)** — builds manuals you learn by operating a screen, and emits S1000D data modules from their JSON. Prototype stage
+- **Measuring published versions from outside** — running them end to end on other hosts and OSes, and fixing what breaks through Issues
 
-- **Adapting spec-ids to OpenSpec and bringing it to the PDF series** — my own CLI [spec-ids](https://github.com/shuji-bonji/spec-ids) gives each requirement in a spec and its acceptance tests the same spec ID, and CI blocks the PR when the two sets disagree. This stops an AI coding agent from rewriting the spec to match its own implementation. The houki (Japanese law) series already runs on spec-ids, with the spec files (spec.md) as the source of truth. I am now extending spec-ids to fit [OpenSpec](https://github.com/Fission-AI/OpenSpec) and trying it on the PDF-series MCP servers. spec-ids 0.5.0 can read OpenSpec's directory layout, and pdf-reader-mcp has shipped two changes through this workflow. pdf-spec-mcp and pdf-verify-mcp come next, then pdf-writer-mcp
-
-### Trying next
-
-- **My own browser UI for [agentchattr](https://github.com/bcurts/agentchattr)** — agentchattr puts several AI coding agents into one chat so that they can talk to each other while they work. I plan to implement its browser UI myself and, as in [e-shiwake](https://github.com/shuji-bonji/e-shiwake), let the user call several LLMs they have configured (a local LLM, OpenAI, Anthropic, Gemini and others) directly from the browser
-
-### On hold
-
-These are still at the idea stage; none of them has taken shape yet.
-
-- **RAG for the houki (Japanese law) series ([houki-hub](https://shuji-bonji.github.io/houki-hub/))** — today every lookup goes straight to the e-Gov Law API and the National Tax Agency site. I want to add RAG to reduce missed hits, and I am also looking at KAG (Knowledge Augmented Generation) so that references between provisions survive retrieval
-- **Extending [normativepdf](https://github.com/shuji-bonji/normativepdf)** — a pure-TypeScript PDF library where every behaviour is tied to an ISO 32000 clause. The aim is to replace the part of pdf-writer-mcp that delegates to `pdf-lib`, so that a clause violation can be fixed and not merely reported
-- **Connecting [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor) to [HEXIS](https://github.com/shuji-bonji/HEXIS) and [Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity)** — tying the record of a design decision to a reference architecture for decision structure (HEXIS) and to a spec for describing authenticity (MoA)
+What I keep going, what I will try next and what is on hold are in [docs/now.en.md](./docs/now.en.md).
 
 ## 🏠 Monuments
 
-[Resume editor](https://github.com/shuji-bonji/resume_editting) — built in 2021 as my very first web app while learning JavaScript. The source is really embarrassing to look at now, but this is where it all started for me. [Live demo here](https://shuji-bonji.github.io/resume_editting/)
+- [Resume editor](https://github.com/shuji-bonji/resume_editting) — built in 2021 as my very first web app while learning JavaScript. The source is really embarrassing to look at now, but this is where it all started for me. [Live demo here](https://shuji-bonji.github.io/resume_editting/)
+- Graduation piece from vocational training: [experience_based_operation_explanation](https://github.com/shuji-bonji/experience_based_operation_explanation) — a 2021 assignment that overlays button areas on screenshots of a ticket machine and lets you walk through screen transitions defined in JSON, in the browser. It is where today's experiential-manual editor started.
 
 ## 📬 Contact
 

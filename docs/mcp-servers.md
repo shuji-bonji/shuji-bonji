@@ -6,7 +6,7 @@ Claude などの AI エージェントから、外部の仕様書やデータを
 複数のサーバーが役割を分担してひとつの流れを作っているものは、**family** としてまとめています。
 
 > [!NOTE]
-> 公開中の MCP サーバー 13 本は、MCP SDK v2（`@modelcontextprotocol/server` 2.x）に移行しました。DTIR family と localllm-mcp は v1 のままです。
+> 公開中の MCP サーバーは MCP SDK v2（`@modelcontextprotocol/server` 2.x）で作っています（2025 年までに公開した 13 本は v2 へ移行済み、S1000D family の 4 本は最初から v2）。DTIR family と localllm-mcp は v1 のままです。
 
 ## 📄 PDF family
 
@@ -70,6 +70,31 @@ IETF の RFC を扱うサーバー、W3C / WHATWG の仕様（HTML 要素・CSS 
 | パッケージ              | 説明                                                                                      | リンク                                                                                                                               |
 | ----------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **houki-abbreviations** | 日本の法令略称・通称の共有辞書（174 エントリ・6 分野）。houki-hub MCP family が共通で利用 | [npm](https://www.npmjs.com/package/@shuji-bonji/houki-abbreviations) · [GitHub](https://github.com/shuji-bonji/houki-abbreviations) |
+
+## 🛫 S1000D family
+
+航空・防衛分野の技術文書規格 S1000D のデータモジュールを、LLM が読み、検査し、作成するための MCP ファミリーです。
+XSD・BREX（Business Rules Exchange。顧客ごとの業務ルールを書いたデータモジュール）・参照・適用性のように決定論的に確かめられることは共有ライブラリ s1000d-core が行い、LLM は文章の生成と説明に限ります。XML は LLM に書かせません。
+仕様書・XSD・既定の BREX は再配布できないため、利用者が s1000d.org から入手したものを指す形にしています。
+全体の構成は [s1000d-stack サイト](https://shuji-bonji.github.io/s1000d-stack/)と[ハブリポジトリ](https://github.com/shuji-bonji/s1000d-stack)で説明しています。
+
+| MCPサーバ | レイヤ | 説明 | リンク |
+| --- | --- | --- | --- |
+| **s1000d-brex-mcp** | ルール層（BREX） | BREX データモジュールを読み、データモジュールを BREX に照らして検査する。SNS・記法・値の参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-brex-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-brex-mcp) |
+| **s1000d-verify-mcp** | 検証層 | 利用者の XSD によるスキーマ検証、BREX 検査、参照の整合、適用性の検査、DML との照合、修正候補の提示（suggest_fixes）、CSDB 全体の検証 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-verify-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-verify-mcp) |
+| **s1000d-reader-mcp** | 実体層（観測） | データモジュール・パブリケーションモジュールを構造（節・手順・警告・図・参照）として読む。ICN のメタデータ、参照の解決、適用性の説明 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-reader-mcp) |
+| **s1000d-writer-mcp** | 生成層（作成・修正） | 構造化した下書きからのデータモジュール組み立て、修正候補の適用、翻訳用の文の取り出しと差し戻し、体験型マニュアル（JSON）からの変換、comment DM の作成 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-writer-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-writer-mcp) |
+
+| パッケージ | 説明 | リンク |
+| --- | --- | --- |
+| **s1000d-core** | 4 本の MCP が共有するライブラリ。DMC / ICN の解析、identification and status section の読み取り、XML / XPath 層 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-core) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/lib/s1000d-core) |
+| **experiential-manual-model** | 体験型マニュアル（画面・ホットスポット・画面遷移・手順・故障探求）のデータモデル。TypeScript の型と JSON Schema | [npm](https://www.npmjs.com/package/@shuji-bonji/experiential-manual-model) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/lib/experiential-manual-model) |
+
+このファミリーをまとめて動かす Skill が 4 つあります（→ [Claude Skills](./claude-skills.md)）。体験型マニュアルからの変換（experience-to-s1000d）、データモジュールの作成（s1000d-publish）、レビュー（s1000d-review）、翻訳（s1000d-translate）です。
+
+> [!NOTE]
+> **s1000d-reader-mcp** は「そのデータモジュールに何が書いてあるか」を答え、**s1000d-verify-mcp** は「規格と BREX に合っているか」を答えます。
+> **s1000d-writer-mcp** は XML を組み立てますが、合っているかどうかは判定しません。書いたあとに必ず s1000d-verify-mcp で確かめます。
 
 ## 🌍 DTIR family
 

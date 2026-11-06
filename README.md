@@ -2,23 +2,23 @@
 
 🌐 [English version (README.en.md)](./README.en.md)
 
-**最近は、AI エージェントが仕様・法令・ドキュメントの原文を引ける MCP と Skill をつくり、その道具で動くアプリと検証器を作っています。**
+**AI エージェントが仕様・法令・技術文書の原文を引き、決められたルールに沿って検査・作成できるようにする MCP（Model Context Protocol）サーバーと Skill をつくり、その道具で動くアプリと検証器を作っています。**
 
-フロントエンドは TypeScript / Angular / RxJS / Svelte を主に使っています。
-バックエンドは TypeScript / Node.js が中心で、.NET C# で Web API を書いた経験もあります。
-もともとは運用とカスタマーエンジニアを長く務め、そこから開発に移りました。
-2025 年 10 月からフリーランスとして、Angular / RxJS / NgRx を使うプロジェクトに参画しています。
+フロントエンドは TypeScript / Angular / RxJS / Svelte を主に使っています。  
+バックエンドは TypeScript / Node.js が中心で、.NET C# で Web API を書いた経験もあります。  
+もともとは運用とカスタマーエンジニアを長く務め、そこから開発に移りました。  
+2025 年 10 月からフリーランスとして、Angular / RxJS / NgRx を使うプロジェクトに参画しています。  
 
-公開しているものは、次の6つです。
+公開しているものは、次の 6 つです。
 
-1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL）。
-2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/)** — PDF と日本の法令を、個別のサーバーではなく系列で引きます。判定はコード、説明は LLM。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
+1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP（ブラウザーの中で AI エージェントにツールを渡す仕組み）の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop）
+2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱います。判定はコード、説明は LLM。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
 3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
-4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令の原文に直接あたるためのものです。
+4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令 / S1000D の原文に直接あたるためのものです。
 5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。
 6. **設計判断の支援 — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — 生成 AI システムの構成を決めるとき、まだ決まっていないことを名指しして返す Skill です。
 
-実装は Claude Code に任せ、設計方針と受け入れ条件は人が決める、という進め方をしています。
+実装は Claude Code に任せ、設計方針と受け入れ条件は人が決める、という進め方をしています。公開したものは、Grok Build など別のホストで利用者と同じ経路から使い直し、見つかった問題を Issue にして直しています。
 
 ## ⚙️ 日常の AI 駆動開発
 
@@ -26,8 +26,9 @@
 
 1. **規約を先に置く** — `AGENTS.md` / `CLAUDE.md` に設計方針とテスト手順を書いておき、毎回のプロンプトで指示し直さずに済むようにしています
 2. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分けて担当させます。要件と受け入れ条件は人が決めます
-3. **調べ物は自作の MCP に任せる** — 仕様書の原文（PDF / Web 仕様 / 法令）と、実際のファイルや互換性データを突き合わせます
-4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET による自動評価をパイプラインに載せます
+3. **調べ物は自作の MCP に任せる** — 仕様書の原文（PDF / Web 仕様 / 法令 / S1000D）と、実際のファイルや互換性データを突き合わせます
+4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET（翻訳の品質を採点するモデル）による自動評価をパイプラインに載せます
+5. **公開後に外から測る** — npm に公開した版を、別のホスト・OS・配布の形で通しで使う試用を行い、結果を Issue に戻します（[pdf-agent-stack の eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)）
 
 ## 🛠 Tech Stack
 
@@ -56,39 +57,29 @@
 
 ## 🗂 Contents
 
-| カテゴリ                                                                                                                                                                       | 概要                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins)                                                                                               | 自作 MCP / Skill / Slash Command / Sub-agent を `/plugin install` で導入できる marketplace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 🔌 [MCP Servers](./docs/mcp-servers.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | [PDF](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-pdf-family)（→ 全体像: [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/)）, [Web Spec](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-web-spec-family), [houki-hub](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-houki-hub-family)（→ 全体像: [houki-hub](https://shuji-bonji.github.io/houki-hub/)）, [DTIR](https://github.com/shuji-bonji/shuji-bonji/blob/main/docs/mcp-servers.md#-dtir-family) の4つのファミリーと、単独の MCP サーバー（[epsg](https://www.npmjs.com/package/@shuji-bonji/epsg-mcp) / [ifc-core](https://www.npmjs.com/package/@shuji-bonji/ifc-core-mcp) / [xcomet](https://www.npmjs.com/package/xcomet-mcp-server) / [rxjs](https://www.npmjs.com/package/@shuji-bonji/rxjs-mcp)） |
-| 🧩 [Claude Skills](./docs/claude-skills.md)                                                                                                                                    | [pdf-trust](https://github.com/shuji-bonji/pdf-trust-skill) / [pdf-publish](https://github.com/shuji-bonji/pdf-publish-skill) / [pdf-read](https://github.com/shuji-bonji/pdf-read-skill) / [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor) / [houki-research](https://github.com/shuji-bonji/houki-research-skill) / [factcheck](https://github.com/shuji-bonji/factcheck-skill) / [media-literacycheck-skill](https://github.com/shuji-bonji/media-literacycheck-skill) / [spec-compliance-skills](https://github.com/shuji-bonji/spec-compliance-skills/) / [deepl-glossary-translation](https://github.com/shuji-bonji/deepl-glossary-translation) など、作業手順をそのまま再利用するための Skill                                                                                                                                             |
-| 📱 [Web Apps & Tools](./docs/web-apps.md)                                                                                                                                      | [e-shiwake](https://github.com/shuji-bonji/e-shiwake) / [fact-checklist](https://github.com/shuji-bonji/fact-checklist) / [marble-to-svg](https://github.com/shuji-bonji/marble-to-svg) / [WebAPI Test Tool](https://github.com/shuji-bonji/WebAPI-Test-Execution-Tool-using-Step-CI-runner)などの PWA と実用ツール                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 🧠 [設計の根拠](./docs/ai-assisted-development.md)                                                                                                                             | 上に挙げた MCP・Skill・アプリを、なぜその構造にしたのかを書いた2つのサイト（[Claude Code を通じて LLM を理解する](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) / [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/)）と、その考え方で日々どう実装しているかの手順です                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| 📖 [Sites & Books](./docs/sites-books.md)                                                                                                                                      | [RxJS](https://shuji-bonji.github.io/RxJS-with-TypeScript/) / [Svelte 5 / SvelteKit](https://shuji-bonji.github.io/Svelte-and-SvelteKit-with-TypeScript/) / [Web Components](https://shuji-bonji.github.io/WebComponents-with-TypeScript/) / [TDD](https://shuji-bonji.github.io/Notes-on-Test-Driven-Development/) などの学習サイトと、[『AI駆動開発時代のNeovim』](https://zenn.dev/shuji_bonji/books/neovim-ide-on-mac) などの Zenn 書籍                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| 📓 [Notes](./docs/notes.md)                                                                                                                                                    | デジタル署名・PWA・デザインパターン、ローカル LLM の実行環境、[Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity)（デジタル資産の真正性を記述するオープン仕様・Draft）、DTIR 翻訳パイプライン（PoC）などのノートとスターターキット                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| カテゴリ | 内容 |
+| --- | --- |
+| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | 自作の MCP / Skill / Slash Command / Sub-agent を `/plugin install` で導入する入口 |
+| 🔌 [MCP Servers](./docs/mcp-servers.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | PDF / Web Spec / houki-hub / S1000D / DTIR の 5 ファミリーと、単独の MCP サーバーの一覧 |
+| 🧩 [Claude Skills](./docs/claude-skills.md) | 作業手順をそのまま再利用するための Skill の一覧 |
+| 📱 [Web Apps & Tools](./docs/web-apps.md) | PWA と実用ツールの一覧 |
+| 🧠 [設計の根拠](./docs/ai-assisted-development.md) | MCP・Skill・アプリをなぜその構造にしたのかの記録と、日々の実装手順 |
+| 📖 [Sites & Books](./docs/sites-books.md) | RxJS / Svelte / Web Components / TDD などの学習サイトと、Zenn 書籍 |
+| 📓 [Notes](./docs/notes.md) | デジタル署名・PWA・ローカル LLM・[Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity)（デジタル資産の真正性を記述するオープン仕様）などのノート |
+| 🧭 [Now](./docs/now.md) | いま進めていること・これから試すこと・検討中のこと |
 
-## 🧭 いま進めていること
+## 🧭 いま進めていること（2026 年 11 月時点）
 
-### 手を動かしていること
+- **[s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — 航空・防衛分野の技術文書規格 S1000D のデータモジュールを、LLM が読み、BREX（顧客ごとの業務ルール）で検査し、XML を書かせずに作成する MCP・Skill の系列です
+- **体験型マニュアル作成ツール（SvelteKit / PWA）** — 操作を体験しながら学べるマニュアルを作り、その JSON から S1000D のデータモジュールを出します。試作中です
+- **公開した版を外から測る** — 別のホスト・OS で通しで使い、見つかった問題を Issue にして直しています
 
-- **spec-ids を OpenSpec に対応させ、PDF シリーズに入れる** — 自作の CLI [spec-ids](https://github.com/shuji-bonji/spec-ids) は、仕様書の要求とテスト名に同じ仕様 ID を付け、食い違いがあれば CI で PR を止めるためのものです。AI エージェントが実装に合わせて仕様書の文面を直してしまうことを防ぎます。法規シリーズではすでに spec-ids を入れ、仕様書（spec.md）を正本とする運用を続けています。今回はこれを [OpenSpec](https://github.com/Fission-AI/OpenSpec) の形式に合わせて改良し、PDF シリーズの MCP サーバーで試しています。spec-ids 0.5.0 で OpenSpec のディレクトリ構成を読めるようにし、pdf-reader-mcp ではこの手順で 2 件の変更を公開しました。次は pdf-spec-mcp・pdf-verify-mcp、最後に pdf-writer-mcp へ広げます
-
-### これから試すこと
-
-- **[agentchattr](https://github.com/bcurts/agentchattr) のブラウザー画面を自前で作る** — agentchattr は、複数の AI コーディングエージェントを 1 つのチャットにつなぎ、互いにやり取りさせながら作業させるためのツールです。この画面を自前で実装し、[e-shiwake](https://github.com/shuji-bonji/e-shiwake) と同じように、利用者が設定した複数の LLM（ローカル LLM・OpenAI・Anthropic・Gemini など）をブラウザーの中から使えるようにすることを試みます
-
-### 検討中のこと（いまは手を止めています）
-
-どれも検討の段階で、まだ形にはなっていません。
-
-- **法規シリーズ（[houki-hub](https://shuji-bonji.github.io/houki-hub/)）に RAG を入れる** — いまは e-Gov 法令 API と国税庁のサイトを、そのつど検索して引いています。取りこぼしを減らすために RAG を入れたいと考えています。条文どうしの参照関係を保ったまま引く KAG（Knowledge Augmented Generation）も併せて検討中です
-- **[normativepdf](https://github.com/shuji-bonji/normativepdf) を広げる** — ISO 32000 の条文と実装を1対1で対応させた、TypeScript 製の PDF ライブラリです。いま pdf-writer-mcp が `pdf-lib` に任せている部分をこれに置き換えて、条文違反を見つけても直せない、という状態をなくしたいと考えています
-- **[ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor) を [HEXIS](https://github.com/shuji-bonji/HEXIS) / [Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity) につなぐ** — ai-design-advisor が返した設計判断を、判断の構造を記述する仕様（HEXIS）と、成果物の真正性を記述する仕様（MoA）に載せられないか検討しています
+続けていること・これから試すこと・検討中のことは [docs/now.md](./docs/now.md) に書いています。
 
 ## 🏠 記念碑
 
 - [履歴書作成アプリ](https://github.com/shuji-bonji/resume_editting) — 2021 年、JavaScript を学びながら初めて作った Web アプリです。いま読み返すとソースはとても恥ずかしいのですが、ここが出発点でした。[公開中のアプリはこちら](https://shuji-bonji.github.io/resume_editting/)
-- 職業訓練時の卒業作品: [体験型操作説明](https://github.com/shuji-bonji/experience_based_operation_explanation) — 上の作品前の同じ 2021 年の職業訓練の制作課題です。券売機の画面画像にボタン領域を重ね、JSON で定義した画面遷移をブラウザー上で疑似体験できるようにしました。ATM の保守業務で保守モード画面の操作説明を自作していた経験が元になっており、いま構想している体験型マニュアル作成ツールと S1000D / IETM 向けの道具は、ここから続いています。
-
+- 職業訓練時の卒業作品: [体験型操作説明](https://github.com/shuji-bonji/experience_based_operation_explanation) — 券売機の画面画像にボタン領域を重ね、JSON で定義した画面遷移をブラウザーで疑似体験できるようにした 2021 年の制作課題です。いまの体験型マニュアル作成ツールの原点です。
 
 ## 📬 Contact
 
