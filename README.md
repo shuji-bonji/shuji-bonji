@@ -90,3 +90,4 @@
 
 [![LAPRAS](https://img.shields.io/badge/LAPRAS-Profile-1E6FD9?style=flat)](https://lapras.com/public/PTFYSXV)
 [![Findy](https://img.shields.io/badge/Findy-Profile-1E6FD9?style=flat)](https://findy-code.io/skills-share/K6nIWB9j24YY8)
+[![Gitty Code](https://img.shields.io/badge/Gitty-Code-1E6FD9?style=flat)](https://gitty-code.com/user/shuji-bonji)
