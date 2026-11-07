@@ -17,7 +17,11 @@
 ## これから試すこと
 
 - **S1000D の閲覧ソフト（IETP）** — 体験型マニュアルと S1000D のデータモジュールをブラウザーで読む閲覧ソフトです。WebMCP に対応させ、[e-shiwake](https://github.com/shuji-bonji/e-shiwake) と同じように AI エージェントから操作できるようにします
-- **[agentchattr](https://github.com/bcurts/agentchattr) のブラウザー画面の自前実装** — 複数の AI コーディングエージェントを 1 つのチャットにつなぐツールの画面を作り直し、利用者が設定した LLM をブラウザーから使えるようにします
+- **ai-collab-platform の構築** — 複数の AI エージェントを 1 つの作業に分担させるための、自分用の作業基盤です。次の 4 つを組み合わせます
+  - 会話の土台に [agentchattr](https://github.com/bcurts/agentchattr)（複数の AI コーディングエージェントを 1 つのチャットにつなぐツール）を使います
+  - LLM への接続は [e-shiwake](https://github.com/shuji-bonji/e-shiwake) と同じ方式にします。OpenAI 互換の `/v1/chat/completions` を `baseUrl` と `apiKey` の設定で差し替え、API キーはブラウザーの中にだけ保存します。ローカル LLM・OpenAI・Anthropic・Gemini を設定で切り替えます
+  - エージェント間の手順は [LangGraph](https://github.com/langchain-ai/langgraphjs) のワークフローとして書きます。ワークフローの仕様は [OpenSpec](https://github.com/Fission-AI/OpenSpec) の形式で書き、[spec-ids](https://github.com/shuji-bonji/spec-ids) で仕様とテストの食い違いを CI で止めます
+  - 実行の流れ（どのエージェントが、どの入力で、何を返したか）は [LangSmith](https://www.langchain.com/langsmith) で見ます
 
 ## 検討中のこと（いまは手を止めています）
 

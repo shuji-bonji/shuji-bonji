@@ -17,7 +17,11 @@ I rewrite this page roughly once a month. The README keeps only the headlines; t
 ## Trying next
 
 - **An S1000D viewer (IETP)** — a browser viewer for experiential manuals and S1000D data modules. It will support WebMCP so that, as in [e-shiwake](https://github.com/shuji-bonji/e-shiwake), an AI agent can operate it
-- **My own browser UI for [agentchattr](https://github.com/bcurts/agentchattr)** — a tool that puts several AI coding agents into one chat. I will rebuild its UI so the user can call the LLMs they have configured from the browser
+- **Building ai-collab-platform** — my own workbench for splitting one task across several AI agents. It combines four parts
+  - [agentchattr](https://github.com/bcurts/agentchattr), a tool that puts several AI coding agents into one chat, as the conversation layer
+  - LLM connections in the same way as [e-shiwake](https://github.com/shuji-bonji/e-shiwake): an OpenAI-compatible `/v1/chat/completions` endpoint selected by `baseUrl` and `apiKey` settings, with API keys stored only in the browser. Local LLMs, OpenAI, Anthropic and Gemini are switched in settings
+  - the steps between agents written as a [LangGraph](https://github.com/langchain-ai/langgraphjs) workflow. The workflow spec is written in the [OpenSpec](https://github.com/Fission-AI/OpenSpec) layout, and [spec-ids](https://github.com/shuji-bonji/spec-ids) blocks the CI when the spec and the tests disagree
+  - the execution trace (which agent ran, with what input, and what it returned) viewed in [LangSmith](https://www.langchain.com/langsmith)
 
 ## On hold
 
