@@ -87,3 +87,6 @@
 [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji)
 [![Qiita](https://img.shields.io/badge/Qiita-shuji--bonji-55C500?style=flat&logo=qiita&logoColor=white)](https://qiita.com/shuji-bonji)
 [![Zenn](https://img.shields.io/badge/Zenn-shuji__bonji-3EA8FF?style=flat&logo=zenn&logoColor=white)](https://zenn.dev/shuji_bonji)
+
+[![LAPRAS](https://img.shields.io/badge/LAPRAS-Profile-1E6FD9?style=flat)](https://lapras.com/public/PTFYSXV)
+[![Findy](https://img.shields.io/badge/Findy-Profile-1E6FD9?style=flat)](https://findy-code.io/skills-share/K6nIWB9j24YY8)
