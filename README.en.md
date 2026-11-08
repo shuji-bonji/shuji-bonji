@@ -9,12 +9,6 @@ Backend is TypeScript / Node.js, plus some .NET C# Web API experience.
 I spent a long time in operations and customer engineering before moving into software development.
 Since October 2025 I have worked as a freelancer on projects built with Angular / RxJS / NgRx.
 
-Work you can bring to me:
-
-- Design and improvement of business SPAs in Angular / RxJS / NgRx (I have built an electronic-signature SPA and RESTful API + SPA systems)
-- Design and implementation of the plumbing (MCP servers / Skills) that lets AI agents read the source text of specifications, statutes and technical documents
-- Tools that check or generate technical documents such as PDF and S1000D against their standards
-
 What I publish falls into six parts.
 
 1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/)) — a journal and voucher-management PWA for sole proprietors. Seventeen tools are passed to both function calling and WebMCP (a way to expose tools to an AI agent from inside the browser), and any operation that rewrites data is approved by a person before it runs (HITL: Human in the Loop).
