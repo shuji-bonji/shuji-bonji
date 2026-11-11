@@ -15,7 +15,7 @@
 2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱います。判定はコード、説明は LLM。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
 3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
 4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令 / S1000D の原文に直接あたるためのものです。
-5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。
+5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。LLM が失敗する理由は [17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) に整理しています。
 6. **設計判断の支援 — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — 生成 AI システムの構成を決めるとき、まだ決まっていないことを名指しして返す Skill です。
 
 実装は Claude Code に任せ、設計方針と受け入れ条件は人が決める、という進め方をしています。公開したものは、Grok Build など別のホストで利用者と同じ経路から使い直し、見つかった問題を Issue にして直しています。
@@ -24,11 +24,13 @@
 
 毎日の実装は Claude Code で進め、自作の MCP と Skill を開発の流れに組み込んでいます。詳しい手順は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめました。
 
-1. **規約を先に置く** — `AGENTS.md` / `CLAUDE.md` に設計方針とテスト手順を書いておき、毎回のプロンプトで指示し直さずに済むようにしています
-2. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分けて担当させます。要件と受け入れ条件は人が決めます
-3. **調べ物は自作の MCP に任せる** — 仕様書の原文（PDF / Web 仕様 / 法令 / S1000D）と、実際のファイルや互換性データを突き合わせます
-4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET（翻訳の品質を採点するモデル）による自動評価をパイプラインに載せます
-5. **公開後に外から測る** — npm に公開した版を、別のホスト・OS・配布の形で通しで使う試用を行い、結果を Issue に戻します（[pdf-agent-stack の eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)）
+どの手順も、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるために置いています。各手順の末尾に、抑えたい制約の名前を書きました。Hallucination のように手順を組んでも残る失敗があるため、差分とテスト結果は人が確かめます。
+
+1. **規約を先に置く** — `AGENTS.md` / `CLAUDE.md` に設計方針とテスト手順を書いておき、毎回のプロンプトで指示し直さずに済むようにしています（Instruction Decay・Prompt Sensitivity）
+2. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分けて担当させます。要件と受け入れ条件は人が決めます（Self-Evaluation Bias・Context Rot）
+3. **調べ物は自作の MCP に任せる** — 仕様書の原文（PDF / Web 仕様 / 法令 / S1000D）と、実際のファイルや互換性データを突き合わせます（Hallucination・Knowledge Boundary）
+4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET（翻訳の品質を採点するモデル）による自動評価をパイプラインに載せます（Compounding Errors・Hallucination）
+5. **公開後に外から測る** — npm に公開した版を、別のホスト・OS・配布の形で通しで使う試用を行い、結果を Issue に戻します（[pdf-agent-stack の eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)）（Non-determinism・Self-Evaluation Bias）
 
 ## 🛠 Tech Stack
 

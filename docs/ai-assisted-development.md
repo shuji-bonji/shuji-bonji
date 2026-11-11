@@ -15,10 +15,12 @@ Claude / Claude Code / GitHub Copilot などの AI エージェントと一緒�
 
 毎日の実装は Claude Code で進めています。単発のチャットで補完させるのではなく、次の手順を繰り返します。
 
-1. **規約を先に置く** — リポジトリに `AGENTS.md` / `CLAUDE.md` を置き、設計方針・テスト手順・してはいけないことを書いておきます。毎回プロンプトを考え直さずに済みます。
-2. **自作の MCP / Skill をつなぐ** — 仕様書（PDF / RFC / W3C / 法令）と、実際のファイル・互換性データ・通達を、family 単位で参照させます。調べ物をウェブ検索任せにしません。
-3. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分担させます。要件の確定・受け入れ条件・設計レビューは人が持ちます。
-4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET による自動評価をパイプラインに載せます。基準に届かなければ、その工程からやり直します。
+各手順は、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるためのものです。手順ごとに、抑えたい制約を「対策する制約」として書いています。
+
+1. **規約を先に置く** — リポジトリに `AGENTS.md` / `CLAUDE.md` を置き、設計方針・テスト手順・してはいけないことを書いておきます。毎回プロンプトを考え直さずに済みます。対策する制約: Instruction Decay、Prompt Sensitivity。
+2. **自作の MCP / Skill をつなぐ** — 仕様書（PDF / RFC / W3C / 法令）と、実際のファイル・互換性データ・通達を、family 単位で参照させます。調べ物をウェブ検索任せにしません。対策する制約: Hallucination、Knowledge Boundary。
+3. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分担させます。要件の確定・受け入れ条件・設計レビューは人が持ちます。対策する制約: Self-Evaluation Bias（作ったモデル自身の採点が甘くなる）、Context Rot（1 つの会話に情報を詰め込むほど精度が落ちる）。
+4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET による自動評価をパイプラインに載せます。基準に届かなければ、その工程からやり直します。対策する制約: Compounding Errors（手順の途中の誤りが後の手順に積み重なる）、Hallucination。
 
 ## 公開している設計の根拠
 
@@ -26,7 +28,7 @@ Claude / Claude Code / GitHub Copilot などの AI エージェントと一緒�
 
 | Phase | 役割 | プロジェクト                                    | 説明                                                                                                                                                 | リンク                                                                                                                                                           |
 | :---: | :--- | :---------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1   | Why  | **understanding-llm-through-claude-code**       | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ                                                                   | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
+|   1   | Why  | **understanding-llm-through-claude-code**       | LLM の構造的制約を理解し、Claude Code の設計思想から「なぜそう設定するのか」を学ぶ。制約の一覧は [17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) にまとめています                 | [Site](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) · [GitHub](https://github.com/shuji-bonji/understanding-llm-through-claude-code) |
 |   2   | How  | **ai-agent-architecture**                       | MCP・Skills・Agent 統合の設計思想・アーキテクチャ・実践ノウハウ                                                                                      | [Site](https://shuji-bonji.github.io/ai-agent-architecture/ja/) · [GitHub](https://github.com/shuji-bonji/ai-agent-architecture)                                 |
 |   3   |      | **Management-of-software-systems-and-services** | 先人達が培ってきた[ソフトウェアシステム・サービス開発・管理](https://github.com/shuji-bonji/Management-of-software-systems-and-services)へ AI を適用 | <!-- [GitHub](https://github.com/shuji-bonji/Management-of-software-systems-and-services) -->                                                                    |
 

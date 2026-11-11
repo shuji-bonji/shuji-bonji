@@ -15,7 +15,7 @@ What I publish falls into six parts.
 2. **Product families — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF, Japanese law and S1000D technical documents are handled as families, not as individual servers. Code decides, the LLM explains. RFCs are collected in [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/).
 3. **Marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — installs the MCP servers and Skills below from Claude Code with `/plugin install`. This is the entry point.
 4. **The tools — [MCP servers](./docs/mcp-servers.en.md) / [Claude Skills](./docs/claude-skills.en.md)** — they let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law / S1000D.
-5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — a record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together.
+5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — a record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together. Why LLMs fail is organized as [17 constraints](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) (Japanese).
 6. **Design-decision support — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — a Skill that names what has not been decided yet when you are shaping a generative-AI system.
 
 Claude Code does the implementation; design policy and acceptance criteria stay with the human. Once something is published, I use it again from another host such as Grok Build, through the same path a user would take, and turn what breaks into Issues.
@@ -24,11 +24,13 @@ Claude Code does the implementation; design policy and acceptance criteria stay 
 
 Claude Code is the main engine; my own MCP servers and Skills sit inside the development loop. Details live in the [AI-Assisted Development Guide](./docs/ai-assisted-development.en.md).
 
-1. **Rules first** — lock design and test procedure in `AGENTS.md` / `CLAUDE.md`; do not depend on one-off prompts
-2. **Split the work** — research, implementation, review, and quality evaluation go to custom sub-agents + Skills. A human keeps the requirements and acceptance criteria
-3. **Knowledge via my MCP families** — cross-check the spec (canonical text: PDF / Web Spec / Japanese law / S1000D) against the actual files and compatibility data
-4. **Quality gates** — `Issue → implement → test → PR`, plus spec checks and automatic evaluators such as xCOMET (a model that scores translation quality)
-5. **Measure from outside after release** — run the published npm version end to end on another host, OS and distribution form, and feed the results back as Issues ([pdf-agent-stack eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval))
+Each step is there to hold back one of the failures that LLMs cause by the way they work ([17 constraints](https://zenn.dev/shuji_bonji/articles/llm-17-constraints), Japanese). The constraints each step targets are named at the end of the step. Some failures, such as hallucination, remain whatever steps are in place, so a human checks the diffs and the test results.
+
+1. **Rules first** — lock design and test procedure in `AGENTS.md` / `CLAUDE.md`; do not depend on one-off prompts (Instruction Decay, Prompt Sensitivity)
+2. **Split the work** — research, implementation, review, and quality evaluation go to custom sub-agents + Skills. A human keeps the requirements and acceptance criteria (Self-Evaluation Bias, Context Rot)
+3. **Knowledge via my MCP families** — cross-check the spec (canonical text: PDF / Web Spec / Japanese law / S1000D) against the actual files and compatibility data (Hallucination, Knowledge Boundary)
+4. **Quality gates** — `Issue → implement → test → PR`, plus spec checks and automatic evaluators such as xCOMET (a model that scores translation quality) (Compounding Errors, Hallucination)
+5. **Measure from outside after release** — run the published npm version end to end on another host, OS and distribution form, and feed the results back as Issues ([pdf-agent-stack eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)) (Non-determinism, Self-Evaluation Bias)
 
 ## 🛠 Tech Stack
 
