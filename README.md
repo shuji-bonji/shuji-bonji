@@ -12,7 +12,7 @@
 公開しているものは、次の 6 つです。
 
 1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP（ブラウザーの中で AI エージェントにツールを渡す仕組み）の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop）
-2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱います。判定はコード、説明は LLM。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
+2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱います。判定はコード、説明は LLM。各製品が LLM の 17 の制約のどれに対処しているかは、[ディスカッション #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に一覧にしています。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
 3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
 4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令 / S1000D の原文に直接あたるためのものです。
 5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。LLM が失敗する理由は [17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) に整理しています。
@@ -24,7 +24,7 @@
 
 毎日の実装は Claude Code で進め、自作の MCP と Skill を開発の流れに組み込んでいます。詳しい手順は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめました。
 
-どの手順も、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるために置いています。各手順の末尾に、抑えたい制約の名前を書きました。Hallucination のように手順を組んでも残る失敗があるため、差分とテスト結果は人が確かめます。
+どの手順も、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるために置いています。各手順の末尾に、抑えたい制約の名前を書きました。製品群では扱っていない制約のうち、Context Rot や Non-determinism などは、主にこの手順で抑えます。Hallucination のように手順を組んでも残る失敗があるため、差分とテスト結果は人が確かめます。
 
 1. **規約を先に置く** — `AGENTS.md` / `CLAUDE.md` に設計方針とテスト手順を書いておき、毎回のプロンプトで指示し直さずに済むようにしています（Instruction Decay・Prompt Sensitivity）
 2. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分けて担当させます。要件と受け入れ条件は人が決めます（Self-Evaluation Bias・Context Rot）

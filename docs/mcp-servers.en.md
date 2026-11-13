@@ -4,6 +4,7 @@
 
 MCP servers that let AI agents (Claude, etc.) interact with external specs and data sources.
 Cross-domain groupings with a coherent story are split out as **families** under their own headings.
+Which of the 17 LLM constraints each server addresses, and how, is listed in [Discussion #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) (Japanese).
 
 > [!NOTE]
 > The published MCP servers run on MCP SDK v2 (`@modelcontextprotocol/server` 2.x): the 13 servers published through 2025 were migrated, and the four S1000D family servers were written on v2 from the start. The DTIR family and localllm-mcp are still on v1.

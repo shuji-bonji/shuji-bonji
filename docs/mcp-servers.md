@@ -4,6 +4,7 @@
 
 Claude などの AI エージェントから、外部の仕様書やデータを扱えるようにする MCP サーバーです。
 複数のサーバーが役割を分担してひとつの流れを作っているものは、**family** としてまとめています。
+各サーバーが LLM の 17 の制約のどれに、どう対処しているかは、[ディスカッション #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に一覧にしています。
 
 > [!NOTE]
 > 公開中の MCP サーバーは MCP SDK v2（`@modelcontextprotocol/server` 2.x）で作っています（2025 年までに公開した 13 本は v2 へ移行済み、S1000D family の 4 本は最初から v2）。DTIR family と localllm-mcp は v1 のままです。
