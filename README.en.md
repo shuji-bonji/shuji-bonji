@@ -74,7 +74,8 @@ Each step is there to hold back one of the failures that LLMs cause by the way t
 ## 🧭 What I am working on (as of November 2026)
 
 - **[s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — a family of MCP servers and Skills that lets an LLM read S1000D data modules (the technical-publication standard used in aerospace and defence), check them against BREX (the customer's business rules), and produce them without letting the LLM write XML
-- **Experiential-manual editor (SvelteKit / PWA)** — builds manuals you learn by operating a screen, and emits S1000D data modules from their JSON. Prototype stage
+- **[Experiential-manual editor](https://github.com/shuji-bonji/experiential-manual-editor) (SvelteKit / PWA)** — builds manuals you learn by operating a screen, and emits S1000D data modules from their JSON. Prototype stage
+- **[MutualSpec](https://github.com/shuji-bonji/mutualspec)** — a spec-driven development framework: specs are written in Markdown and YAML per business boundary, and a tool decides whether they follow the rules. The design is published; implementation has not started
 - **Measuring published versions from outside** — running them end to end on other hosts and OSes, and fixing what breaks through Issues
 
 What I keep going, what I will try next and what is on hold are in [docs/now.en.md](./docs/now.en.md).

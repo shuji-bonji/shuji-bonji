@@ -8,6 +8,7 @@
 | ----------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **e-shiwake**                 | フリーランス・個人事業主向けの仕訳帳 + 証憑管理 PWAアプリ | [📱 App](https://shuji-bonji.github.io/e-shiwake/) · [GitHub](https://github.com/shuji-bonji/e-shiwake)                                          |
 | **e-shiwake-ai**              | AIエージェントをフロントエンドとして利用した、e-shiwake   | [GitHub](https://github.com/shuji-bonji/e-shiwake-ai)                                                                                            |
+| **experiential-manual-editor** | 体験型マニュアル作成ツール（試作中）。画面の画像に押せる範囲を描き、操作を体験しながら学べるマニュアルを作る | [GitHub](https://github.com/shuji-bonji/experiential-manual-editor) |
 | **fact-checklist**            | 事実確認チェックシート — 情報の信頼性を評価するPWAアプリ  | [📱 App](https://fact-checklist.vercel.app) · [GitHub](https://github.com/shuji-bonji/fact-checklist)                                            |
 | **websocket-practical-guide** | WebSocket 実践ガイド — リアルタイムWebアプリ実践PWA       | 工事中🏗️ [📱 App](https://shuji-bonji.github.io/websocket-practical-guide/) · [GitHub](https://github.com/shuji-bonji/websocket-practical-guide) |
 | **marble-to-svg**             | RxJS マーブル記法 → SVG 変換ツール                        | [🔧 Tool](https://shuji-bonji.github.io/marble-to-svg/) · [GitHub](https://github.com/shuji-bonji/marble-to-svg)                                 |

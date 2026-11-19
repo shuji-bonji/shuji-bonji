@@ -73,7 +73,8 @@
 ## 🧭 いま進めていること（2026 年 11 月時点）
 
 - **[s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — 航空・防衛分野の技術文書規格 S1000D のデータモジュールを、LLM が読み、BREX（顧客ごとの業務ルール）で検査し、XML を書かせずに作成する MCP・Skill の系列です
-- **体験型マニュアル作成ツール（SvelteKit / PWA）** — 操作を体験しながら学べるマニュアルを作り、その JSON から S1000D のデータモジュールを出します。試作中です
+- **[体験型マニュアル作成ツール](https://github.com/shuji-bonji/experiential-manual-editor)（SvelteKit / PWA）** — 操作を体験しながら学べるマニュアルを作り、その JSON から S1000D のデータモジュールを出します。試作中です
+- **[MutualSpec](https://github.com/shuji-bonji/mutualspec)** — 仕様を業務の境界ごとに Markdown と YAML で書き、ルールに合っているかをツールが判定する、仕様駆動開発のフレームワークです。設計を公開した段階で、実装はこれからです
 - **公開した版を外から測る** — 別のホスト・OS で通しで使い、見つかった問題を Issue にして直しています
 
 続けていること・これから試すこと・検討中のことは [docs/now.md](./docs/now.md) に書いています。

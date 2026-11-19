@@ -27,7 +27,7 @@ ISO 32000（PDF 2.0）・PDF 1.7・PDF/UA・TS 32001 系の仕様書そのもの
 | パッケージ          | 説明                                                                                                             | リンク                                                                                                                             |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | **pdf-constraints** | ISO 32000 の条文を、機械が検査できる制約の表に置き換えたデータライブラリ。pdf-verify-mcp の条文検査（validate_clauses）が使う | [npm](https://www.npmjs.com/package/@shuji-bonji/pdf-constraints) · [GitHub](https://github.com/shuji-bonji/pdf-constraints) |
-| **normativepdf** 🚧 | ISO 32000 の条文と実装を1対1で対応させた TypeScript 製の PDF ライブラリ。出力が veraPDF を通ることをリリースごとに測る。pdf-writer-mcp が `pdf-lib` に任せている部分の置き換えを目指す（開発初期） | [GitHub](https://github.com/shuji-bonji/normativepdf) |
+| **normativepdf** 🚧 | ISO 32000 の条文と実装を1対1で対応させた TypeScript 製の PDF ライブラリ。出力が veraPDF を通ることをリリースごとに測る。pdf-writer-mcp が `pdf-lib` に任せている部分の置き換えを目指す（開発初期） | [npm](https://www.npmjs.com/package/normativepdf) · [GitHub](https://github.com/shuji-bonji/normativepdf) |
 
 > [!NOTE]
 > **pdf-reader-mcp** は「その PDF に何が入っているか」を答え、**pdf-verify-mcp** は「その PDF が本物かどうか」を答えます。
@@ -81,15 +81,15 @@ XSD・BREX（Business Rules Exchange。顧客ごとの業務ルールを書い�
 
 | MCPサーバ | レイヤ | 説明 | リンク |
 | --- | --- | --- | --- |
-| **s1000d-brex-mcp** | ルール層（BREX） | BREX データモジュールを読み、データモジュールを BREX に照らして検査する。SNS・記法・値の参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-brex-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-brex-mcp) |
-| **s1000d-verify-mcp** | 検証層 | 利用者の XSD によるスキーマ検証、BREX 検査、参照の整合、適用性の検査、DML との照合、修正候補の提示（suggest_fixes）、CSDB 全体の検証 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-verify-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-verify-mcp) |
-| **s1000d-reader-mcp** | 実体層（観測） | データモジュール・パブリケーションモジュールを構造（節・手順・警告・図・参照）として読む。ICN のメタデータ、参照の解決、適用性の説明 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-reader-mcp) |
-| **s1000d-writer-mcp** | 生成層（作成・修正） | 構造化した下書きからのデータモジュール組み立て、修正候補の適用、翻訳用の文の取り出しと差し戻し、体験型マニュアル（JSON）からの変換、comment DM の作成 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-writer-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/mcp/s1000d-writer-mcp) |
+| **s1000d-brex-mcp** | ルール層（BREX） | BREX データモジュールを読み、データモジュールを BREX に照らして検査する。SNS・記法・値の参照 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-brex-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-brex-mcp) |
+| **s1000d-verify-mcp** | 検証層 | 利用者の XSD によるスキーマ検証、BREX 検査、参照の整合、適用性の検査、DML との照合、修正候補の提示（suggest_fixes）、CSDB 全体の検証 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-verify-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-verify-mcp) |
+| **s1000d-reader-mcp** | 実体層（観測） | データモジュール・パブリケーションモジュールを構造（節・手順・警告・図・参照）として読む。ICN のメタデータ、参照の解決、適用性の説明 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-reader-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-reader-mcp) |
+| **s1000d-writer-mcp** | 生成層（作成・修正） | 構造化した下書きからのデータモジュール組み立て、修正候補の適用、既にあるデータモジュールの編集（節点を足す・取り除く・移す）と改版、翻訳用の文の取り出しと差し戻し、体験型マニュアル（JSON）からの変換、comment DM の作成 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-writer-mcp) · [GitHub](https://github.com/shuji-bonji/s1000d-writer-mcp) |
 
 | パッケージ | 説明 | リンク |
 | --- | --- | --- |
-| **s1000d-core** | 4 本の MCP が共有するライブラリ。DMC / ICN の解析、identification and status section の読み取り、XML / XPath 層 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-core) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/lib/s1000d-core) |
-| **experiential-manual-model** | 体験型マニュアル（画面・ホットスポット・画面遷移・手順・故障探求）のデータモデル。TypeScript の型と JSON Schema | [npm](https://www.npmjs.com/package/@shuji-bonji/experiential-manual-model) · [GitHub](https://github.com/shuji-bonji/s1000d-stack/tree/main/lib/experiential-manual-model) |
+| **s1000d-core** | 4 本の MCP が共有するライブラリ。DMC / ICN の解析、identification and status section の読み取り、XML / XPath 層 | [npm](https://www.npmjs.com/package/@shuji-bonji/s1000d-core) · [GitHub](https://github.com/shuji-bonji/s1000d-core) |
+| **experiential-manual-model** | 体験型マニュアル（画面・ホットスポット・画面遷移・手順・故障探求）のデータモデル。TypeScript の型と JSON Schema | [npm](https://www.npmjs.com/package/@shuji-bonji/experiential-manual-model) · [GitHub](https://github.com/shuji-bonji/experiential-manual-model) |
 
 このファミリーをまとめて動かす Skill が 4 つあります（→ [Claude Skills](./claude-skills.md)）。体験型マニュアルからの変換（experience-to-s1000d）、データモジュールの作成（s1000d-publish）、レビュー（s1000d-review）、翻訳（s1000d-translate）です。
 
