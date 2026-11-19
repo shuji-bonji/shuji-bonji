@@ -34,28 +34,31 @@
 
 ## 🛠 Tech Stack
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=c-sharp&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
-![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=flat&logo=reactivex&logoColor=white)
-![NgRx](https://img.shields.io/badge/NgRx-BA2BD2?style=flat&logo=ngrx&logoColor=white)
-![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=flat&logo=svelte&logoColor=white)
-![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=flat&logo=svelte&logoColor=white)
-![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat&logo=pwa&logoColor=white)
-![Jasmine](https://img.shields.io/badge/Jasmine-8A4182?style=flat&logo=jasmine&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=flat&logo=anthropic&logoColor=white)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=flat&logo=claude&logoColor=white)
-![Skills](https://img.shields.io/badge/Skills-Claude%20Skills-D97757?style=flat)
-![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=white)
+公開リポジトリのコードで確かめられる技術と、業務で使っていてコードを公開していない技術を、分けて書きます。
+
+### 公開リポジトリで使っている技術
+
+| 分野 | 技術 | 確かめられる場所 |
+| --- | --- | --- |
+| 言語・実行環境 | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | [MCP サーバーの一覧](./docs/mcp-servers.md) |
+| AI エージェント向けの道具 | ![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat) ![Skills](https://img.shields.io/badge/Skills-Claude%20Skills-D97757?style=flat) | [claude-plugins](https://github.com/shuji-bonji/claude-plugins) · [Claude Skills の一覧](./docs/claude-skills.md) |
+| フロントエンド | ![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=flat&logo=svelte&logoColor=white) ![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=flat&logo=svelte&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat&logo=pwa&logoColor=white) | [e-shiwake](https://github.com/shuji-bonji/e-shiwake) · [Web Apps & Tools](./docs/web-apps.md) |
+| リアクティブプログラミング | ![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=flat&logo=reactivex&logoColor=white) | [TypeScript で RxJS](https://shuji-bonji.github.io/RxJS-with-TypeScript/) · [rxjs-mcp-server](https://github.com/shuji-bonji/rxjs-mcp-server) |
+| テスト・ビルド | ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) | [e-shiwake](https://github.com/shuji-bonji/e-shiwake) |
+
+### 業務で使っている技術
+
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white) ![NgRx](https://img.shields.io/badge/NgRx-BA2BD2?style=flat&logo=ngrx&logoColor=white) ![Jasmine](https://img.shields.io/badge/Jasmine-8A4182?style=flat&logo=jasmine&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white) ![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=c-sharp&logoColor=white)
+
+業務では Angular / RxJS / NgRx で SPA を開発しています。.NET C# では Web API を書きました。  
+業務のコードは公開していないため、この欄の技術は公開リポジトリからは確かめられません。RxJS だけは、上の表に挙げた学習サイトと MCP サーバーで確かめられます。
+
+### 開発に使っている AI ツール
+
+![Claude](https://img.shields.io/badge/Claude-D97757?style=flat&logo=anthropic&logoColor=white) ![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=flat&logo=claude&logoColor=white) ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?style=flat&logo=githubcopilot&logoColor=white) ![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat&logo=cursor&logoColor=white) ![xAI](https://img.shields.io/badge/xAI-000000?style=flat) ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=white)
+
+主に使うのは Claude と Claude Code です。Cursor と xAI は最近使い始め、補助として使っています。  
+AI エージェントどうしを連携させる用途では、ローカル LLM を含め、Claude 以外のモデルも使っていく予定です。
 
 ## 🗂 Contents
 
