@@ -11,12 +11,14 @@
 
 公開しているものは、次の 6 つです。
 
-1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP（ブラウザーの中で AI エージェントにツールを渡す仕組み）の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop）
-2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱い、判定はコードが、説明は LLM が受け持ちます。各製品が LLM の 17 の制約のどれに対処しているかは、[ディスカッション #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に一覧にしています。
-3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
-4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令 / S1000D の原文に直接あたるためのものです。
-5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。LLM が失敗する理由は [17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) に整理しています。
-6. **設計判断の支援 — [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor)** — 生成 AI システムの構成を決めるとき、まだ決まっていないことを名指しして返す Skill です。
+| 種別 | 名前 | 概要 |
+|------|------|------|
+| 動くアプリ | [e-shiwake](https://github.com/shuji-bonji/e-shiwake)（[デモ](https://shuji-bonji.github.io/e-shiwake/)） | 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCPの両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop） |
+| 製品群 | [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) /<br>[houki-hub](https://shuji-bonji.github.io/houki-hub/) /<br> [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/) | PDF・日本の法令・S1000Dを系列で扱う。判定はコード、説明はLLMが受け持つ。各製品が LLM の [17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)のどれに対処しているかは、[Discussion #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に記載。|
+| marketplace | [claude-plugins](https://github.com/shuji-bonji/claude-plugins) | MCPサーバーとSkillをClaude Codeから`/plugin install`で導入 |
+| 道具 | [MCP サーバー](./docs/mcp-servers.md) /<br> [Claude Skills](./docs/claude-skills.md) | AIエージェントがPDF / W3C / RFC / 法令 / S1000Dの原文に直接当たるためのもの |
+| 設計の根拠 | [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/) | 上の製品群をなぜその層に分けたかの記録 |
+| 設計判断の支援 | [ai-design-advisor](https://github.com/shuji-bonji/ai-design-advisor) | 生成AIシステムの構成を決めるとき、まだ決まっていないことを名指しして返すSkill |
 
 実装は Claude Code に任せ、設計方針と受け入れ条件は人が決める、という進め方をしています。公開したものは、Grok Build など別のホストで利用者と同じ経路から使い直し、見つかった問題を Issue にして直しています。
 
