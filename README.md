@@ -11,7 +11,7 @@
 
 公開しているものは、次の 6 つです。
 
-1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP（ブラウザーの中で AI エージェントにツールを渡す仕組み）の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop）
+1. **アプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP（ブラウザーの中で AI エージェントにツールを渡す仕組み）の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop）
 2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱います。判定はコード、説明は LLM。各製品が LLM の 17 の制約のどれに対処しているかは、[ディスカッション #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に一覧にしています。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
 3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
 4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令 / S1000D の原文に直接あたるためのものです。
