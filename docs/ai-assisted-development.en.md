@@ -16,10 +16,13 @@ Day-to-day implementation runs on Claude Code. Rather than completing things in 
 
 Each step is there to hold back one of the failures that LLMs cause by the way they work ([17 constraints](https://zenn.dev/shuji_bonji/articles/llm-17-constraints), Japanese). Each step names the constraints it targets.
 
+Among the constraints the products do not address, those such as Context Rot and Non-determinism are mainly held back by these steps. Some failures, such as hallucination, remain whatever steps are in place, so a human checks the diffs and the test results.
+
 1. **Rules first** — put `AGENTS.md` / `CLAUDE.md` in the repository, recording the design policy, the test procedure, and what must not be done. That removes the need to rethink the prompt every time. Targets: Instruction Decay, Prompt Sensitivity.
 2. **Connect my own MCP servers / Skills** — let agents read the source text of specifications (PDF / RFC / W3C / statutes) alongside actual files, compatibility data, and circulars, family by family. Research is not left to a web search. Targets: Hallucination, Knowledge Boundary.
 3. **Split the roles** — research, implementation, review, and quality evaluation are shared out across sub-agents and Skills. Fixing the requirements, the acceptance criteria, and the design review stays with the human. Targets: Self-Evaluation Bias (a model grades its own output too leniently), Context Rot (accuracy drops as one conversation fills up).
 4. **Pass the quality gates** — fix the flow as `Issue → implement → test → PR`, and put spec checks and automatic evaluation such as xCOMET on the pipeline. If a result falls short of the criteria, the work goes back to that step. Targets: Compounding Errors (an error early in a procedure builds up in later steps), Hallucination.
+5. **Measure from outside after release** — run the published npm version end to end on another host, OS and distribution form, and feed the results back as Issues ([pdf-agent-stack eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)). Targets: Non-determinism, Self-Evaluation Bias.
 
 ## The rationale behind what I publish
 

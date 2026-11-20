@@ -12,7 +12,7 @@ Since October 2025 I have worked as a freelancer on projects built with Angular 
 What I publish falls into six parts.
 
 1. **A working app — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)** ([demo](https://shuji-bonji.github.io/e-shiwake/)) — a journal and voucher-management PWA for sole proprietors. Seventeen tools are passed to both function calling and WebMCP (a way to expose tools to an AI agent from inside the browser), and any operation that rewrites data is approved by a person before it runs (HITL: Human in the Loop).
-2. **Product families — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF, Japanese law and S1000D technical documents are handled as families, not as individual servers. Code decides, the LLM explains. Which of the 17 LLM constraints each product addresses is listed in [Discussion #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) (Japanese). RFCs are collected in [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/).
+2. **Product families — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF, Japanese law and S1000D technical documents are handled as families, not as individual servers: code decides, the LLM explains. Which of the 17 LLM constraints each product addresses is listed in [Discussion #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) (Japanese).
 3. **Marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — installs the MCP servers and Skills below from Claude Code with `/plugin install`. This is the entry point.
 4. **The tools — [MCP servers](./docs/mcp-servers.en.md) / [Claude Skills](./docs/claude-skills.en.md)** — they let AI agents go straight to the source text of PDF / W3C / RFC / Japanese law / S1000D.
 5. **Design rationale — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — a record of why the products above are split into the layers they are. Not how to use the products, but the constraints and how the pieces are put together. Why LLMs fail is organized as [17 constraints](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) (Japanese).
@@ -22,15 +22,25 @@ Claude Code does the implementation; design policy and acceptance criteria stay 
 
 ## ⚙️ How I run AI-driven development
 
-Claude Code is the main engine; my own MCP servers and Skills sit inside the development loop. Details live in the [AI-Assisted Development Guide](./docs/ai-assisted-development.en.md).
+Day-to-day implementation runs on Claude Code, with my own MCP servers and Skills built into the development flow. I repeat five steps: put the rules in place first, split the roles, leave research to my own MCP servers, pass the quality gates, and measure from outside after release.
 
-Each step is there to hold back one of the failures that LLMs cause by the way they work ([17 constraints](https://zenn.dev/shuji_bonji/articles/llm-17-constraints), Japanese). The constraints each step targets are named at the end of the step. Among the constraints the products do not address, those such as Context Rot and Non-determinism are mainly held back by these steps. Some failures, such as hallucination, remain whatever steps are in place, so a human checks the diffs and the test results.
+Each step is there to hold back one of the failures that LLMs cause by the way they work ([17 constraints](https://zenn.dev/shuji_bonji/articles/llm-17-constraints), Japanese).
+
+<details>
+<summary>The five steps, and the constraints each one targets</summary>
 
 1. **Rules first** — lock design and test procedure in `AGENTS.md` / `CLAUDE.md`; do not depend on one-off prompts (Instruction Decay, Prompt Sensitivity)
 2. **Split the work** — research, implementation, review, and quality evaluation go to custom sub-agents + Skills. A human keeps the requirements and acceptance criteria (Self-Evaluation Bias, Context Rot)
 3. **Knowledge via my MCP families** — cross-check the spec (canonical text: PDF / Web Spec / Japanese law / S1000D) against the actual files and compatibility data (Hallucination, Knowledge Boundary)
 4. **Quality gates** — `Issue → implement → test → PR`, plus spec checks and automatic evaluators such as xCOMET (a model that scores translation quality) (Compounding Errors, Hallucination)
 5. **Measure from outside after release** — run the published npm version end to end on another host, OS and distribution form, and feed the results back as Issues ([pdf-agent-stack eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)) (Non-determinism, Self-Evaluation Bias)
+
+Among the constraints the products do not address, those such as Context Rot and Non-determinism are mainly held back by these steps.  
+Some failures, such as hallucination, remain whatever steps are in place, so a human checks the diffs and the test results.
+
+</details>
+
+More detail is in the [AI-Assisted Development Guide](./docs/ai-assisted-development.en.md).
 
 ## 🛠 Tech Stack
 
@@ -62,13 +72,11 @@ For work where several AI agents cooperate, I plan to use models other than Clau
 
 ## 🗂 Contents
 
+What does not fall under the six parts above is collected in these documents.
+
 | Category | What is there |
 | --- | --- |
-| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | The entry point for installing my MCP / Skill / Slash Command / Sub-agent extensions with `/plugin install` |
-| 🔌 [MCP Servers](./docs/mcp-servers.en.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | Five families — PDF / Web Spec / houki-hub / S1000D / DTIR — and the standalone MCP servers |
-| 🧩 [Claude Skills](./docs/claude-skills.en.md) | Skills that package a working procedure so it can be reused as is |
 | 📱 [Web Apps & Tools](./docs/web-apps.en.md) | PWAs and practical tools |
-| 🧠 [Design rationale](./docs/ai-assisted-development.en.md) | Why the MCP servers, Skills and apps are structured the way they are, and the day-to-day implementation procedure |
 | 📖 [Sites & Books](./docs/sites-books.en.md) | Learning sites on RxJS / Svelte / Web Components / TDD, and Zenn books |
 | 📓 [Notes](./docs/notes.en.md) | Notes on digital signatures, PWA, local LLMs, [Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity) (an open spec for describing digital-asset authenticity) and more |
 | 🧭 [Now](./docs/now.en.md) | What I am working on, trying next, and considering |

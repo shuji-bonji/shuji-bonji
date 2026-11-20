@@ -17,10 +17,13 @@ Claude / Claude Code / GitHub Copilot などの AI エージェントと一緒�
 
 各手順は、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるためのものです。手順ごとに、抑えたい制約を「対策する制約」として書いています。
 
+製品群では扱っていない制約のうち、Context Rot や Non-determinism などは、主にこの手順で抑えます。Hallucination のように手順を組んでも残る失敗があるため、差分とテスト結果は人が確かめます。
+
 1. **規約を先に置く** — リポジトリに `AGENTS.md` / `CLAUDE.md` を置き、設計方針・テスト手順・してはいけないことを書いておきます。毎回プロンプトを考え直さずに済みます。対策する制約: Instruction Decay、Prompt Sensitivity。
 2. **自作の MCP / Skill をつなぐ** — 仕様書（PDF / RFC / W3C / 法令）と、実際のファイル・互換性データ・通達を、family 単位で参照させます。調べ物をウェブ検索任せにしません。対策する制約: Hallucination、Knowledge Boundary。
 3. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分担させます。要件の確定・受け入れ条件・設計レビューは人が持ちます。対策する制約: Self-Evaluation Bias（作ったモデル自身の採点が甘くなる）、Context Rot（1 つの会話に情報を詰め込むほど精度が落ちる）。
 4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET による自動評価をパイプラインに載せます。基準に届かなければ、その工程からやり直します。対策する制約: Compounding Errors（手順の途中の誤りが後の手順に積み重なる）、Hallucination。
+5. **公開後に外から測る** — npm に公開した版を、別のホスト・OS・配布の形で通しで使い、結果を Issue に戻します（[pdf-agent-stack の eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)）。対策する制約: Non-determinism、Self-Evaluation Bias。
 
 ## 公開している設計の根拠
 

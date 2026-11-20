@@ -12,7 +12,7 @@
 公開しているものは、次の 6 つです。
 
 1. **動くアプリ — [e-shiwake](https://github.com/shuji-bonji/e-shiwake)**（[デモ](https://shuji-bonji.github.io/e-shiwake/)） — 個人事業主向けの仕訳帳・証憑管理 PWA。17 個のツールを function calling と WebMCP（ブラウザーの中で AI エージェントにツールを渡す仕組み）の両方に渡し、データを書き換える操作は実行前に人が承認します（HITL: Human in the Loop）
-2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱います。判定はコード、説明は LLM。各製品が LLM の 17 の制約のどれに対処しているかは、[ディスカッション #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に一覧にしています。RFC は [rfcxml-mcp](https://shuji-bonji.github.io/rfcxml-mcp/) にまとめています。
+2. **製品群 — [PDF Agent Stack](https://shuji-bonji.github.io/pdf-agent-stack/ja/) / [houki-hub](https://shuji-bonji.github.io/houki-hub/) / [s1000d-stack](https://shuji-bonji.github.io/s1000d-stack/)** — PDF、日本の法令、S1000D の技術文書を、個別のサーバーではなく系列で扱い、判定はコードが、説明は LLM が受け持ちます。各製品が LLM の 17 の制約のどれに対処しているかは、[ディスカッション #14](https://github.com/shuji-bonji/zenn-articles/discussions/14) に一覧にしています。
 3. **marketplace — [claude-plugins](https://github.com/shuji-bonji/claude-plugins)** — 下の MCP サーバーと Skill を、Claude Code から `/plugin install` で入れられます。導入の入口です。
 4. **道具 — [MCP サーバー](./docs/mcp-servers.md) / [Claude Skills](./docs/claude-skills.md)** — AI エージェントが PDF / W3C / RFC / 日本の法令 / S1000D の原文に直接あたるためのものです。
 5. **設計の根拠 — [AI Agent Architecture](https://shuji-bonji.github.io/ai-agent-architecture/ja/) / [Understanding LLMs](https://shuji-bonji.github.io/understanding-llm-through-claude-code/ja/)** — 上の製品群を、なぜその層に分けたかの記録です。製品の使い方ではなく、制約と組み方です。LLM が失敗する理由は [17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints) に整理しています。
@@ -22,15 +22,25 @@
 
 ## ⚙️ 日常の AI 駆動開発
 
-毎日の実装は Claude Code で進め、自作の MCP と Skill を開発の流れに組み込んでいます。詳しい手順は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめました。
+毎日の実装は Claude Code で進め、自作の MCP と Skill を開発の流れに組み込んでいます。規約を先に置く、役割を分ける、調べ物は自作の MCP に任せる、品質ゲートを通す、公開後に外から測る、の 5 つの手順を繰り返します。
 
-どの手順も、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるために置いています。各手順の末尾に、抑えたい制約の名前を書きました。製品群では扱っていない制約のうち、Context Rot や Non-determinism などは、主にこの手順で抑えます。Hallucination のように手順を組んでも残る失敗があるため、差分とテスト結果は人が確かめます。
+どの手順も、LLM が仕組みの上で起こす失敗（[17 の制約](https://zenn.dev/shuji_bonji/articles/llm-17-constraints)）のどれかを抑えるために置いています。
+
+<details>
+<summary>5 つの手順と、それぞれが抑える制約</summary>
 
 1. **規約を先に置く** — `AGENTS.md` / `CLAUDE.md` に設計方針とテスト手順を書いておき、毎回のプロンプトで指示し直さずに済むようにしています（Instruction Decay・Prompt Sensitivity）
 2. **役割を分ける** — 調査・実装・レビュー・品質評価を、サブエージェントと Skill に分けて担当させます。要件と受け入れ条件は人が決めます（Self-Evaluation Bias・Context Rot）
 3. **調べ物は自作の MCP に任せる** — 仕様書の原文（PDF / Web 仕様 / 法令 / S1000D）と、実際のファイルや互換性データを突き合わせます（Hallucination・Knowledge Boundary）
 4. **品質ゲートを通す** — `Issue → 実装 → テスト → PR` を固定し、仕様との照合や xCOMET（翻訳の品質を採点するモデル）による自動評価をパイプラインに載せます（Compounding Errors・Hallucination）
 5. **公開後に外から測る** — npm に公開した版を、別のホスト・OS・配布の形で通しで使う試用を行い、結果を Issue に戻します（[pdf-agent-stack の eval](https://github.com/shuji-bonji/pdf-agent-stack/tree/main/eval)）（Non-determinism・Self-Evaluation Bias）
+
+製品群では扱っていない制約のうち、Context Rot や Non-determinism などは、主にこの手順で抑えます。  
+Hallucination のように手順を組んでも残る失敗があるため、差分とテスト結果は人が確かめます。
+
+</details>
+
+さらに詳しい説明は [AI-Assisted Development Guide](./docs/ai-assisted-development.md) にまとめました。
 
 ## 🛠 Tech Stack
 
@@ -62,13 +72,11 @@ AI エージェントどうしを連携させる用途では、ローカル LLM 
 
 ## 🗂 Contents
 
+上の 6 つに入らないものは、次の文書にまとめています。
+
 | カテゴリ | 内容 |
 | --- | --- |
-| 📦 [Claude Plugins (Marketplace)](https://github.com/shuji-bonji/claude-plugins) | 自作の MCP / Skill / Slash Command / Sub-agent を `/plugin install` で導入する入口 |
-| 🔌 [MCP Servers](./docs/mcp-servers.md) [![npm](https://img.shields.io/badge/npm-shuji--bonji-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/~shuji-bonji) | PDF / Web Spec / houki-hub / S1000D / DTIR の 5 ファミリーと、単独の MCP サーバーの一覧 |
-| 🧩 [Claude Skills](./docs/claude-skills.md) | 作業手順をそのまま再利用するための Skill の一覧 |
 | 📱 [Web Apps & Tools](./docs/web-apps.md) | PWA と実用ツールの一覧 |
-| 🧠 [設計の根拠](./docs/ai-assisted-development.md) | MCP・Skill・アプリをなぜその構造にしたのかの記録と、日々の実装手順 |
 | 📖 [Sites & Books](./docs/sites-books.md) | RxJS / Svelte / Web Components / TDD などの学習サイトと、Zenn 書籍 |
 | 📓 [Notes](./docs/notes.md) | デジタル署名・PWA・ローカル LLM・[Manifest of Authenticity](https://github.com/shuji-bonji/Manifest-of-Authenticity)（デジタル資産の真正性を記述するオープン仕様）などのノート |
 | 🧭 [Now](./docs/now.md) | いま進めていること・これから試すこと・検討中のこと |
